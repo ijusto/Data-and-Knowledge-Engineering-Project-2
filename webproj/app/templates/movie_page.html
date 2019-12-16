@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MovieDB - </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/blog-home.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">MovieDB</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../actors">Actors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../directors">Directors</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+       
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-12 align-items-center">
+                <div class="d-flex flex-row" style="min-width: 0;
+                                                word-wrap: break-word;
+                                                background-color: #fff;
+                                                background-clip: border-box;
+                                                border: 1px solid rgba(0, 0, 0, 0.125);
+                                                border-radius: 0.25rem;
+                                                border-bottom-right-radius: 0.25rem;
+                                                border-bottom-left-radius: 0.25rem;
+                                                margin-bottom: 1.5rem !important;">
+                <div class="p-2">
+                    <!--<img class="card-img-top" src="" alt="Card image cap"/>-->
+                    <img style="width:350px;padding-top: 12px" src="{{movie_img}}" alt="Card image cap" class="card-img"/>
+                </div>
+                <div class="p-2">
+                    <!--<div class="card-body" style="align-items: baseline">-->
+                    <h1><!--class="card-title"-->{{ movie_name }}</h1>
+                    <p style="padding-left: 15px"><b><i>Year: </i></b>{{ movie_year }}</p>
+                    <p style="padding-left: 15px"><b><i>Rating: </i></b>{{ movie_rating }}</p>
+                    <p style="padding-left: 15px"><b><i>Language: </i></b>{{ movie_language }}</p>
+                    <p style="padding-left: 15px"><b><i>Country: </i></b>{{ movie_country }}</p>
+                    <p style="padding-left: 15px"><b><i>Duration: </i></b>{{ movie_duration }} min</p>
+                    <p style="padding-left: 15px"><b><i>Budget: </i></b>{{ movie_budget }}</p>
+                    <p style="padding-left: 15px"><strong><i>Genres: </i></strong>
+                        {% for genre in movie_genres %}
+                            [{{ genre }}]
+                        {% endfor %}
+                    </p>
+                    <p style="padding-left: 15px"><strong><i>Director: </i></strong><a href="../../director/{{movie_director}}">{{movie_director}}</a></p>
+
+                    <p style="padding-left: 15px">
+                        <strong><i>Cast: </i></strong>
+                            <br/>
+                        <strong style="padding-left: 20px"><i>Main actors: </i></strong>
+                                {% for actor_name in movie_main_actors %}
+                                    [<a href="../../actor/{{actor_name}}">{{actor_name}}</a>]
+                                {% endfor %}
+                        <br/>
+                        <strong style="padding-left: 20px"><i>Secondary actors: </i></strong>
+                                {% if movie_secondary_actors|length == 0 %}
+                                    None
+                                {% else %}
+                                    {% for actor_name in movie_secondary_actors %}
+                                        [<a href="../../actor/{{actor_name}}">{{actor_name}}</a>]
+                                    {% endfor %}
+                                {% endif %}
+                            <br/>
+                        </p>
+                    <p>
+
+                    </p>
+                    </p>
+                    <p style="padding-left: 15px"><strong><i>Plot keywords: </i></strong>
+                        {% for key in movie_plot_keywords %}
+                            [{{ key }}]
+                        {% endfor %}
+                    </p>
+                    <p style="padding-left: 15px"><b><i>Score: </i></b><strong>{{ movie_score }}</strong>/10</p>
+
+                    <p align="right"> <button type="submit" class="btn btn-secondary" type="button" onclick="deleteAlert('{{ movie_name }}')">Delete</button></p>
+                    <script>function deleteAlert(movie) {
+                        if (confirm("Are you sure you want to delete the movie \"" + movie + "\" from the database?")) window.location.replace("http://127.0.0.1:8000/delete_movie/"+movie);
+                    }</script>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">EDC - Trabalho Prático 1 - Grupo 3</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

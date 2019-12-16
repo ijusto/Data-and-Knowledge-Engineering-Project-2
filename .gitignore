@@ -1,0 +1,8 @@
+webproj/.idea/
+webproj/venv/
+webproj/app/__pycache__/
+webproj/webproj/__pycache__/
+webproj/app/migrations/__pycache__/
+webproj/app/migrations/
+
+*.pyc
