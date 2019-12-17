@@ -50,7 +50,7 @@ mov:avatar
 			"paraplegic";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "178";
 	predicate:budget "237000000".
 mov:spectre
@@ -76,7 +76,7 @@ mov:spectre
 			"terrorist";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "148";
 	predicate:budget "245000000".
 mov:the_dark_knight_rises
@@ -86,7 +86,7 @@ mov:the_dark_knight_rises
 	predicate:actor 
 			person:Tom_Hardy,
 			person:Christian_Bale,
-			person:Joseph_Gordon-Levitt;
+			person:Joseph_Gordon_Levitt;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
 			person:Christopher_Nolan;
@@ -101,7 +101,7 @@ mov:the_dark_knight_rises
 			"terrorist plot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "164";
 	predicate:budget "250000000".
 mov:john_carter
@@ -127,7 +127,7 @@ mov:john_carter
 			"princess";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "132";
 	predicate:budget "263700000".
 mov:spider_man_3
@@ -153,7 +153,7 @@ mov:spider_man_3
 			"villain";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "156";
 	predicate:budget "258000000".
 mov:tangled
@@ -183,7 +183,7 @@ mov:tangled
 			"tower";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "100";
 	predicate:budget "260000000".
 mov:avengers_age_of_ultron
@@ -209,7 +209,7 @@ mov:avengers_age_of_ultron
 			"superhero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "141";
 	predicate:budget "250000000".
 mov:harry_potter_and_the_half_blood_prince
@@ -236,7 +236,7 @@ mov:harry_potter_and_the_half_blood_prince
 			"professor";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "153";
 	predicate:budget "250000000".
 mov:batman_v_superman_dawn_of_justice
@@ -262,7 +262,7 @@ mov:batman_v_superman_dawn_of_justice
 			"superman";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "183";
 	predicate:budget "250000000".
 mov:superman_returns
@@ -288,7 +288,7 @@ mov:superman_returns
 			"return to earth";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "169";
 	predicate:budget "209000000".
 mov:quantum_of_solace
@@ -313,7 +313,7 @@ mov:quantum_of_solace
 			"revenge";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "200000000".
 mov:the_lone_ranger
@@ -339,7 +339,7 @@ mov:the_lone_ranger
 			"train";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "150";
 	predicate:budget "215000000".
 mov:man_of_steel
@@ -366,7 +366,7 @@ mov:man_of_steel
 			"reboot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "143";
 	predicate:budget "225000000".
 mov:the_chronicles_of_narnia_prince_caspian
@@ -393,7 +393,7 @@ mov:the_chronicles_of_narnia_prince_caspian
 			"narnia";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "150";
 	predicate:budget "225000000".
 mov:the_avengers
@@ -419,7 +419,7 @@ mov:the_avengers
 			"soldier";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "173";
 	predicate:budget "220000000".
 mov:pirates_of_the_caribbean_on_stranger_tides
@@ -445,7 +445,7 @@ mov:pirates_of_the_caribbean_on_stranger_tides
 			"soldier";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "136";
 	predicate:budget "250000000".
 mov:men_in_black_3
@@ -474,7 +474,7 @@ mov:men_in_black_3
 			"prison";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "225000000".
 mov:the_hobbit_the_battle_of_the_five_armies
@@ -499,7 +499,7 @@ mov:the_hobbit_the_battle_of_the_five_armies
 			"orc";
 	predicate:country "New Zealand";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "164";
 	predicate:budget "250000000".
 mov:the_amazing_spider_man
@@ -525,7 +525,7 @@ mov:the_amazing_spider_man
 			"teenager";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "153";
 	predicate:budget "230000000".
 mov:robin_hood
@@ -552,7 +552,7 @@ mov:robin_hood
 			"robin hood";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "156";
 	predicate:budget "200000000".
 mov:the_hobbit_the_desolation_of_smaug
@@ -577,7 +577,7 @@ mov:the_hobbit_the_desolation_of_smaug
 			"sword and sorcery";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "186";
 	predicate:budget "225000000".
 mov:the_golden_compass
@@ -603,7 +603,7 @@ mov:the_golden_compass
 			"quest";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "113";
 	predicate:budget "180000000".
 mov:king_kong
@@ -630,7 +630,7 @@ mov:king_kong
 			"king kong";
 	predicate:country "New Zealand";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "201";
 	predicate:budget "207000000".
 mov:titanic
@@ -655,7 +655,7 @@ mov:titanic
 			"wet";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "194";
 	predicate:budget "200000000".
 mov:captain_america_civil_war
@@ -681,7 +681,7 @@ mov:captain_america_civil_war
 			"superhero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "147";
 	predicate:budget "250000000".
 mov:battleship
@@ -708,7 +708,7 @@ mov:battleship
 			"ship";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "131";
 	predicate:budget "209000000".
 mov:jurassic_world
@@ -735,7 +735,7 @@ mov:jurassic_world
 			"velociraptor";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "150000000".
 mov:skyfall
@@ -761,7 +761,7 @@ mov:skyfall
 			"terrorist cell";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "143";
 	predicate:budget "200000000".
 mov:spider_man_2
@@ -788,7 +788,7 @@ mov:spider_man_2
 			"tentacle";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "135";
 	predicate:budget "200000000".
 mov:iron_man_3
@@ -814,7 +814,7 @@ mov:iron_man_3
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "195";
 	predicate:budget "200000000".
 mov:alice_in_wonderland
@@ -840,7 +840,7 @@ mov:alice_in_wonderland
 			"shrinking potion";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "108";
 	predicate:budget "200000000".
 mov:x_men_the_last_stand
@@ -868,7 +868,7 @@ mov:x_men_the_last_stand
 			"x men";
 	predicate:country "Canada";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "104";
 	predicate:budget "210000000".
 mov:monsters_university
@@ -896,7 +896,7 @@ mov:monsters_university
 			"university";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "104";
 	predicate:budget "200000000".
 mov:transformers_revenge_of_the_fallen
@@ -922,7 +922,7 @@ mov:transformers_revenge_of_the_fallen
 			"symbol";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "150";
 	predicate:budget "200000000".
 mov:transformers_age_of_extinction
@@ -948,7 +948,7 @@ mov:transformers_age_of_extinction
 			"truck";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "165";
 	predicate:budget "210000000".
 mov:oz_the_great_and_powerful
@@ -974,7 +974,7 @@ mov:oz_the_great_and_powerful
 			"witch";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "130";
 	predicate:budget "215000000".
 mov:the_amazing_spider_man_2
@@ -1001,7 +1001,7 @@ mov:the_amazing_spider_man_2
 			"teenager";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "142";
 	predicate:budget "200000000".
 mov:tron_legacy
@@ -1027,7 +1027,7 @@ mov:tron_legacy
 			"warrior";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "125";
 	predicate:budget "170000000".
 mov:cars_2
@@ -1055,7 +1055,7 @@ mov:cars_2
 			"spy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "106";
 	predicate:budget "200000000".
 mov:green_lantern
@@ -1081,7 +1081,7 @@ mov:green_lantern
 			"test pilot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "200000000".
 mov:toy_story_3
@@ -1109,7 +1109,7 @@ mov:toy_story_3
 			"toy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "103";
 	predicate:budget "200000000".
 mov:terminator_salvation
@@ -1135,7 +1135,7 @@ mov:terminator_salvation
 			"skynet";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "118";
 	predicate:budget "200000000".
 mov:furious_7
@@ -1161,7 +1161,7 @@ mov:furious_7
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "140";
 	predicate:budget "190000000".
 mov:world_war_z
@@ -1189,7 +1189,7 @@ mov:world_war_z
 			"zombie";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "190000000".
 mov:x_men_days_of_future_past
@@ -1217,7 +1217,7 @@ mov:x_men_days_of_future_past
 			"time travel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "149";
 	predicate:budget "200000000".
 mov:star_trek_into_darkness
@@ -1243,7 +1243,7 @@ mov:star_trek_into_darkness
 			"space";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "132";
 	predicate:budget "190000000".
 mov:jack_the_giant_slayer
@@ -1268,7 +1268,7 @@ mov:jack_the_giant_slayer
 			"princess";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "114";
 	predicate:budget "195000000".
 mov:the_great_gatsby
@@ -1293,7 +1293,7 @@ mov:the_great_gatsby
 			"tragedy";
 	predicate:country "Australia";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "143";
 	predicate:budget "105000000".
 mov:prince_of_persia_the_sands_of_time
@@ -1320,7 +1320,7 @@ mov:prince_of_persia_the_sands_of_time
 			"princess";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "200000000".
 mov:pacific_rim
@@ -1346,7 +1346,7 @@ mov:pacific_rim
 			"robot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "131";
 	predicate:budget "190000000".
 mov:transformers_dark_of_the_moon
@@ -1372,7 +1372,7 @@ mov:transformers_dark_of_the_moon
 			"spacecraft";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "154";
 	predicate:budget "195000000".
 mov:indiana_jones_and_the_kingdom_of_the_crystal_skull
@@ -1398,7 +1398,7 @@ mov:indiana_jones_and_the_kingdom_of_the_crystal_skull
 			"year 1957";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "122";
 	predicate:budget "185000000".
 mov:brave
@@ -1426,7 +1426,7 @@ mov:brave
 			"rebellious daughter";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "93";
 	predicate:budget "185000000".
 mov:star_trek_beyond
@@ -1453,7 +1453,7 @@ mov:star_trek_beyond
 			"third part";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "122";
 	predicate:budget "185000000".
 mov:wall·e
@@ -1480,7 +1480,7 @@ mov:wall·e
 			"soil";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "98";
 	predicate:budget "180000000".
 mov:rush_hour_3
@@ -1507,7 +1507,7 @@ mov:rush_hour_3
 			"triad";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "91";
 	predicate:budget "140000000".
 mov:2012
@@ -1533,7 +1533,7 @@ mov:2012
 			"writer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "158";
 	predicate:budget "200000000".
 mov:a_christmas_carol
@@ -1560,7 +1560,7 @@ mov:a_christmas_carol
 			"scrooge";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "96";
 	predicate:budget "200000000".
 mov:jupiter_ascending
@@ -1586,7 +1586,7 @@ mov:jupiter_ascending
 			"woman in bra and panties";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "127";
 	predicate:budget "176000000".
 mov:the_legend_of_tarzan
@@ -1613,7 +1613,7 @@ mov:the_legend_of_tarzan
 			"tarzan";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "110";
 	predicate:budget "180000000".
 mov:the_chronicles_of_narnia_the_lion_the_witch_and_the_wardrobe
@@ -1639,7 +1639,7 @@ mov:the_chronicles_of_narnia_the_lion_the_witch_and_the_wardrobe
 			"snow";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "150";
 	predicate:budget "180000000".
 mov:x_men_apocalypse
@@ -1665,7 +1665,7 @@ mov:x_men_apocalypse
 			"year 1983";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "144";
 	predicate:budget "178000000".
 mov:the_dark_knight
@@ -1692,7 +1692,7 @@ mov:the_dark_knight
 			"urban setting";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "152";
 	predicate:budget "185000000".
 mov:up
@@ -1719,7 +1719,7 @@ mov:up
 			"skeleton";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "96";
 	predicate:budget "175000000".
 mov:monsters_vs_aliens
@@ -1748,7 +1748,7 @@ mov:monsters_vs_aliens
 			"giantess";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "94";
 	predicate:budget "175000000".
 mov:iron_man
@@ -1774,7 +1774,7 @@ mov:iron_man
 			"u.s. air force";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "126";
 	predicate:budget "140000000".
 mov:hugo
@@ -1801,7 +1801,7 @@ mov:hugo
 			"train";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "126";
 	predicate:budget "170000000".
 mov:wild_wild_west
@@ -1828,7 +1828,7 @@ mov:wild_wild_west
 			"utah";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "170000000".
 mov:the_mummy_tomb_of_the_dragon_emperor
@@ -1856,7 +1856,7 @@ mov:the_mummy_tomb_of_the_dragon_emperor
 			"shangri la";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "112";
 	predicate:budget "145000000".
 mov:suicide_squad
@@ -1883,7 +1883,7 @@ mov:suicide_squad
 			"super villain";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "175000000".
 mov:evan_almighty
@@ -1909,7 +1909,7 @@ mov:evan_almighty
 			"flood";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "96";
 	predicate:budget "175000000".
 mov:edge_of_tomorrow
@@ -1935,7 +1935,7 @@ mov:edge_of_tomorrow
 			"time loop";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "113";
 	predicate:budget "178000000".
 mov:waterworld
@@ -1962,7 +1962,7 @@ mov:waterworld
 			"water";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "176";
 	predicate:budget "175000000".
 mov:gi_joe_the_rise_of_cobra
@@ -1970,7 +1970,7 @@ mov:gi_joe_the_rise_of_cobra
 	predicate:year "2009";
 	predicate:score "5.8";
 	predicate:actor 
-			person:Joseph_Gordon-Levitt,
+			person:Joseph_Gordon_Levitt,
 			person:Dennis_Quaid,
 			person:Leo_Howard;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BMTQzMTU1NzQwNl5BMl5BanBnXkFtZTcwNDg4NzMzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg";
@@ -1989,7 +1989,7 @@ mov:gi_joe_the_rise_of_cobra
 			"warhead";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "118";
 	predicate:budget "175000000".
 mov:inside_out
@@ -2018,7 +2018,7 @@ mov:inside_out
 			"sadness";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "95";
 	predicate:budget "175000000".
 mov:the_jungle_book
@@ -2045,7 +2045,7 @@ mov:the_jungle_book
 			"wolf";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "106";
 	predicate:budget "175000000".
 mov:iron_man_2
@@ -2071,7 +2071,7 @@ mov:iron_man_2
 			"tony stark";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "200000000".
 mov:snow_white_and_the_huntsman
@@ -2098,7 +2098,7 @@ mov:snow_white_and_the_huntsman
 			"snow white";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "132";
 	predicate:budget "170000000".
 mov:maleficent
@@ -2126,7 +2126,7 @@ mov:maleficent
 			"kingdom";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "97";
 	predicate:budget "180000000".
 mov:dawn_of_the_planet_of_the_apes
@@ -2136,7 +2136,7 @@ mov:dawn_of_the_planet_of_the_apes
 	predicate:actor 
 			person:Gary_Oldman,
 			person:Judy_Greer,
-			person:Kodi_Smit-McPhee;
+			person:Kodi_Smit_McPhee;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BMTgwODk3NDc1N15BMl5BanBnXkFtZTgwNTc1NjQwMjE@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
 			person:Matt_Reeves;
@@ -2153,7 +2153,7 @@ mov:dawn_of_the_planet_of_the_apes
 			"sequel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "130";
 	predicate:budget "170000000".
 mov:47_ronin
@@ -2162,7 +2162,7 @@ mov:47_ronin
 	predicate:score "6.3";
 	predicate:actor 
 			person:Keanu_Reeves,
-			person:Cary-Hiroyuki_Tagawa,
+			person:Cary_Hiroyuki_Tagawa,
 			person:Jin_Akanishi;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BMTc0MjE2NzE0OV5BMl5BanBnXkFtZTgwNTU5MjE1MDE@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
@@ -2180,7 +2180,7 @@ mov:47_ronin
 			"tournament";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "128";
 	predicate:budget "175000000".
 mov:captain_america_the_winter_soldier
@@ -2206,7 +2206,7 @@ mov:captain_america_the_winter_soldier
 			"world domination";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "136";
 	predicate:budget "170000000".
 mov:shrek_forever_after
@@ -2234,7 +2234,7 @@ mov:shrek_forever_after
 			"true love";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "93";
 	predicate:budget "165000000".
 mov:tomorrowland
@@ -2262,7 +2262,7 @@ mov:tomorrowland
 			"time travel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "130";
 	predicate:budget "190000000".
 mov:big_hero_6
@@ -2292,7 +2292,7 @@ mov:big_hero_6
 			"superhero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "102";
 	predicate:budget "165000000".
 mov:wreck_it_ralph
@@ -2320,7 +2320,7 @@ mov:wreck_it_ralph
 			"medal";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "101";
 	predicate:budget "165000000".
 mov:the_polar_express
@@ -2347,7 +2347,7 @@ mov:the_polar_express
 			"train";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "100";
 	predicate:budget "165000000".
 mov:independence_day_resurgence
@@ -2373,7 +2373,7 @@ mov:independence_day_resurgence
 			"mothership";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "120";
 	predicate:budget "165000000".
 mov:how_to_train_your_dragon
@@ -2400,7 +2400,7 @@ mov:how_to_train_your_dragon
 			"village";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "98";
 	predicate:budget "165000000".
 mov:terminator_3_rise_of_the_machines
@@ -2425,7 +2425,7 @@ mov:terminator_3_rise_of_the_machines
 			"skynet";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "109";
 	predicate:budget "200000000".
 mov:guardians_of_the_galaxy
@@ -2451,7 +2451,7 @@ mov:guardians_of_the_galaxy
 			"tree";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "121";
 	predicate:budget "170000000".
 mov:interstellar
@@ -2477,7 +2477,7 @@ mov:interstellar
 			"wormhole";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "169";
 	predicate:budget "165000000".
 mov:inception
@@ -2487,7 +2487,7 @@ mov:inception
 	predicate:actor 
 			person:Leonardo_DiCaprio,
 			person:Tom_Hardy,
-			person:Joseph_Gordon-Levitt;
+			person:Joseph_Gordon_Levitt;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
 			person:Christopher_Nolan;
@@ -2504,7 +2504,7 @@ mov:inception
 			"thief";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "148";
 	predicate:budget "160000000".
 mov:the_fast_and_the_furious
@@ -2530,7 +2530,7 @@ mov:the_fast_and_the_furious
 			"undercover cop";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "38000000".
 mov:the_curious_case_of_benjamin_button
@@ -2556,7 +2556,7 @@ mov:the_curious_case_of_benjamin_button
 			"premature aging";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "166";
 	predicate:budget "150000000".
 mov:x_men_first_class
@@ -2582,7 +2582,7 @@ mov:x_men_first_class
 			"professor";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "132";
 	predicate:budget "160000000".
 mov:the_hunger_games_mockingjay___part_2
@@ -2607,7 +2607,7 @@ mov:the_hunger_games_mockingjay___part_2
 			"revolution";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "137";
 	predicate:budget "160000000".
 mov:poseidon
@@ -2634,7 +2634,7 @@ mov:poseidon
 			"water";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "98";
 	predicate:budget "160000000".
 mov:alice_through_the_looking_glass
@@ -2660,7 +2660,7 @@ mov:alice_through_the_looking_glass
 			"sequel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "113";
 	predicate:budget "170000000".
 mov:shrek_the_third
@@ -2688,7 +2688,7 @@ mov:shrek_the_third
 			"tough guy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "93";
 	predicate:budget "160000000".
 mov:warcraft
@@ -2714,7 +2714,7 @@ mov:warcraft
 			"sword and sorcery";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "160000000".
 mov:terminator_genisys
@@ -2740,7 +2740,7 @@ mov:terminator_genisys
 			"time machine";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "126";
 	predicate:budget "155000000".
 mov:the_chronicles_of_narnia_the_voyage_of_the_dawn_treader
@@ -2766,7 +2766,7 @@ mov:the_chronicles_of_narnia_the_voyage_of_the_dawn_treader
 			"warrior";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "113";
 	predicate:budget "155000000".
 mov:pearl_harbor
@@ -2794,7 +2794,7 @@ mov:pearl_harbor
 			"sunday";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "184";
 	predicate:budget "140000000".
 mov:transformers
@@ -2820,7 +2820,7 @@ mov:transformers
 			"teenage hero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "144";
 	predicate:budget "150000000".
 mov:alexander
@@ -2850,7 +2850,7 @@ mov:alexander
 			"king";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "206";
 	predicate:budget "155000000".
 mov:harry_potter_and_the_order_of_the_phoenix
@@ -2877,7 +2877,7 @@ mov:harry_potter_and_the_order_of_the_phoenix
 			"wizard";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "138";
 	predicate:budget "150000000".
 mov:harry_potter_and_the_goblet_of_fire
@@ -2904,7 +2904,7 @@ mov:harry_potter_and_the_goblet_of_fire
 			"wizard";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "157";
 	predicate:budget "150000000".
 mov:hancock
@@ -2929,7 +2929,7 @@ mov:hancock
 			"tough girl";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "102";
 	predicate:budget "150000000".
 mov:i_am_legend
@@ -2955,7 +2955,7 @@ mov:i_am_legend
 			"virus";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "104";
 	predicate:budget "150000000".
 mov:charlie_and_the_chocolate_factory
@@ -2982,7 +2982,7 @@ mov:charlie_and_the_chocolate_factory
 			"ticket";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "115";
 	predicate:budget "150000000".
 mov:ratatouille
@@ -3009,7 +3009,7 @@ mov:ratatouille
 			"restaurant";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "111";
 	predicate:budget "150000000".
 mov:batman_begins
@@ -3034,7 +3034,7 @@ mov:batman_begins
 			"social decay";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "128";
 	predicate:budget "150000000".
 mov:madagascar_escape_2_africa
@@ -3062,7 +3062,7 @@ mov:madagascar_escape_2_africa
 			"zoo";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "89";
 	predicate:budget "150000000".
 mov:night_at_the_museum_battle_of_the_smithsonian
@@ -3089,7 +3089,7 @@ mov:night_at_the_museum_battle_of_the_smithsonian
 			"tyrannosaurus rex";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "105";
 	predicate:budget "150000000".
 mov:x_men_origins_wolverine
@@ -3117,7 +3117,7 @@ mov:x_men_origins_wolverine
 			"wolverine the character";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "119";
 	predicate:budget "150000000".
 mov:the_matrix_revolutions
@@ -3142,7 +3142,7 @@ mov:the_matrix_revolutions
 			"machine";
 	predicate:country "Australia";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "129";
 	predicate:budget "150000000".
 mov:frozen
@@ -3171,7 +3171,7 @@ mov:frozen
 			"snowman";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "102";
 	predicate:budget "150000000".
 mov:the_matrix_reloaded
@@ -3196,7 +3196,7 @@ mov:the_matrix_reloaded
 			"stylized violence";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "138";
 	predicate:budget "150000000".
 mov:thor_the_dark_world
@@ -3222,7 +3222,7 @@ mov:thor_the_dark_world
 			"weapon";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "112";
 	predicate:budget "170000000".
 mov:mad_max_fury_road
@@ -3249,7 +3249,7 @@ mov:mad_max_fury_road
 			"post apocalypse";
 	predicate:country "Australia";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "120";
 	predicate:budget "150000000".
 mov:angels_and_demons
@@ -3259,7 +3259,7 @@ mov:angels_and_demons
 	predicate:actor 
 			person:Tom_Hanks,
 			person:Ayelet_Zurer,
-			person:Armin_Mueller-Stahl;
+			person:Armin_Mueller_Stahl;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BMjEzNzM2MjgxMF5BMl5BanBnXkFtZTcwNTQ1MTM0Mg@@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
 			person:Ron_Howard;
@@ -3274,7 +3274,7 @@ mov:angels_and_demons
 			"reference to raphael";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "146";
 	predicate:budget "150000000".
 mov:thor
@@ -3300,7 +3300,7 @@ mov:thor
 			"throne";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "115";
 	predicate:budget "150000000".
 mov:bolt
@@ -3328,7 +3328,7 @@ mov:bolt
 			"superpower";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "96";
 	predicate:budget "150000000".
 mov:g_force
@@ -3358,7 +3358,7 @@ mov:g_force
 			"talking mouse";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "88";
 	predicate:budget "150000000".
 mov:wrath_of_the_titans
@@ -3384,7 +3384,7 @@ mov:wrath_of_the_titans
 			"zeus";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "99";
 	predicate:budget "150000000".
 mov:dark_shadows
@@ -3410,7 +3410,7 @@ mov:dark_shadows
 			"foot closeup";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "113";
 	predicate:budget "100000000".
 mov:mission_impossible___rogue_nation
@@ -3436,7 +3436,7 @@ mov:mission_impossible___rogue_nation
 			"spy";
 	predicate:country "China";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "131";
 	predicate:budget "150000000".
 mov:the_wolfman
@@ -3463,7 +3463,7 @@ mov:the_wolfman
 			"werewolf";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "119";
 	predicate:budget "150000000".
 mov:the_legend_of_tarzan
@@ -3490,7 +3490,7 @@ mov:the_legend_of_tarzan
 			"tarzan";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "110";
 	predicate:budget "180000000".
 mov:bee_movie
@@ -3517,7 +3517,7 @@ mov:bee_movie
 			"squashed bug";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "91";
 	predicate:budget "150000000".
 mov:kung_fu_panda_2
@@ -3545,7 +3545,7 @@ mov:kung_fu_panda_2
 			"tigress";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "90";
 	predicate:budget "150000000".
 mov:the_last_airbender
@@ -3572,7 +3572,7 @@ mov:the_last_airbender
 			"water";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "103";
 	predicate:budget "150000000".
 mov:mission_impossible_iii
@@ -3598,7 +3598,7 @@ mov:mission_impossible_iii
 			"vatican";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "150000000".
 mov:white_house_down
@@ -3624,7 +3624,7 @@ mov:white_house_down
 			"white house";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "131";
 	predicate:budget "150000000".
 mov:mars_needs_moms
@@ -3653,7 +3653,7 @@ mov:mars_needs_moms
 			"sexism";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "88";
 	predicate:budget "150000000".
 mov:flushed_away
@@ -3680,7 +3680,7 @@ mov:flushed_away
 			"toad";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "85";
 	predicate:budget "149000000".
 mov:pan
@@ -3706,7 +3706,7 @@ mov:pan
 			"reference to peter pan";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "111";
 	predicate:budget "150000000".
 mov:mr_peabody_and_sherman
@@ -3734,7 +3734,7 @@ mov:mr_peabody_and_sherman
 			"time travel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "92";
 	predicate:budget "145000000".
 mov:troy
@@ -3758,7 +3758,7 @@ mov:troy
 			"troy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "196";
 	predicate:budget "175000000".
 mov:die_another_day
@@ -3784,7 +3784,7 @@ mov:die_another_day
 			"patricide";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "133";
 	predicate:budget "142000000".
 mov:ghostbusters
@@ -3811,7 +3811,7 @@ mov:ghostbusters
 			"reboot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "144000000".
 mov:armageddon
@@ -3838,7 +3838,7 @@ mov:armageddon
 			"outer space";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "153";
 	predicate:budget "140000000".
 mov:men_in_black_ii
@@ -3868,7 +3868,7 @@ mov:men_in_black_ii
 			"pug";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "88";
 	predicate:budget "140000000".
 mov:beowulf
@@ -3895,7 +3895,7 @@ mov:beowulf
 			"warrior";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "115";
 	predicate:budget "150000000".
 mov:kung_fu_panda_3
@@ -3923,7 +3923,7 @@ mov:kung_fu_panda_3
 			"village";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "95";
 	predicate:budget "145000000".
 mov:mission_impossible___ghost_protocol
@@ -3949,7 +3949,7 @@ mov:mission_impossible___ghost_protocol
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "133";
 	predicate:budget "145000000".
 mov:rise_of_the_guardians
@@ -3976,7 +3976,7 @@ mov:rise_of_the_guardians
 			"tooth";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "97";
 	predicate:budget "145000000".
 mov:fun_with_dick_and_jane
@@ -4001,7 +4001,7 @@ mov:fun_with_dick_and_jane
 			"unemployment";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "90";
 	predicate:budget "100000000".
 mov:the_last_samurai
@@ -4028,7 +4028,7 @@ mov:the_last_samurai
 			"samurai";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "154";
 	predicate:budget "140000000".
 mov:exodus_gods_and_kings
@@ -4054,7 +4054,7 @@ mov:exodus_gods_and_kings
 			"plague";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "150";
 	predicate:budget "140000000".
 mov:star_trek
@@ -4080,7 +4080,7 @@ mov:star_trek
 			"vulcan";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "127";
 	predicate:budget "150000000".
 mov:spider_man
@@ -4107,7 +4107,7 @@ mov:spider_man
 			"superhero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "121";
 	predicate:budget "139000000".
 mov:how_to_train_your_dragon_2
@@ -4136,7 +4136,7 @@ mov:how_to_train_your_dragon_2
 			"viking";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "102";
 	predicate:budget "145000000".
 mov:gods_of_egypt
@@ -4162,7 +4162,7 @@ mov:gods_of_egypt
 			"egyptian goddess";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "126";
 	predicate:budget "140000000".
 mov:stealth
@@ -4189,7 +4189,7 @@ mov:stealth
 			"pilot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "121";
 	predicate:budget "135000000".
 mov:watchmen
@@ -4216,7 +4216,7 @@ mov:watchmen
 			"male nudity";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "215";
 	predicate:budget "130000000".
 mov:lethal_weapon_4
@@ -4242,7 +4242,7 @@ mov:lethal_weapon_4
 			"triad";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "127";
 	predicate:budget "140000000".
 mov:hulk
@@ -4267,7 +4267,7 @@ mov:hulk
 			"san francisco california";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "138";
 	predicate:budget "137000000".
 mov:gi_joe_retaliation
@@ -4294,7 +4294,7 @@ mov:gi_joe_retaliation
 			"president";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "122";
 	predicate:budget "130000000".
 mov:sahara
@@ -4321,7 +4321,7 @@ mov:sahara
 			"ship";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "130000000".
 mov:final_fantasy_the_spirits_within
@@ -4330,7 +4330,7 @@ mov:final_fantasy_the_spirits_within
 	predicate:score "6.4";
 	predicate:actor 
 			person:Steve_Buscemi,
-			person:Ming-Na_Wen,
+			person:Ming_Na_Wen,
 			person:Jean_Simmons;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BZWFmYmViNGEtNzM5NC00NDliLThmNTUtYTY1NjhiN2ZjMGM5XkEyXkFqcGdeQXVyMDM5ODIyNw@@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
@@ -4350,7 +4350,7 @@ mov:final_fantasy_the_spirits_within
 			"year 2065";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "137000000".
 mov:captain_america_the_first_avenger
@@ -4376,7 +4376,7 @@ mov:captain_america_the_first_avenger
 			"war bond";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "140000000".
 mov:the_world_is_not_enough
@@ -4402,7 +4402,7 @@ mov:the_world_is_not_enough
 			"tycoon";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "128";
 	predicate:budget "135000000".
 mov:master_and_commander_the_far_side_of_the_world
@@ -4430,7 +4430,7 @@ mov:master_and_commander_the_far_side_of_the_world
 			"ship";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "138";
 	predicate:budget "150000000".
 mov:the_twilight_saga_breaking_dawn___part_2
@@ -4457,7 +4457,7 @@ mov:the_twilight_saga_breaking_dawn___part_2
 			"vision";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "115";
 	predicate:budget "120000000".
 mov:happy_feet_2
@@ -4484,7 +4484,7 @@ mov:happy_feet_2
 			"sequel";
 	predicate:country "Australia";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "100";
 	predicate:budget "135000000".
 mov:the_incredible_hulk
@@ -4510,7 +4510,7 @@ mov:the_incredible_hulk
 			"opening action scene";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "135";
 	predicate:budget "150000000".
 mov:the_bfg
@@ -4536,7 +4536,7 @@ mov:the_bfg
 			"queen";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "117";
 	predicate:budget "140000000".
 mov:the_revenant
@@ -4563,7 +4563,7 @@ mov:the_revenant
 			"survival";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "156";
 	predicate:budget "135000000".
 mov:turbo
@@ -4591,7 +4591,7 @@ mov:turbo
 			"underdog";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "96";
 	predicate:budget "135000000".
 mov:rango
@@ -4619,7 +4619,7 @@ mov:rango
 			"western town";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "107";
 	predicate:budget "135000000".
 mov:penguins_of_madagascar
@@ -4646,7 +4646,7 @@ mov:penguins_of_madagascar
 			"television van";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "92";
 	predicate:budget "132000000".
 mov:the_bourne_ultimatum
@@ -4672,7 +4672,7 @@ mov:the_bourne_ultimatum
 			"memory";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "115";
 	predicate:budget "110000000".
 mov:kung_fu_panda
@@ -4700,7 +4700,7 @@ mov:kung_fu_panda
 			"snow leopard";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "92";
 	predicate:budget "130000000".
 mov:ant_man
@@ -4727,7 +4727,7 @@ mov:ant_man
 			"vault";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "117";
 	predicate:budget "130000000".
 mov:the_hunger_games_catching_fire
@@ -4753,7 +4753,7 @@ mov:the_hunger_games_catching_fire
 			"uprising";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "146";
 	predicate:budget "130000000".
 mov:the_twilight_saga_breaking_dawn___part_2
@@ -4780,7 +4780,7 @@ mov:the_twilight_saga_breaking_dawn___part_2
 			"vision";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "115";
 	predicate:budget "120000000".
 mov:home
@@ -4809,7 +4809,7 @@ mov:home
 			"mother daughter relationship";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "94";
 	predicate:budget "135000000".
 mov:war_of_the_worlds
@@ -4835,7 +4835,7 @@ mov:war_of_the_worlds
 			"tripod";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "132000000".
 mov:bad_boys_ii
@@ -4862,7 +4862,7 @@ mov:bad_boys_ii
 			"undercover";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "147";
 	predicate:budget "130000000".
 mov:puss_in_boots
@@ -4891,7 +4891,7 @@ mov:puss_in_boots
 			"hero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "90";
 	predicate:budget "130000000".
 mov:salt
@@ -4918,7 +4918,7 @@ mov:salt
 			"strong female lead";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "101";
 	predicate:budget "110000000".
 mov:noah
@@ -4944,7 +4944,7 @@ mov:noah
 			"wrath of god";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "138";
 	predicate:budget "125000000".
 mov:the_adventures_of_tintin
@@ -4971,7 +4971,7 @@ mov:the_adventures_of_tintin
 			"treasure";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "107";
 	predicate:budget "135000000".
 mov:harry_potter_and_the_prisoner_of_azkaban
@@ -4998,7 +4998,7 @@ mov:harry_potter_and_the_prisoner_of_azkaban
 			"wizard";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "142";
 	predicate:budget "130000000".
 mov:australia
@@ -5025,7 +5025,7 @@ mov:australia
 			"japanese";
 	predicate:country "Australia";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "165";
 	predicate:budget "130000000".
 mov:after_earth
@@ -5051,7 +5051,7 @@ mov:after_earth
 			"real life father and son playing father and son";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "100";
 	predicate:budget "130000000".
 mov:dinosaur
@@ -5078,7 +5078,7 @@ mov:dinosaur
 			"nesting grounds";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "82";
 	predicate:budget "127500000".
 mov:night_at_the_museum_secret_of_the_tomb
@@ -5105,7 +5105,7 @@ mov:night_at_the_museum_secret_of_the_tomb
 			"tablet";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "98";
 	predicate:budget "127000000".
 mov:megamind
@@ -5133,7 +5133,7 @@ mov:megamind
 			"superhero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "95";
 	predicate:budget "130000000".
 mov:ripd
@@ -5159,7 +5159,7 @@ mov:ripd
 			"undead";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "96";
 	predicate:budget "130000000".
 mov:pirates_of_the_caribbean_the_curse_of_the_black_pearl
@@ -5185,7 +5185,7 @@ mov:pirates_of_the_caribbean_the_curse_of_the_black_pearl
 			"undead";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "143";
 	predicate:budget "140000000".
 mov:the_hunger_games_mockingjay___part_1
@@ -5211,7 +5211,7 @@ mov:the_hunger_games_mockingjay___part_1
 			"uprising";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "125000000".
 mov:the_da_vinci_code
@@ -5236,7 +5236,7 @@ mov:the_da_vinci_code
 			"secret";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "174";
 	predicate:budget "125000000".
 mov:rio_2
@@ -5264,7 +5264,7 @@ mov:rio_2
 			"no opening credits";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "101";
 	predicate:budget "103000000".
 mov:x_men_2
@@ -5292,7 +5292,7 @@ mov:x_men_2
 			"x men";
 	predicate:country "Canada";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "134";
 	predicate:budget "110000000".
 mov:fast_five
@@ -5318,7 +5318,7 @@ mov:fast_five
 			"police";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "132";
 	predicate:budget "125000000".
 mov:sherlock_holmes_a_game_of_shadows
@@ -5346,7 +5346,7 @@ mov:sherlock_holmes_a_game_of_shadows
 			"train";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "129";
 	predicate:budget "125000000".
 mov:clash_of_the_titans
@@ -5372,7 +5372,7 @@ mov:clash_of_the_titans
 			"zeus";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "125000000".
 mov:total_recall
@@ -5397,7 +5397,7 @@ mov:total_recall
 			"space colony";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "113";
 	predicate:budget "65000000".
 mov:the_13th_warrior
@@ -5423,7 +5423,7 @@ mov:the_13th_warrior
 			"warrior";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "102";
 	predicate:budget "85000000".
 mov:the_bourne_legacy
@@ -5449,7 +5449,7 @@ mov:the_bourne_legacy
 			"wolf";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "135";
 	predicate:budget "125000000".
 mov:batman_and_robin
@@ -5473,7 +5473,7 @@ mov:batman_and_robin
 			"gotham";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "125";
 	predicate:budget "125000000".
 mov:how_the_grinch_stole_christmas
@@ -5499,7 +5499,7 @@ mov:how_the_grinch_stole_christmas
 			"snowflake";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "110";
 	predicate:budget "123000000".
 mov:the_day_after_tomorrow
@@ -5526,7 +5526,7 @@ mov:the_day_after_tomorrow
 			"weather";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "125000000".
 mov:mission_impossible_ii
@@ -5552,7 +5552,7 @@ mov:mission_impossible_ii
 			"virus";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "125000000".
 mov:the_perfect_storm
@@ -5579,7 +5579,7 @@ mov:the_perfect_storm
 			"storm";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "130";
 	predicate:budget "140000000".
 mov:fantastic_4_rise_of_the_silver_surfer
@@ -5606,7 +5606,7 @@ mov:fantastic_4_rise_of_the_silver_surfer
 			"superheroine";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "92";
 	predicate:budget "130000000".
 mov:life_of_pi
@@ -5632,7 +5632,7 @@ mov:life_of_pi
 			"tiger";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "127";
 	predicate:budget "120000000".
 mov:ghost_rider
@@ -5658,7 +5658,7 @@ mov:ghost_rider
 			"mephistopheles";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "110000000".
 mov:jason_bourne
@@ -5683,7 +5683,7 @@ mov:jason_bourne
 			"repeated scene";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "120000000".
 mov:prometheus
@@ -5709,7 +5709,7 @@ mov:prometheus
 			"suspended animation";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "124";
 	predicate:budget "130000000".
 mov:stuart_little_2
@@ -5737,7 +5737,7 @@ mov:stuart_little_2
 			"soccer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "77";
 	predicate:budget "120000000".
 mov:elysium
@@ -5764,7 +5764,7 @@ mov:elysium
 			"social commentary";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "109";
 	predicate:budget "115000000".
 mov:the_chronicles_of_riddick
@@ -5791,7 +5791,7 @@ mov:the_chronicles_of_riddick
 			"warrior";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "134";
 	predicate:budget "105000000".
 mov:robocop
@@ -5818,7 +5818,7 @@ mov:robocop
 			"technology";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "117";
 	predicate:budget "100000000".
 mov:speed_racer
@@ -5844,7 +5844,7 @@ mov:speed_racer
 			"speed";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "135";
 	predicate:budget "120000000".
 mov:how_do_you_know
@@ -5870,7 +5870,7 @@ mov:how_do_you_know
 			"revelation";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "121";
 	predicate:budget "120000000".
 mov:knight_and_day
@@ -5896,7 +5896,7 @@ mov:knight_and_day
 			"surveillance";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "117";
 	predicate:budget "117000000".
 mov:oblivion
@@ -5923,7 +5923,7 @@ mov:oblivion
 			"sex in a pool";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "120000000".
 mov:star_wars_episode_iii___revenge_of_the_sith
@@ -5950,7 +5950,7 @@ mov:star_wars_episode_iii___revenge_of_the_sith
 			"vision";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "140";
 	predicate:budget "113000000".
 mov:star_wars_episode_ii___attack_of_the_clones
@@ -5977,7 +5977,7 @@ mov:star_wars_episode_ii___attack_of_the_clones
 			"prequel to cult film";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "142";
 	predicate:budget "115000000".
 mov:monsters_inc
@@ -6005,7 +6005,7 @@ mov:monsters_inc
 			"scream";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "92";
 	predicate:budget "115000000".
 mov:the_wolverine
@@ -6032,7 +6032,7 @@ mov:the_wolverine
 			"self healing";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "138";
 	predicate:budget "120000000".
 mov:star_wars_episode_i___the_phantom_menace
@@ -6059,7 +6059,7 @@ mov:star_wars_episode_i___the_phantom_menace
 			"wilhelm scream";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "136";
 	predicate:budget "115000000".
 mov:the_croods
@@ -6087,7 +6087,7 @@ mov:the_croods
 			"survival";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "98";
 	predicate:budget "135000000".
 mov:windtalkers
@@ -6113,7 +6113,7 @@ mov:windtalkers
 			"u.s. soldier";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "153";
 	predicate:budget "115000000".
 mov:teenage_mutant_ninja_turtles
@@ -6140,7 +6140,7 @@ mov:teenage_mutant_ninja_turtles
 			"turtle";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "101";
 	predicate:budget "125000000".
 mov:gravity
@@ -6167,7 +6167,7 @@ mov:gravity
 			"space station";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "91";
 	predicate:budget "100000000".
 mov:fantastic_four
@@ -6193,7 +6193,7 @@ mov:fantastic_four
 			"troubled production";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "100";
 	predicate:budget "120000000".
 mov:night_at_the_museum
@@ -6221,7 +6221,7 @@ mov:night_at_the_museum
 			"watchman";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "108";
 	predicate:budget "110000000".
 mov:san_andreas
@@ -6248,7 +6248,7 @@ mov:san_andreas
 			"san andreas fault";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "114";
 	predicate:budget "110000000".
 mov:tomorrow_never_dies
@@ -6274,7 +6274,7 @@ mov:tomorrow_never_dies
 			"world war three";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "119";
 	predicate:budget "110000000".
 mov:the_patriot
@@ -6301,7 +6301,7 @@ mov:the_patriot
 			"standoff";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "142";
 	predicate:budget "110000000".
 mov:mr_and_mrs_smith
@@ -6329,7 +6329,7 @@ mov:mr_and_mrs_smith
 			"target";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "126";
 	predicate:budget "120000000".
 mov:insurgent
@@ -6355,7 +6355,7 @@ mov:insurgent
 			"truth serum";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "119";
 	predicate:budget "110000000".
 mov:the_aviator
@@ -6380,7 +6380,7 @@ mov:the_aviator
 			"test flight";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "170";
 	predicate:budget "110000000".
 mov:the_green_hornet
@@ -6408,7 +6408,7 @@ mov:the_green_hornet
 			"superhero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "119";
 	predicate:budget "120000000".
 mov:300_rise_of_an_empire
@@ -6435,7 +6435,7 @@ mov:300_rise_of_an_empire
 			"navy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "102";
 	predicate:budget "110000000".
 mov:the_smurfs
@@ -6463,7 +6463,7 @@ mov:the_smurfs
 			"smurf";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "103";
 	predicate:budget "110000000".
 mov:home_on_the_range
@@ -6491,7 +6491,7 @@ mov:home_on_the_range
 			"rustler";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "76";
 	predicate:budget "110000000".
 mov:allegiant
@@ -6519,7 +6519,7 @@ mov:allegiant
 			"strong female lead";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "120";
 	predicate:budget "110000000".
 mov:real_steel
@@ -6546,7 +6546,7 @@ mov:real_steel
 			"robot battle";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "127";
 	predicate:budget "110000000".
 mov:the_smurfs_2
@@ -6574,7 +6574,7 @@ mov:the_smurfs_2
 			"smurf";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "105";
 	predicate:budget "105000000".
 mov:speed_2_cruise_control
@@ -6601,7 +6601,7 @@ mov:speed_2_cruise_control
 			"ship run aground";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "121";
 	predicate:budget "160000000".
 mov:live_free_or_die_hard
@@ -6627,7 +6627,7 @@ mov:live_free_or_die_hard
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "129";
 	predicate:budget "110000000".
 mov:the_lord_of_the_rings_the_fellowship_of_the_ring
@@ -6654,7 +6654,7 @@ mov:the_lord_of_the_rings_the_fellowship_of_the_ring
 			"ring";
 	predicate:country "New Zealand";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "171";
 	predicate:budget "93000000".
 mov:around_the_world_in_80_days
@@ -6680,7 +6680,7 @@ mov:around_the_world_in_80_days
 			"train";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "120";
 	predicate:budget "110000000".
 mov:ali
@@ -6706,7 +6706,7 @@ mov:ali
 			"rumble in the jungle";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "165";
 	predicate:budget "107000000".
 mov:the_cat_in_the_hat
@@ -6733,7 +6733,7 @@ mov:the_cat_in_the_hat
 			"talking cat";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "82";
 	predicate:budget "109000000".
 mov:i_robot
@@ -6760,7 +6760,7 @@ mov:i_robot
 			"robot vs. robot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "115";
 	predicate:budget "120000000".
 mov:kingdom_of_heaven
@@ -6788,7 +6788,7 @@ mov:kingdom_of_heaven
 			"medieval times";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "194";
 	predicate:budget "130000000".
 mov:stuart_little
@@ -6815,7 +6815,7 @@ mov:stuart_little
 			"orphanage";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "84";
 	predicate:budget "133000000".
 mov:the_princess_and_the_frog
@@ -6843,7 +6843,7 @@ mov:the_princess_and_the_frog
 			"waitress";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "97";
 	predicate:budget "105000000".
 mov:the_martian
@@ -6869,7 +6869,7 @@ mov:the_martian
 			"space habitat";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "151";
 	predicate:budget "108000000".
 mov:the_island
@@ -6897,7 +6897,7 @@ mov:the_island
 			"lottery";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "136";
 	predicate:budget "126000000".
 mov:town_and_country
@@ -6922,7 +6922,7 @@ mov:town_and_country
 			"hardware store";
 	predicate:country "New Line";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "104";
 	predicate:budget "90000000".
 mov:gone_in_sixty_seconds
@@ -6948,7 +6948,7 @@ mov:gone_in_sixty_seconds
 			"thief";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "127";
 	predicate:budget "90000000".
 mov:gladiator
@@ -6974,7 +6974,7 @@ mov:gladiator
 			"roman empire";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "171";
 	predicate:budget "103000000".
 mov:minority_report
@@ -7001,7 +7001,7 @@ mov:minority_report
 			"year 2054";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "145";
 	predicate:budget "102000000".
 mov:harry_potter_and_the_chamber_of_secrets
@@ -7028,7 +7028,7 @@ mov:harry_potter_and_the_chamber_of_secrets
 			"wizardry";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "174";
 	predicate:budget "100000000".
 mov:casino_royale
@@ -7054,7 +7054,7 @@ mov:casino_royale
 			"terrorist";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "144";
 	predicate:budget "150000000".
 mov:planet_of_the_apes
@@ -7062,7 +7062,7 @@ mov:planet_of_the_apes
 	predicate:year "2001";
 	predicate:score "5.7";
 	predicate:actor 
-			person:Cary-Hiroyuki_Tagawa,
+			person:Cary_Hiroyuki_Tagawa,
 			person:Estella_Warren,
 			person:Erick_Avari;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BY2RlMDhlY2MtMjQ1Zi00NzI5LTgxOTgtZjliNWMzYTY3NWZkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg";
@@ -7081,7 +7081,7 @@ mov:planet_of_the_apes
 			"year 2029";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "119";
 	predicate:budget "100000000".
 mov:terminator_2_judgment_day
@@ -7106,7 +7106,7 @@ mov:terminator_2_judgment_day
 			"time travel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "153";
 	predicate:budget "102000000".
 mov:public_enemies
@@ -7134,7 +7134,7 @@ mov:public_enemies
 			"public enemy number one";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "140";
 	predicate:budget "100000000".
 mov:american_gangster
@@ -7160,7 +7160,7 @@ mov:american_gangster
 			"vietnam";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "176";
 	predicate:budget "100000000".
 mov:true_lies
@@ -7186,7 +7186,7 @@ mov:true_lies
 			"spy film";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "141";
 	predicate:budget "115000000".
 mov:the_taking_of_pelham_1_2_3
@@ -7212,7 +7212,7 @@ mov:the_taking_of_pelham_1_2_3
 			"train";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "106";
 	predicate:budget "100000000".
 mov:little_fockers
@@ -7237,7 +7237,7 @@ mov:little_fockers
 			"suspicion";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "98";
 	predicate:budget "100000000".
 mov:the_other_guys
@@ -7263,7 +7263,7 @@ mov:the_other_guys
 			"police";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "100000000".
 mov:eraser
@@ -7290,7 +7290,7 @@ mov:eraser
 			"witness protection program";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "115";
 	predicate:budget "100000000".
 mov:django_unchained
@@ -7315,7 +7315,7 @@ mov:django_unchained
 			"slavery";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "165";
 	predicate:budget "100000000".
 mov:the_hunchback_of_notre_dame
@@ -7343,7 +7343,7 @@ mov:the_hunchback_of_notre_dame
 			"victor hugo";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "91";
 	predicate:budget "100000000".
 mov:the_expendables_2
@@ -7369,7 +7369,7 @@ mov:the_expendables_2
 			"revenge";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "103";
 	predicate:budget "92000000".
 mov:national_treasure
@@ -7397,7 +7397,7 @@ mov:national_treasure
 			"treasure hunter";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "131";
 	predicate:budget "100000000".
 mov:eragon
@@ -7424,7 +7424,7 @@ mov:eragon
 			"teenage hero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "104";
 	predicate:budget "100000000".
 mov:where_the_wild_things_are
@@ -7451,7 +7451,7 @@ mov:where_the_wild_things_are
 			"king";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "101";
 	predicate:budget "100000000".
 mov:pan
@@ -7477,7 +7477,7 @@ mov:pan
 			"reference to peter pan";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "111";
 	predicate:budget "150000000".
 mov:epic
@@ -7504,7 +7504,7 @@ mov:epic
 			"sword and fantasy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "102";
 	predicate:budget "100000000".
 mov:the_tourist
@@ -7530,7 +7530,7 @@ mov:the_tourist
 			"venice italy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "103";
 	predicate:budget "100000000".
 mov:end_of_days
@@ -7557,7 +7557,7 @@ mov:end_of_days
 			"lucifer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "121";
 	predicate:budget "83000000".
 mov:blood_diamond
@@ -7583,7 +7583,7 @@ mov:blood_diamond
 			"sierra leone";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "143";
 	predicate:budget "100000000".
 mov:the_wolf_of_wall_street
@@ -7610,7 +7610,7 @@ mov:the_wolf_of_wall_street
 			"stockbroker";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "240";
 	predicate:budget "100000000".
 mov:batman_forever
@@ -7636,7 +7636,7 @@ mov:batman_forever
 			"tuxedo";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "121";
 	predicate:budget "100000000".
 mov:starship_troopers
@@ -7662,7 +7662,7 @@ mov:starship_troopers
 			"planet";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "129";
 	predicate:budget "105000000".
 mov:cloud_atlas
@@ -7687,7 +7687,7 @@ mov:cloud_atlas
 			"nursing home";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "172";
 	predicate:budget "102000000".
 mov:catwoman
@@ -7715,7 +7715,7 @@ mov:catwoman
 			"radical transformation";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "87";
 	predicate:budget "100000000".
 mov:hercules
@@ -7740,7 +7740,7 @@ mov:hercules
 			"mercenary";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "101";
 	predicate:budget "100000000".
 mov:treasure_planet
@@ -7748,7 +7748,7 @@ mov:treasure_planet
 	predicate:year "2002";
 	predicate:score "7.1";
 	predicate:actor 
-			person:Joseph_Gordon-Levitt,
+			person:Joseph_Gordon_Levitt,
 			person:Martin_Short,
 			person:Michael_Wincott;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BNGI0N2EzZDktNDY3OS00NWFmLTgxZjEtMTc1OTNlMzQxNDZkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg";
@@ -7767,7 +7767,7 @@ mov:treasure_planet
 			"treasure";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "95";
 	predicate:budget "140000000".
 mov:land_of_the_lost
@@ -7793,7 +7793,7 @@ mov:land_of_the_lost
 			"tyrannosaurus rex";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "102";
 	predicate:budget "100000000".
 mov:the_expendables_3
@@ -7819,7 +7819,7 @@ mov:the_expendables_3
 			"rescue";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "131";
 	predicate:budget "90000000".
 mov:point_break
@@ -7846,7 +7846,7 @@ mov:point_break
 			"heist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "114";
 	predicate:budget "105000000".
 mov:son_of_the_mask
@@ -7872,7 +7872,7 @@ mov:son_of_the_mask
 			"mask";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "94";
 	predicate:budget "84000000".
 mov:in_the_heart_of_the_sea
@@ -7901,7 +7901,7 @@ mov:in_the_heart_of_the_sea
 			"whale";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "122";
 	predicate:budget "100000000".
 mov:the_adventures_of_pluto_nash
@@ -7927,7 +7927,7 @@ mov:the_adventures_of_pluto_nash
 			"nightclub";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "95";
 	predicate:budget "100000000".
 mov:green_zone
@@ -7954,7 +7954,7 @@ mov:green_zone
 			"weapon of mass destruction";
 	predicate:country "France";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "115";
 	predicate:budget "100000000".
 mov:the_peanuts_movie
@@ -7981,7 +7981,7 @@ mov:the_peanuts_movie
 			"red hair";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "88";
 	predicate:budget "99000000".
 mov:the_spanish_prisoner
@@ -8007,7 +8007,7 @@ mov:the_spanish_prisoner
 			"secret";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "110";
 	predicate:budget "10000000".
 mov:the_mummy_returns
@@ -8034,7 +8034,7 @@ mov:the_mummy_returns
 			"son";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "130";
 	predicate:budget "98000000".
 mov:gangs_of_new_york
@@ -8059,7 +8059,7 @@ mov:gangs_of_new_york
 			"revenge";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "216";
 	predicate:budget "100000000".
 mov:the_flowers_of_war
@@ -8086,7 +8086,7 @@ mov:the_flowers_of_war
 			"starving child";
 	predicate:country "China";
 	predicate:language "Mandarin";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "146";
 	predicate:budget "94000000".
 mov:the_stepford_wives
@@ -8112,7 +8112,7 @@ mov:the_stepford_wives
 			"writer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "93";
 	predicate:budget "90000000".
 mov:black_hawk_down
@@ -8138,7 +8138,7 @@ mov:black_hawk_down
 			"warlord";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "152";
 	predicate:budget "92000000".
 mov:the_campaign
@@ -8162,7 +8162,7 @@ mov:the_campaign
 			"u.s. congressman";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "85";
 	predicate:budget "95000000".
 mov:the_fifth_element
@@ -8188,7 +8188,7 @@ mov:the_fifth_element
 			"taxi driver";
 	predicate:country "France";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "126";
 	predicate:budget "93000000".
 mov:sex_and_the_city_2
@@ -8214,7 +8214,7 @@ mov:sex_and_the_city_2
 			"united arab emirates";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "146";
 	predicate:budget "100000000".
 mov:the_road_to_el_dorado
@@ -8242,7 +8242,7 @@ mov:the_road_to_el_dorado
 			"implied sex";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "89";
 	predicate:budget "95000000".
 mov:ice_age_continental_drift
@@ -8269,7 +8269,7 @@ mov:ice_age_continental_drift
 			"pirate";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "88";
 	predicate:budget "95000000".
 mov:cinderella
@@ -8296,7 +8296,7 @@ mov:cinderella
 			"pumpkin";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "105";
 	predicate:budget "95000000".
 mov:the_lovely_bones
@@ -8322,7 +8322,7 @@ mov:the_lovely_bones
 			"rape";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "135";
 	predicate:budget "65000000".
 mov:finding_nemo
@@ -8349,7 +8349,7 @@ mov:finding_nemo
 			"short term memory loss";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "100";
 	predicate:budget "94000000".
 mov:the_lord_of_the_rings_the_return_of_the_king
@@ -8376,7 +8376,7 @@ mov:the_lord_of_the_rings_the_return_of_the_king
 			"ring";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "192";
 	predicate:budget "94000000".
 mov:the_lord_of_the_rings_the_two_towers
@@ -8403,7 +8403,7 @@ mov:the_lord_of_the_rings_the_two_towers
 			"wizard";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "172";
 	predicate:budget "94000000".
 mov:seventh_son
@@ -8429,7 +8429,7 @@ mov:seventh_son
 			"witch";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "102";
 	predicate:budget "95000000".
 mov:lara_croft_tomb_raider
@@ -8456,7 +8456,7 @@ mov:lara_croft_tomb_raider
 			"tomb raider";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "100";
 	predicate:budget "115000000".
 mov:transcendence
@@ -8484,7 +8484,7 @@ mov:transcendence
 			"technology";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "119";
 	predicate:budget "100000000".
 mov:jurassic_park_iii
@@ -8511,7 +8511,7 @@ mov:jurassic_park_iii
 			"search";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "92";
 	predicate:budget "93000000".
 mov:rise_of_the_planet_of_the_apes
@@ -8538,7 +8538,7 @@ mov:rise_of_the_planet_of_the_apes
 			"when animals attack";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "105";
 	predicate:budget "93000000".
 mov:the_spiderwick_chronicles
@@ -8564,7 +8564,7 @@ mov:the_spiderwick_chronicles
 			"magical creature";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "107";
 	predicate:budget "90000000".
 mov:a_good_day_to_die_hard
@@ -8589,7 +8589,7 @@ mov:a_good_day_to_die_hard
 			"russian";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "101";
 	predicate:budget "92000000".
 mov:the_alamo
@@ -8616,7 +8616,7 @@ mov:the_alamo
 			"texas";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "137";
 	predicate:budget "107000000".
 mov:the_incredibles
@@ -8643,7 +8643,7 @@ mov:the_incredibles
 			"superhero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "115";
 	predicate:budget "92000000".
 mov:cutthroat_island
@@ -8669,7 +8669,7 @@ mov:cutthroat_island
 			"treasure map";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "98000000".
 mov:percy_jackson_and_the_olympians_the_lightning_thief
@@ -8695,7 +8695,7 @@ mov:percy_jackson_and_the_olympians_the_lightning_thief
 			"teenager";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "118";
 	predicate:budget "95000000".
 mov:men_in_black
@@ -8723,7 +8723,7 @@ mov:men_in_black
 			"wisecrack humor";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "98";
 	predicate:budget "90000000".
 mov:toy_story_2
@@ -8751,7 +8751,7 @@ mov:toy_story_2
 			"toy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "82";
 	predicate:budget "90000000".
 mov:unstoppable
@@ -8776,7 +8776,7 @@ mov:unstoppable
 			"train engineer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "98";
 	predicate:budget "100000000".
 mov:rush_hour_2
@@ -8803,7 +8803,7 @@ mov:rush_hour_2
 			"vacation";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "90";
 	predicate:budget "90000000".
 mov:what_lies_beneath
@@ -8831,7 +8831,7 @@ mov:what_lies_beneath
 			"vermont";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "130";
 	predicate:budget "100000000".
 mov:cloudy_with_a_chance_of_meatballs
@@ -8858,7 +8858,7 @@ mov:cloudy_with_a_chance_of_meatballs
 			"weather";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "90";
 	predicate:budget "100000000".
 mov:ice_age_dawn_of_the_dinosaurs
@@ -8886,7 +8886,7 @@ mov:ice_age_dawn_of_the_dinosaurs
 			"weasel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "94";
 	predicate:budget "90000000".
 mov:the_secret_life_of_walter_mitty
@@ -8914,7 +8914,7 @@ mov:the_secret_life_of_walter_mitty
 			"snow leopard";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "114";
 	predicate:budget "90000000".
 mov:the_departed
@@ -8940,7 +8940,7 @@ mov:the_departed
 			"undercover cop";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "151";
 	predicate:budget "90000000".
 mov:mulan
@@ -8948,7 +8948,7 @@ mov:mulan
 	predicate:year "1998";
 	predicate:score "7.5";
 	predicate:actor 
-			person:Ming-Na_Wen,
+			person:Ming_Na_Wen,
 			person:Harvey_Fierstein,
 			person:June_Foray;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BODkxNGQ1NWYtNzg0Ny00Yjg3LThmZTItMjE2YjhmZTQ0ODY5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg";
@@ -8969,7 +8969,7 @@ mov:mulan
 			"the huns";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "88";
 	predicate:budget "90000000".
 mov:tropic_thunder
@@ -8994,7 +8994,7 @@ mov:tropic_thunder
 			"written and directed by cast member";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "121";
 	predicate:budget "92000000".
 mov:the_girl_with_the_dragon_tattoo
@@ -9021,7 +9021,7 @@ mov:the_girl_with_the_dragon_tattoo
 			"punk";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "158";
 	predicate:budget "90000000".
 mov:die_hard_with_a_vengeance
@@ -9047,7 +9047,7 @@ mov:die_hard_with_a_vengeance
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "128";
 	predicate:budget "90000000".
 mov:sherlock_holmes
@@ -9075,7 +9075,7 @@ mov:sherlock_holmes
 			"sherlock holmes";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "128";
 	predicate:budget "90000000".
 mov:atlantis_the_lost_empire
@@ -9104,7 +9104,7 @@ mov:atlantis_the_lost_empire
 			"museum";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "95";
 	predicate:budget "120000000".
 mov:alvin_and_the_chipmunks_the_road_chip
@@ -9133,7 +9133,7 @@ mov:alvin_and_the_chipmunks_the_road_chip
 			"road movie";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "92";
 	predicate:budget "90000000".
 mov:valkyrie
@@ -9160,7 +9160,7 @@ mov:valkyrie
 			"nazis";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "121";
 	predicate:budget "75000000".
 mov:pixels
@@ -9187,7 +9187,7 @@ mov:pixels
 			"video gamer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "88000000".
 mov:ai_artificial_intelligence
@@ -9213,7 +9213,7 @@ mov:ai_artificial_intelligence
 			"robot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "146";
 	predicate:budget "100000000".
 mov:the_haunted_mansion
@@ -9241,7 +9241,7 @@ mov:the_haunted_mansion
 			"thunderstorm";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "88";
 	predicate:budget "90000000".
 mov:contact
@@ -9268,7 +9268,7 @@ mov:contact
 			"universe";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "150";
 	predicate:budget "90000000".
 mov:hollow_man
@@ -9295,7 +9295,7 @@ mov:hollow_man
 			"surrealism";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "119";
 	predicate:budget "95000000".
 mov:the_interpreter
@@ -9321,7 +9321,7 @@ mov:the_interpreter
 			"threat";
 	predicate:country "UK";
 	predicate:language "Aboriginal";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "128";
 	predicate:budget "80000000".
 mov:percy_jackson_sea_of_monsters
@@ -9347,7 +9347,7 @@ mov:percy_jackson_sea_of_monsters
 			"tree";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "106";
 	predicate:budget "90000000".
 mov:lara_croft_tomb_raider_the_cradle_of_life
@@ -9373,7 +9373,7 @@ mov:lara_croft_tomb_raider_the_cradle_of_life
 			"pandora's box";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "117";
 	predicate:budget "95000000".
 mov:now_you_see_me_2
@@ -9402,7 +9402,7 @@ mov:now_you_see_me_2
 			"rooftop";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "129";
 	predicate:budget "90000000".
 mov:the_saint
@@ -9430,7 +9430,7 @@ mov:the_saint
 			"the saint";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "68000000".
 mov:spy_game
@@ -9456,7 +9456,7 @@ mov:spy_game
 			"retirement";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "114";
 	predicate:budget "92000000".
 mov:mission_to_mars
@@ -9482,7 +9482,7 @@ mov:mission_to_mars
 			"zero gravity";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "114";
 	predicate:budget "90000000".
 mov:rio
@@ -9510,7 +9510,7 @@ mov:rio
 			"minnesota";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "96";
 	predicate:budget "90000000".
 mov:bicentennial_man
@@ -9536,7 +9536,7 @@ mov:bicentennial_man
 			"robot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "132";
 	predicate:budget "100000000".
 mov:volcano
@@ -9563,7 +9563,7 @@ mov:volcano
 			"volcano";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "104";
 	predicate:budget "90000000".
 mov:k_19_the_widowmaker
@@ -9590,7 +9590,7 @@ mov:k_19_the_widowmaker
 			"test launch";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "138";
 	predicate:budget "100000000".
 mov:fantastic_four
@@ -9616,7 +9616,7 @@ mov:fantastic_four
 			"troubled production";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "100";
 	predicate:budget "120000000".
 mov:conan_the_barbarian
@@ -9641,7 +9641,7 @@ mov:conan_the_barbarian
 			"warlord";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "129";
 	predicate:budget "20000000".
 mov:cinderella_man
@@ -9667,7 +9667,7 @@ mov:cinderella_man
 			"love";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "144";
 	predicate:budget "88000000".
 mov:the_nutcracker_in_3d
@@ -9694,7 +9694,7 @@ mov:the_nutcracker_in_3d
 			"toy comes to life";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "110";
 	predicate:budget "90000000".
 mov:seabiscuit
@@ -9720,7 +9720,7 @@ mov:seabiscuit
 			"seabiscuit";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "140";
 	predicate:budget "87000000".
 mov:twister
@@ -9747,7 +9747,7 @@ mov:twister
 			"tornado";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "113";
 	predicate:budget "92000000".
 mov:the_fast_and_the_furious
@@ -9773,7 +9773,7 @@ mov:the_fast_and_the_furious
 			"undercover cop";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "38000000".
 mov:cast_away
@@ -9799,7 +9799,7 @@ mov:cast_away
 			"talking to inanimate object";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "143";
 	predicate:budget "90000000".
 mov:happy_feet
@@ -9827,7 +9827,7 @@ mov:happy_feet
 			"song";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "108";
 	predicate:budget "100000000".
 mov:the_bourne_supremacy
@@ -9853,7 +9853,7 @@ mov:the_bourne_supremacy
 			"one against many";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "108";
 	predicate:budget "75000000".
 mov:air_force_one
@@ -9880,7 +9880,7 @@ mov:air_force_one
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "124";
 	predicate:budget "85000000".
 mov:the_three_musketeers
@@ -9906,7 +9906,7 @@ mov:the_three_musketeers
 			"musketeer";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "110";
 	predicate:budget "75000000".
 mov:hotel_transylvania
@@ -9933,7 +9933,7 @@ mov:hotel_transylvania
 			"transylvania";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "91";
 	predicate:budget "85000000".
 mov:enchanted
@@ -9962,7 +9962,7 @@ mov:enchanted
 			"prince";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "107";
 	predicate:budget "85000000".
 mov:safe_house
@@ -9989,7 +9989,7 @@ mov:safe_house
 			"safe house";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "115";
 	predicate:budget "85000000".
 mov:102_dalmatians
@@ -10015,7 +10015,7 @@ mov:102_dalmatians
 			"puppy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "100";
 	predicate:budget "85000000".
 mov:tower_heist
@@ -10041,7 +10041,7 @@ mov:tower_heist
 			"manager";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "104";
 	predicate:budget "75000000".
 mov:the_holiday
@@ -10066,7 +10066,7 @@ mov:the_holiday
 			"self esteem";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "138";
 	predicate:budget "85000000".
 mov:enemy_of_the_state
@@ -10094,7 +10094,7 @@ mov:enemy_of_the_state
 			"surveillance";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "140";
 	predicate:budget "90000000".
 mov:open_season
@@ -10121,7 +10121,7 @@ mov:open_season
 			"hunter";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "83";
 	predicate:budget "85000000".
 mov:divergent
@@ -10147,7 +10147,7 @@ mov:divergent
 			"narrated by character";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "139";
 	predicate:budget "85000000".
 mov:enemy_at_the_gates
@@ -10160,7 +10160,7 @@ mov:enemy_at_the_gates
 			person:Clemens_Schick;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BYWFlY2E3ODQtZWNiNi00ZGU4LTkzNWEtZTQ2ZTViMWRhYjIzL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
-			person:Jean-Jacques_Annaud;
+			person:Jean_Jacques_Annaud;
 	predicate:genre 
 			genres:drama,
 			genres:history,
@@ -10173,7 +10173,7 @@ mov:enemy_at_the_gates
 			"stalingrad";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "131";
 	predicate:budget "68000000".
 mov:the_rundown
@@ -10200,7 +10200,7 @@ mov:the_rundown
 			"jungle";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "104";
 	predicate:budget "85000000".
 mov:last_action_hero
@@ -10227,7 +10227,7 @@ mov:last_action_hero
 			"video store";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "130";
 	predicate:budget "70000000".
 mov:memoirs_of_a_geisha
@@ -10252,7 +10252,7 @@ mov:memoirs_of_a_geisha
 			"love";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "145";
 	predicate:budget "85000000".
 mov:the_fast_and_the_furious_tokyo_drift
@@ -10278,7 +10278,7 @@ mov:the_fast_and_the_furious_tokyo_drift
 			"tokyo japan";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "104";
 	predicate:budget "85000000".
 mov:arthur_christmas
@@ -10306,7 +10306,7 @@ mov:arthur_christmas
 			"resentment";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "97";
 	predicate:budget "100000000".
 mov:meet_joe_black
@@ -10332,7 +10332,7 @@ mov:meet_joe_black
 			"wealth";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "178";
 	predicate:budget "90000000".
 mov:collateral_damage
@@ -10358,7 +10358,7 @@ mov:collateral_damage
 			"terrorism";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "108";
 	predicate:budget "85000000".
 mov:mirror_mirror
@@ -10386,7 +10386,7 @@ mov:mirror_mirror
 			"snow";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "106";
 	predicate:budget "85000000".
 mov:scott_pilgrim_vs_the_world
@@ -10413,7 +10413,7 @@ mov:scott_pilgrim_vs_the_world
 			"rock band";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "112";
 	predicate:budget "60000000".
 mov:the_core
@@ -10440,7 +10440,7 @@ mov:the_core
 			"scientist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "135";
 	predicate:budget "60000000".
 mov:nutty_professor_ii_the_klumps
@@ -10466,7 +10466,7 @@ mov:nutty_professor_ii_the_klumps
 			"serum";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "109";
 	predicate:budget "65000000".
 mov:scooby_doo
@@ -10492,7 +10492,7 @@ mov:scooby_doo
 			"tough girl";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "86";
 	predicate:budget "84000000".
 mov:dredd
@@ -10517,7 +10517,7 @@ mov:dredd
 			"post apocalypse";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "95";
 	predicate:budget "35000000".
 mov:click
@@ -10544,7 +10544,7 @@ mov:click
 			"stopped time";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "107";
 	predicate:budget "70000000".
 mov:cats_and_dogs_the_revenge_of_kitty_galore
@@ -10571,7 +10571,7 @@ mov:cats_and_dogs_the_revenge_of_kitty_galore
 			"special agent";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "82";
 	predicate:budget "85000000".
 mov:jumper
@@ -10598,7 +10598,7 @@ mov:jumper
 			"vault";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "88";
 	predicate:budget "85000000".
 mov:hellboy_ii_the_golden_army
@@ -10626,7 +10626,7 @@ mov:hellboy_ii_the_golden_army
 			"superhero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "120";
 	predicate:budget "85000000".
 mov:zodiac
@@ -10654,7 +10654,7 @@ mov:zodiac
 			"zodiac killer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "162";
 	predicate:budget "65000000".
 mov:the_6th_day
@@ -10681,7 +10681,7 @@ mov:the_6th_day
 			"murder";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "82000000".
 mov:bruce_almighty
@@ -10706,7 +10706,7 @@ mov:bruce_almighty
 			"walking on water";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "101";
 	predicate:budget "81000000".
 mov:the_expendables
@@ -10732,7 +10732,7 @@ mov:the_expendables
 			"rescue mission";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "113";
 	predicate:budget "80000000".
 mov:mission_impossible
@@ -10758,7 +10758,7 @@ mov:mission_impossible
 			"traitor";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "110";
 	predicate:budget "80000000".
 mov:the_hunger_games
@@ -10785,7 +10785,7 @@ mov:the_hunger_games
 			"suicide attempt";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "142";
 	predicate:budget "78000000".
 mov:the_hangover_part_ii
@@ -10809,7 +10809,7 @@ mov:the_hangover_part_ii
 			"wedding";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "102";
 	predicate:budget "80000000".
 mov:batman_returns
@@ -10833,7 +10833,7 @@ mov:batman_returns
 			"penguin";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "126";
 	predicate:budget "80000000".
 mov:over_the_hedge
@@ -10860,7 +10860,7 @@ mov:over_the_hedge
 			"turtle";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "83";
 	predicate:budget "80000000".
 mov:lilo_and_stitch
@@ -10890,7 +10890,7 @@ mov:lilo_and_stitch
 			"social worker";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "85";
 	predicate:budget "80000000".
 mov:deep_impact
@@ -10918,7 +10918,7 @@ mov:deep_impact
 			"secretary";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "120";
 	predicate:budget "75000000".
 mov:red_2
@@ -10945,7 +10945,7 @@ mov:red_2
 			"team";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "84000000".
 mov:the_longest_yard
@@ -10971,7 +10971,7 @@ mov:the_longest_yard
 			"warden";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "113";
 	predicate:budget "82000000".
 mov:alvin_and_the_chipmunks_chipwrecked
@@ -11000,7 +11000,7 @@ mov:alvin_and_the_chipmunks_chipwrecked
 			"tennis ball";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "87";
 	predicate:budget "75000000".
 mov:grown_ups_2
@@ -11024,7 +11024,7 @@ mov:grown_ups_2
 			"sneezing";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "101";
 	predicate:budget "80000000".
 mov:get_smart
@@ -11050,7 +11050,7 @@ mov:get_smart
 			"spy";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "110";
 	predicate:budget "80000000".
 mov:shutter_island
@@ -11075,7 +11075,7 @@ mov:shutter_island
 			"year 1954";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "138";
 	predicate:budget "80000000".
 mov:four_christmases
@@ -11101,7 +11101,7 @@ mov:four_christmases
 			"tv news";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "88";
 	predicate:budget "80000000".
 mov:robots
@@ -11129,7 +11129,7 @@ mov:robots
 			"robot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "91";
 	predicate:budget "75000000".
 mov:face_off
@@ -11156,7 +11156,7 @@ mov:face_off
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "138";
 	predicate:budget "80000000".
 mov:bedtime_stories
@@ -11183,7 +11183,7 @@ mov:bedtime_stories
 			"tween girl";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "99";
 	predicate:budget "80000000".
 mov:road_to_perdition
@@ -11209,7 +11209,7 @@ mov:road_to_perdition
 			"revenge";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "117";
 	predicate:budget "80000000".
 mov:just_go_with_it
@@ -11234,7 +11234,7 @@ mov:just_go_with_it
 			"woman wearing a string bikini";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "117";
 	predicate:budget "80000000".
 mov:con_air
@@ -11260,7 +11260,7 @@ mov:con_air
 			"prison";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "123";
 	predicate:budget "75000000".
 mov:eagle_eye
@@ -11286,7 +11286,7 @@ mov:eagle_eye
 			"twin brother";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "118";
 	predicate:budget "80000000".
 mov:cold_mountain
@@ -11314,7 +11314,7 @@ mov:cold_mountain
 			"wounded soldier";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "154";
 	predicate:budget "79000000".
 mov:the_book_of_eli
@@ -11341,7 +11341,7 @@ mov:the_book_of_eli
 			"water";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "118";
 	predicate:budget "80000000".
 mov:flubber
@@ -11367,7 +11367,7 @@ mov:flubber
 			"wedding";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "90";
 	predicate:budget "80000000".
 mov:the_haunting
@@ -11394,7 +11394,7 @@ mov:the_haunting
 			"old house";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "113";
 	predicate:budget "80000000".
 mov:space_jam
@@ -11424,7 +11424,7 @@ mov:space_jam
 			"monstars";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "88";
 	predicate:budget "80000000".
 mov:the_pink_panther
@@ -11452,7 +11452,7 @@ mov:the_pink_panther
 			"soccer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "93";
 	predicate:budget "65000000".
 mov:the_day_the_earth_stood_still
@@ -11478,7 +11478,7 @@ mov:the_day_the_earth_stood_still
 			"scientist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "104";
 	predicate:budget "80000000".
 mov:conspiracy_theory
@@ -11506,7 +11506,7 @@ mov:conspiracy_theory
 			"taxi";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "135";
 	predicate:budget "75000000".
 mov:fury
@@ -11532,7 +11532,7 @@ mov:fury
 			"tank";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "134";
 	predicate:budget "68000000".
 mov:six_days_seven_nights
@@ -11559,7 +11559,7 @@ mov:six_days_seven_nights
 			"thunderstorm";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "98";
 	predicate:budget "70000000".
 mov:yogi_bear
@@ -11586,7 +11586,7 @@ mov:yogi_bear
 			"yogi bear";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "80";
 	predicate:budget "80000000".
 mov:spirit_stallion_of_the_cimarron
@@ -11613,7 +11613,7 @@ mov:spirit_stallion_of_the_cimarron
 			"wild stallion";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "83";
 	predicate:budget "80000000".
 mov:zookeeper
@@ -11639,7 +11639,7 @@ mov:zookeeper
 			"zoo";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "102";
 	predicate:budget "80000000".
 mov:lost_in_space
@@ -11667,7 +11667,7 @@ mov:lost_in_space
 			"spaceship";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "130";
 	predicate:budget "80000000".
 mov:the_manchurian_candidate
@@ -11694,7 +11694,7 @@ mov:the_manchurian_candidate
 			"soldier";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "129";
 	predicate:budget "80000000".
 mov:hotel_transylvania_2
@@ -11721,7 +11721,7 @@ mov:hotel_transylvania_2
 			"vampire";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "89";
 	predicate:budget "80000000".
 mov:fantasia_2000
@@ -11748,7 +11748,7 @@ mov:fantasia_2000
 			"piano";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "74";
 	predicate:budget "80000000".
 mov:the_time_machine
@@ -11774,7 +11774,7 @@ mov:the_time_machine
 			"time travel romance";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "96";
 	predicate:budget "80000000".
 mov:mighty_joe_young
@@ -11802,7 +11802,7 @@ mov:mighty_joe_young
 			"poacher";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "114";
 	predicate:budget "90000000".
 mov:swordfish
@@ -11828,7 +11828,7 @@ mov:swordfish
 			"wearing a sound wire";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "99";
 	predicate:budget "80000000".
 mov:the_legend_of_zorro
@@ -11854,7 +11854,7 @@ mov:the_legend_of_zorro
 			"zorro";
 	predicate:country "USA";
 	predicate:language "Spanish";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "129";
 	predicate:budget "75000000".
 mov:what_dreams_may_come
@@ -11880,7 +11880,7 @@ mov:what_dreams_may_come
 			"suicide";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "113";
 	predicate:budget "85000000".
 mov:little_nicky
@@ -11905,7 +11905,7 @@ mov:little_nicky
 			"the devil";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "90";
 	predicate:budget "80000000".
 mov:the_brothers_grimm
@@ -11933,7 +11933,7 @@ mov:the_brothers_grimm
 			"village";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "118";
 	predicate:budget "88000000".
 mov:mars_attacks
@@ -11959,7 +11959,7 @@ mov:mars_attacks
 			"weapon";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "70000000".
 mov:surrogates
@@ -11985,7 +11985,7 @@ mov:surrogates
 			"robot";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "89";
 	predicate:budget "80000000".
 mov:thirteen_days
@@ -12011,7 +12011,7 @@ mov:thirteen_days
 			"president";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "145";
 	predicate:budget "80000000".
 mov:daylight
@@ -12038,7 +12038,7 @@ mov:daylight
 			"weimaraner";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "114";
 	predicate:budget "80000000".
 mov:walking_with_dinosaurs_3d
@@ -12064,7 +12064,7 @@ mov:walking_with_dinosaurs_3d
 			"orphan";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "87";
 	predicate:budget "80000000".
 mov:battlefield_earth
@@ -12090,7 +12090,7 @@ mov:battlefield_earth
 			"voyager golden record";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "119";
 	predicate:budget "44000000".
 mov:looney_tunes_back_in_action
@@ -12119,7 +12119,7 @@ mov:looney_tunes_back_in_action
 			"stuntman";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "91";
 	predicate:budget "80000000".
 mov:nine
@@ -12145,7 +12145,7 @@ mov:nine
 			"mistress";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "118";
 	predicate:budget "80000000".
 mov:timeline
@@ -12171,7 +12171,7 @@ mov:timeline
 			"time machine";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "80000000".
 mov:the_postman
@@ -12198,7 +12198,7 @@ mov:the_postman
 			"usa";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "177";
 	predicate:budget "80000000".
 mov:babe_pig_in_the_city
@@ -12226,7 +12226,7 @@ mov:babe_pig_in_the_city
 			"pig";
 	predicate:country "Australia";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "97";
 	predicate:budget "80000000".
 mov:the_last_witch_hunter
@@ -12252,7 +12252,7 @@ mov:the_last_witch_hunter
 			"witch hunter";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "90000000".
 mov:red_planet
@@ -12278,7 +12278,7 @@ mov:red_planet
 			"survival";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "70000000".
 mov:arthur_and_the_invisibles
@@ -12305,7 +12305,7 @@ mov:arthur_and_the_invisibles
 			"treasure";
 	predicate:country "France";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "94";
 	predicate:budget "86000000".
 mov:oceans
@@ -12330,7 +12330,7 @@ mov:oceans
 			"spider crab";
 	predicate:country "France";
 	predicate:language "French";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "104";
 	predicate:budget "40000000".
 mov:a_sound_of_thunder
@@ -12358,7 +12358,7 @@ mov:a_sound_of_thunder
 			"wave";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "102";
 	predicate:budget "52000000".
 mov:pompeii
@@ -12386,7 +12386,7 @@ mov:pompeii
 			"slave";
 	predicate:country "Canada";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "105";
 	predicate:budget "80000000".
 mov:a_beautiful_mind
@@ -12411,7 +12411,7 @@ mov:a_beautiful_mind
 			"nobel prize";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "135";
 	predicate:budget "58000000".
 mov:the_lion_king
@@ -12439,7 +12439,7 @@ mov:the_lion_king
 			"unnecessary guilt";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "73";
 	predicate:budget "45000000".
 mov:journey_2_the_mysterious_island
@@ -12468,7 +12468,7 @@ mov:journey_2_the_mysterious_island
 			"mysterious island";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "94";
 	predicate:budget "79000000".
 mov:cloudy_with_a_chance_of_meatballs_2
@@ -12496,7 +12496,7 @@ mov:cloudy_with_a_chance_of_meatballs_2
 			"scientist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "95";
 	predicate:budget "78000000".
 mov:red_dragon
@@ -12522,7 +12522,7 @@ mov:red_dragon
 			"tragic villain";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "124";
 	predicate:budget "78000000".
 mov:hidalgo
@@ -12548,7 +12548,7 @@ mov:hidalgo
 			"sheik";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "136";
 	predicate:budget "100000000".
 mov:jack_and_jill
@@ -12572,7 +12572,7 @@ mov:jack_and_jill
 			"twins";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "91";
 	predicate:budget "79000000".
 mov:2_fast_2_furious
@@ -12598,7 +12598,7 @@ mov:2_fast_2_furious
 			"undercover agent";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "107";
 	predicate:budget "76000000".
 mov:the_little_prince
@@ -12626,7 +12626,7 @@ mov:the_little_prince
 			"the little prince";
 	predicate:country "France";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "108";
 	predicate:budget "81200000".
 mov:the_invasion
@@ -12651,7 +12651,7 @@ mov:the_invasion
 			"virus";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "99";
 	predicate:budget "80000000".
 mov:the_adventures_of_rocky_and_bullwinkle
@@ -12679,7 +12679,7 @@ mov:the_adventures_of_rocky_and_bullwinkle
 			"squirrel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "92";
 	predicate:budget "76000000".
 mov:the_secret_life_of_pets
@@ -12705,7 +12705,7 @@ mov:the_secret_life_of_pets
 			"terrier";
 	predicate:country "Japan";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "87";
 	predicate:budget "75000000".
 mov:the_league_of_extraordinary_gentlemen
@@ -12732,7 +12732,7 @@ mov:the_league_of_extraordinary_gentlemen
 			"steampunk";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "110";
 	predicate:budget "78000000".
 mov:despicable_me_2
@@ -12759,7 +12759,7 @@ mov:despicable_me_2
 			"woman agent";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "98";
 	predicate:budget "76000000".
 mov:independence_day
@@ -12785,7 +12785,7 @@ mov:independence_day
 			"spaceship";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "154";
 	predicate:budget "75000000".
 mov:the_lost_world_jurassic_park
@@ -12811,7 +12811,7 @@ mov:the_lost_world_jurassic_park
 			"jurassic park";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "129";
 	predicate:budget "73000000".
 mov:madagascar
@@ -12838,7 +12838,7 @@ mov:madagascar
 			"zoo";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "86";
 	predicate:budget "75000000".
 mov:children_of_men
@@ -12864,7 +12864,7 @@ mov:children_of_men
 			"violence";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "109";
 	predicate:budget "76000000".
 mov:x_men
@@ -12890,7 +12890,7 @@ mov:x_men
 			"superhero team";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "104";
 	predicate:budget "75000000".
 mov:wanted
@@ -12917,7 +12917,7 @@ mov:wanted
 			"strong female lead";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "110";
 	predicate:budget "75000000".
 mov:the_rock
@@ -12943,7 +12943,7 @@ mov:the_rock
 			"rocket";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "136";
 	predicate:budget "75000000".
 mov:ice_age_the_meltdown
@@ -12972,7 +12972,7 @@ mov:ice_age_the_meltdown
 			"valley";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "115";
 	predicate:budget "80000000".
 mov:50_first_dates
@@ -12997,7 +12997,7 @@ mov:50_first_dates
 			"veterinarian";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "99";
 	predicate:budget "75000000".
 mov:hairspray
@@ -13026,7 +13026,7 @@ mov:hairspray
 			"tv dance show";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "117";
 	predicate:budget "75000000".
 mov:exorcist_the_beginning
@@ -13052,7 +13052,7 @@ mov:exorcist_the_beginning
 			"relic";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "125";
 	predicate:budget "50000000".
 mov:inspector_gadget
@@ -13080,7 +13080,7 @@ mov:inspector_gadget
 			"police";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "110";
 	predicate:budget "75000000".
 mov:now_you_see_me
@@ -13106,7 +13106,7 @@ mov:now_you_see_me
 			"magician";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "125";
 	predicate:budget "75000000".
 mov:grown_ups
@@ -13130,7 +13130,7 @@ mov:grown_ups
 			"high school basketball";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "102";
 	predicate:budget "80000000".
 mov:the_terminal
@@ -13155,7 +13155,7 @@ mov:the_terminal
 			"man without a country";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "128";
 	predicate:budget "60000000".
 mov:hotel_for_dogs
@@ -13180,7 +13180,7 @@ mov:hotel_for_dogs
 			"playing with a dog";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "100";
 	predicate:budget "35000000".
 mov:vertical_limit
@@ -13207,7 +13207,7 @@ mov:vertical_limit
 			"urination";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "124";
 	predicate:budget "75000000".
 mov:shark_tale
@@ -13234,7 +13234,7 @@ mov:shark_tale
 			"vegetarian";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "90";
 	predicate:budget "75000000".
 mov:dreamgirls
@@ -13260,7 +13260,7 @@ mov:dreamgirls
 			"trio";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "130";
 	predicate:budget "70000000".
 mov:be_cool
@@ -13286,7 +13286,7 @@ mov:be_cool
 			"widow";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "118";
 	predicate:budget "53000000".
 mov:munich
@@ -13312,7 +13312,7 @@ mov:munich
 			"munich olympics";
 	predicate:country "France";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "163";
 	predicate:budget "70000000".
 mov:tears_of_the_sun
@@ -13339,7 +13339,7 @@ mov:tears_of_the_sun
 			"refugee";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "142";
 	predicate:budget "70000000".
 mov:killers
@@ -13366,7 +13366,7 @@ mov:killers
 			"store clerk";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "100";
 	predicate:budget "75000000".
 mov:the_man_from_uncle
@@ -13392,7 +13392,7 @@ mov:the_man_from_uncle
 			"nuclear bomb";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "75000000".
 mov:spanglish
@@ -13418,7 +13418,7 @@ mov:spanglish
 			"mexico";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "131";
 	predicate:budget "80000000".
 mov:monster_house
@@ -13446,7 +13446,7 @@ mov:monster_house
 			"suburb";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "91";
 	predicate:budget "75000000".
 mov:bandits
@@ -13473,7 +13473,7 @@ mov:bandits
 			"television";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "123";
 	predicate:budget "80000000".
 mov:first_knight
@@ -13500,7 +13500,7 @@ mov:first_knight
 			"marriage";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "134";
 	predicate:budget "55000000".
 mov:anna_and_the_king
@@ -13526,7 +13526,7 @@ mov:anna_and_the_king
 			"siam";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "148";
 	predicate:budget "75000000".
 mov:immortals
@@ -13553,7 +13553,7 @@ mov:immortals
 			"torture device";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "110";
 	predicate:budget "75000000".
 mov:hostage
@@ -13566,7 +13566,7 @@ mov:hostage
 			person:Ransford_Doherty;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BNmE3NTEzODUtMTJjMC00ODk3LTk4MzMtNmY5Mjg4M2M4OThhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
-			person:Florent-Emilio_Siri;
+			person:Florent_Emilio_Siri;
 	predicate:genre 
 			genres:action,
 			genres:crime,
@@ -13581,7 +13581,7 @@ mov:hostage
 			"police";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "113";
 	predicate:budget "52000000".
 mov:titan_ae
@@ -13609,7 +13609,7 @@ mov:titan_ae
 			"scientist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "94";
 	predicate:budget "75000000".
 mov:hollywood_homicide
@@ -13636,7 +13636,7 @@ mov:hollywood_homicide
 			"sex";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "75000000".
 mov:soldier
@@ -13662,7 +13662,7 @@ mov:soldier
 			"survivor";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "99";
 	predicate:budget "75000000".
 mov:monkeybone
@@ -13688,7 +13688,7 @@ mov:monkeybone
 			"nightmare";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "93";
 	predicate:budget "75000000".
 mov:flight_of_the_phoenix
@@ -13715,7 +13715,7 @@ mov:flight_of_the_phoenix
 			"survivor";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "113";
 	predicate:budget "45000000".
 mov:unbreakable
@@ -13742,7 +13742,7 @@ mov:unbreakable
 			"train crash";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "75000000".
 mov:minions
@@ -13770,7 +13770,7 @@ mov:minions
 			"villain";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "91";
 	predicate:budget "74000000".
 mov:sucker_punch
@@ -13795,7 +13795,7 @@ mov:sucker_punch
 			"samurai";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "128";
 	predicate:budget "82000000".
 mov:snake_eyes
@@ -13821,7 +13821,7 @@ mov:snake_eyes
 			"long take";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "98";
 	predicate:budget "69000000".
 mov:sphere
@@ -13848,7 +13848,7 @@ mov:sphere
 			"sphere";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "134";
 	predicate:budget "75000000".
 mov:the_angry_birds_movie
@@ -13858,7 +13858,7 @@ mov:the_angry_birds_movie
 	predicate:actor 
 			person:Peter_Dinklage,
 			person:Josh_Gad,
-			person:Keegan-Michael_Key;
+			person:Keegan_Michael_Key;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BMTY3MjU0NDA0OF5BMl5BanBnXkFtZTgwNTc0MTU3OTE@._V1_UY268_CR3,0,182,268_AL_.jpg";
 	predicate:director 
 			person:Clay_Kaytis;
@@ -13875,7 +13875,7 @@ mov:the_angry_birds_movie
 			"pig";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "97";
 	predicate:budget "73000000".
 mov:funny_people
@@ -13900,7 +13900,7 @@ mov:funny_people
 			"stand up comedian";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "153";
 	predicate:budget "75000000".
 mov:the_kingdom
@@ -13926,7 +13926,7 @@ mov:the_kingdom
 			"stabbed in the crotch";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "110";
 	predicate:budget "70000000".
 mov:talladega_nights_the_ballad_of_ricky_bobby
@@ -13952,7 +13952,7 @@ mov:talladega_nights_the_ballad_of_ricky_bobby
 			"racing";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "122";
 	predicate:budget "73000000".
 mov:dr_dolittle_2
@@ -13960,7 +13960,7 @@ mov:dr_dolittle_2
 	predicate:year "2001";
 	predicate:score "4.6";
 	predicate:actor 
-			person:Raven-Symoné_Raven-Symoné,
+			person:Raven_Symoné_Raven_Symoné,
 			person:Jeffrey_Jones,
 			person:Kevin_Pollak;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BYTZhMWZkYjgtNjE5MS00OWY4LWFmMWQtMDc4M2RlMjg4Y2NhXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_UX182_CR0,0,182,268_AL_.jpg";
@@ -13978,7 +13978,7 @@ mov:dr_dolittle_2
 			"second part";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "87";
 	predicate:budget "72000000".
 mov:braveheart
@@ -14005,7 +14005,7 @@ mov:braveheart
 			"tyranny";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "178";
 	predicate:budget "72000000".
 mov:jarhead
@@ -14031,7 +14031,7 @@ mov:jarhead
 			"usmc";
 	predicate:country "Germany";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "125";
 	predicate:budget "70000000".
 mov:the_simpsons_movie
@@ -14057,7 +14057,7 @@ mov:the_simpsons_movie
 			"the simpsons";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "87";
 	predicate:budget "75000000".
 mov:the_majestic
@@ -14082,7 +14082,7 @@ mov:the_majestic
 			"writer";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "152";
 	predicate:budget "72000000".
 mov:driven
@@ -14108,7 +14108,7 @@ mov:driven
 			"rookie";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "72000000".
 mov:two_brothers
@@ -14117,11 +14117,11 @@ mov:two_brothers
 	predicate:score "7.1";
 	predicate:actor 
 			person:David_Gant,
-			person:Jean-Claude_Dreyfus,
+			person:Jean_Claude_Dreyfus,
 			person:Oanh_Nguyen;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BNTMzOTA3NDcxMl5BMl5BanBnXkFtZTcwMTY5NDUyMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
-			person:Jean-Jacques_Annaud;
+			person:Jean_Jacques_Annaud;
 	predicate:genre 
 			genres:adventure,
 			genres:drama,
@@ -14134,7 +14134,7 @@ mov:two_brothers
 			"tiger";
 	predicate:country "France";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "109";
 	predicate:budget "59660000".
 mov:the_village
@@ -14161,7 +14161,7 @@ mov:the_village
 			"woods";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "108";
 	predicate:budget "60000000".
 mov:doctor_dolittle
@@ -14170,7 +14170,7 @@ mov:doctor_dolittle
 	predicate:score "5.3";
 	predicate:actor 
 			person:Oliver_Platt,
-			person:Raven-Symoné_Raven-Symoné,
+			person:Raven_Symoné_Raven_Symoné,
 			person:Peter_Boyle;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BNGVmYjI4ZjktMjVkNi00ZTRlLWJlYTMtNzMxYjQ0ZDIyZWNmXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_UX182_CR0,0,182,268_AL_.jpg";
 	predicate:director 
@@ -14187,7 +14187,7 @@ mov:doctor_dolittle
 			"tiger";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "85";
 	predicate:budget "71500000".
 mov:signs
@@ -14213,7 +14213,7 @@ mov:signs
 			"loss of faith";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "106";
 	predicate:budget "72000000".
 mov:shrek_2
@@ -14242,7 +14242,7 @@ mov:shrek_2
 			"sequel";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "93";
 	predicate:budget "150000000".
 mov:cars
@@ -14270,7 +14270,7 @@ mov:cars
 			"truck";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "G";
+	predicate:rating "g";
 	predicate:duration "117";
 	predicate:budget "120000000".
 mov:runaway_bride
@@ -14295,7 +14295,7 @@ mov:runaway_bride
 			"wedding";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "116";
 	predicate:budget "70000000".
 mov:xxx
@@ -14321,7 +14321,7 @@ mov:xxx
 			"russian";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "132";
 	predicate:budget "70000000".
 mov:the_spongebob_movie_sponge_out_of_water
@@ -14349,7 +14349,7 @@ mov:the_spongebob_movie_sponge_out_of_water
 			"time machine";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "92";
 	predicate:budget "74000000".
 mov:ransom
@@ -14374,7 +14374,7 @@ mov:ransom
 			"ransom";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "139";
 	predicate:budget "80000000".
 mov:inglourious_basterds
@@ -14400,7 +14400,7 @@ mov:inglourious_basterds
 			"scalping";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "153";
 	predicate:budget "75000000".
 mov:hook
@@ -14427,7 +14427,7 @@ mov:hook
 			"hero";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "142";
 	predicate:budget "70000000".
 mov:hercules
@@ -14452,7 +14452,7 @@ mov:hercules
 			"mercenary";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "101";
 	predicate:budget "100000000".
 mov:die_hard_2
@@ -14477,7 +14477,7 @@ mov:die_hard_2
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "124";
 	predicate:budget "70000000".
 mov:swat
@@ -14504,7 +14504,7 @@ mov:swat
 			"training";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "117";
 	predicate:budget "80000000".
 mov:vanilla_sky
@@ -14532,7 +14532,7 @@ mov:vanilla_sky
 			"reality";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "141";
 	predicate:budget "68000000".
 mov:lady_in_the_water
@@ -14559,7 +14559,7 @@ mov:lady_in_the_water
 			"swimming pool";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "110";
 	predicate:budget "70000000".
 mov:avp_alien_vs_predator
@@ -14586,7 +14586,7 @@ mov:avp_alien_vs_predator
 			"satellite";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "109";
 	predicate:budget "60000000".
 mov:alvin_and_the_chipmunks_the_squeakquel
@@ -14614,7 +14614,7 @@ mov:alvin_and_the_chipmunks_the_squeakquel
 			"waste container";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "88";
 	predicate:budget "75000000".
 mov:we_were_soldiers
@@ -14641,7 +14641,7 @@ mov:we_were_soldiers
 			"vietnamese";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "124";
 	predicate:budget "75000000".
 mov:olympus_has_fallen
@@ -14666,7 +14666,7 @@ mov:olympus_has_fallen
 			"u.s. president";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "119";
 	predicate:budget "70000000".
 mov:star_trek_insurrection
@@ -14693,7 +14693,7 @@ mov:star_trek_insurrection
 			"planet";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG";
+	predicate:rating "pg";
 	predicate:duration "103";
 	predicate:budget "58000000".
 mov:battle_los_angeles
@@ -14718,7 +14718,7 @@ mov:battle_los_angeles
 			"mission";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "116";
 	predicate:budget "70000000".
 mov:big_fish
@@ -14744,7 +14744,7 @@ mov:big_fish
 			"traveling salesman";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "125";
 	predicate:budget "70000000".
 mov:wolf
@@ -14771,7 +14771,7 @@ mov:wolf
 			"wolf";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "125";
 	predicate:budget "70000000".
 mov:war_horse
@@ -14796,7 +14796,7 @@ mov:war_horse
 			"world war one";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "146";
 	predicate:budget "66000000".
 mov:the_monuments_men
@@ -14821,7 +14821,7 @@ mov:the_monuments_men
 			"world war two";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "118";
 	predicate:budget "70000000".
 mov:the_abyss
@@ -14848,7 +14848,7 @@ mov:the_abyss
 			"underwater";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "171";
 	predicate:budget "69500000".
 mov:wall_street_money_never_sleeps
@@ -14872,7 +14872,7 @@ mov:wall_street_money_never_sleeps
 			"mentor";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "136";
 	predicate:budget "70000000".
 mov:dracula_untold
@@ -14900,7 +14900,7 @@ mov:dracula_untold
 			"vampire";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "92";
 	predicate:budget "70000000".
 mov:the_siege
@@ -14925,7 +14925,7 @@ mov:the_siege
 			"terrorist";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "R";
+	predicate:rating "r";
 	predicate:duration "116";
 	predicate:budget "70000000".
 mov:stardust
@@ -14952,7 +14952,7 @@ mov:stardust
 			"village";
 	predicate:country "UK";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "127";
 	predicate:budget "70000000".
 mov:seven_years_in_tibet
@@ -14965,7 +14965,7 @@ mov:seven_years_in_tibet
 			person:Victor_Wong;
 	predicate:poster "https://m.media-amazon.com/images/M/MV5BYmM4ZDhhNmItMDEyZi00NDUyLTk3MzUtMzE5NTE1ZWM0N2UyXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UY268_CR2,0,182,268_AL_.jpg";
 	predicate:director 
-			person:Jean-Jacques_Annaud;
+			person:Jean_Jacques_Annaud;
 	predicate:genre 
 			genres:adventure,
 			genres:biography,
@@ -14980,7 +14980,7 @@ mov:seven_years_in_tibet
 			"tibet";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "136";
 	predicate:budget "70000000".
 mov:the_dilemma
@@ -15005,7 +15005,7 @@ mov:the_dilemma
 			"two word title";
 	predicate:country "USA";
 	predicate:language "English";
-	predicate:rating "PG-13";
+	predicate:rating "pg_13";
 	predicate:duration "111";
 	predicate:budget "70000000".
 person:James_Cameron
@@ -15639,7 +15639,7 @@ person:Matthew_McConaughey
 		predicate:profession "Actor";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMTg0MDc3ODUwOV5BMl5BanBnXkFtZTcwMTk2NjY4Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg";
 		predicate:bio "American actor and producer Matthew David McConaughey was born in Uvalde, Texas. His mother, Mary Kathleen (McCabe), is a substitute school teacher originally from New Jersey. His father, James Donald McConaughey, was a Mississippi-born gas station owner who ran an oil pipe supply business. He is of Irish, Scottish, English, German, and Swedish descent. Matthew grew up in Longview, Texas, where he graduated from the local High School (1988). Showing little interest in his father's oil business, which his two brothers later joined, Matthew was longing for a change of scenery, and spent a year in Australia, washing dishes and shoveling chicken manure. Back to the States, he attended the University of Texas in Austin, originally wishing to be a lawyer. But, when he discovered an inspirational Og Mandino book \"The Greatest Salesman in the World\" before one of his final exams, he suddenly knew he had to change his major from law to film.He began his acting career in 1991, appearing in student films and commercials in Texas and directed short films as Chicano Chariots (1992). Once, in his hotel bar in Austin, he met the casting director and producer Don Phillips, who introduced him to director Richard Linklater for his next project. At first, Linklater thought Matthew was too handsome to play the role of a guy chasing high school girls in his coming-of-age drama Juventude Inconsciente (1993), but cast him after Matthew grew out his hair and mustache. His character was initially in three scenes but the role grew to more than 300 lines as Linklater encouraged him to do some improvisations. In 1995, he starred in Massacre no Texas: O Regresso (1994), playing a mad bloodthirsty sadistic killer, opposite Renée Zellweger.Shortly thereafter, moving to L.A., Matthew became a sensation with his performances in two high-profile 1996 films Um Corpo no Deserto (1996), where he portrayed killing suspected sheriff and in the film adaptation of John Grisham's novel Tempo de Matar (1996), where he played an idealistic young lawyer opposite Sandra Bullock and Kevin Spacey. The actor was soon being hailed as one of the industry's hottest young leading man inspiring comparisons to actor Paul Newman. His following performances were Robert Zemeckis' Contacto (1997) with Jodie Foster (the film was finished just before the death of the great astronomer and popularizer of space science Carl Sagan) and Steven Spielberg's Amistad (1997), a fact-based 1839 story about the rebellious African slaves. In 1998, he teamed again with Richard Linklater as one of the bank-robbing brothers in Os Irmãos Fora-da-Lei (1998), set in Matthew's birthplace, Uvalde, Texas. During this time, he also wrote, directed and starred in the 20-minute short The Rebel (1998).In 1999, he starred in the comedy Edtv (1999), about the rise of reality television, and in 2000, he headlined Jonathan Mostow's Submarino U-571 (2000), portraying officer Lt. Tyler, in a WW II story of the daring mission of American submariners trying to capture the Enigma cipher machine.In the 2000s, he became known for starring in romantic comedies, such as The Wedding Planner (2001), opposite Jennifer Lopez, and Como Perder um Homem em 10 Dias (2003), in which he co-starred with Kate Hudson. He played Denton Van Zan, an American warrior and dragons hunter in the futuristic thriller Reino de Fogo (2002), where he co-starred with Christian Bale. In 2006, he starred in the romantic comedy Como Despachar um Encalhado (2006), and later as head coach Jack Lengyel in Universidade Marshall (2006), along with Matthew Fox. In 2008, he played treasure hunter Benjamin \"Finn\" Finnegan in O Tesouro Encalhado (2008), again with Kate Hudson. After playing Connor Mead in As Minhas Adoráveis Ex-Namoradas (2009), co-starring with Jennifer Garner, McConaughey took a two year hiatus to open different opportunities in his career. Since 2010, he has moved away from romantic comedies.That change came in 2011, in his first movie after that pause, when he portrayed criminal defense attorney Mickey Haller in Cliente de Risco (2011), that operates mostly from the back seat of his Lincoln car. After this performance that was considered one of his best until then, Matthew played other iconic characters as district attorney Danny Buck Davidson in Morre... e Deixa-me em Paz (2011), the wild private detective \"Killer\" Joe Cooper in Killer Joe (2011), Mud in Fuga (2012), reporter Ward Jensen in The Paperboy - Um Rapaz do Sul (2012), male stripper club owner Dallas in Magic Mike (2012), starring Channing Tatum. McConaughey's career certainly reached it's prime, when he played HIV carrier Ron Woodroof in the biographical drama O Clube de Dallas (2013), shot in less than a month. For his portrayal of Ron, Matthew won the Best Actor in the 86th Academy Awards, as well as the Golden Globe Award for Best Actor, among other awards and nominations. The same year, he also appeared in Martin Scorsese's O Lobo de Wall Street (2013). In 2014, he starred in HBO's True Detective (2014), as detective Rustin Cohle, whose job is to investigate with his partner Martin Hart, played by Woody Harrelson, a gruesome murder that happened in his little town in Louisiana. The series was highly acclaimed by critics winning 4 of the 7 categories it was nominated at the 66th Primetime Emmy Awards; he also won a Critics' Choice Award for the role.Also in 2014, Matthew starred in Christopher Nolan's sci-fi film Interstellar (2014), playing Cooper, a former NASA pilot. - IMDb Mini Biography By:  Tzvetislav Samardjiev, tzvetislav@abv.bg, Marcelo Gaia, and Pedro Borges  ".
-person:Joseph_Gordon-Levitt
+person:Joseph_Gordon_Levitt
 		predicate:name "Joseph Gordon-Levitt";
 		predicate:profession "Actor";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BZTk5ZGQ0OGQtYWYwMy00ZTE1LWE0NWUtMTQ2MmYxMWUxZWM3XkEyXkFqcGdeQXVyMjAyNzk2Nw@@._V1_UY317_CR6,0,214,317_AL_.jpg";
@@ -15909,7 +15909,7 @@ person:Breck_Eisner
 		predicate:profession "Director";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMTg3NzU4ODU5Ml5BMl5BanBnXkFtZTYwODA1MTQz._V1_UX214_CR0,0,214,317_AL_.jpg";
 		predicate:bio "Breck Eisner was born on December 24, 1970 in California, USA. He is a director, known for The Crazies - Desconfia dos Teus Vizinhos (2010), Sahara (2005) and O Último Caçador de Bruxas (2015). He has been married to Georgia Irwin Eisner since June 24, 2006. ".
-person:Ming-Na_Wen
+person:Ming_Na_Wen
 		predicate:name "Ming-Na Wen";
 		predicate:profession "Actor";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMTIyNjUwNTk3OV5BMl5BanBnXkFtZTcwOTE4NTMzMQ@@._V1_UY317_CR19,0,214,317_AL_.jpg";
@@ -16139,7 +16139,7 @@ person:Tao_Okamoto
 		predicate:profession "Actor";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BYTI3NDZkZDUtZWRmMC00MjhkLTg0OWUtY2M2ODM3Yjk4MGIzXkEyXkFqcGdeQXVyNDMwMjg1NjU@._V1_UX214_CR0,0,214,317_AL_.jpg";
 		predicate:bio "Tao Okamoto born in Chiba, Japan on May 22, 1985, known professionally as Tao, is a Japanese actress and model. In 2009, she was one of the faces of Ralph Lauren. She made her film debut in 2013 as Mariko Yashida, the female lead, in Wolverine (2013). She also had recurring roles in the television series Hannibal (2013), O Homem do Castelo Alto (2015) and Westworld (2016). . She started modeling as a teenager in Japan, when she was 14 years old. In 2006, she made a decision to move to Paris and develop her career on an international level. Soon after that, Tao made her debut on the European runways, breaking barriers as one of the very few prominent East Asian models of that era. Through her long catwalk career, she has walked for numerous top brands, including Alexander Wang, Chanel, Dolce and Gabbana, Fendi, Louis Vuitton, Michael Kors, Miu Miu, Ralph Lauren, and Yves Saint Laurent. In 2009, Tao moved to New York City and made waves in the industry by donning a unique bowl haircut. It became an inspirational look and even prompted designer Phillip Lim to model the hairstyle of his entire Fall/Winter 2009 show's cast after Tao's cut.] Tao has been involved with various advertising and editorial projects. She has fronted campaigns such as Dolce and Gabbana with Mario Testino, Emporio Armani by Alasdair McLellan, Kenzo with Mario Sorrenti, and Tommy Hilfiger with Craig McDean. Editorially, she has shot for i-D Magazine, V Magazine, W Magazine, and various international editions of Harper's Bazaar and Vogue. The November 2009 issue of Vogue Nippon (Japanese Vogue) is dedicated to Tao, with her featured exclusively inside as well as on the cover - the first Japanese model to do so in nearly a decade. Tao is widely recognized as one of the top models to ever come from Japan, having won honors such as \"Model of the Year\" from the Japan Fashion Editor's Club and being dubbed as one of Vogue Nippon's \"Women of the Year\" in 2010. In 2013, Tao made her film debut as the female lead, Mariko Yashida, opposite Hugh Jackman, in 20th Century Fox's Wolverine (2013), also known in some parts of Asia as Wolverine: Samurai. In October 2014, it was announced that Tao had joined the cast of Hannibal (2013) as Chiyoh, Hannibal Lecter's family servant. In January 2015, it was announced that Tao would be starring in the film Kurosurôdo (2015) with Filipino actress/cosplayer Alodia Gosiengfiao In 2015, Tao starred in O Homem do Castelo Alto (2015) as Betty Kasoura, wife of lawyer Paul Kasoura and a customer at Robert Childan's American Artistic Handcrafts. Tao played Mercy Graves in the 2016 film Batman v Super-Homem: O Despertar da Justiça (2016). - IMDb Mini Biography By:  Sam013024  ".
-person:Cedric_Nicolas-Troyan
+person:Cedric_Nicolas_Troyan
 		predicate:name "Cedric Nicolas-Troyan";
 		predicate:profession "Director";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMjIyNjc1MTE1NV5BMl5BanBnXkFtZTgwNzI3NjY2MTE@._V1_UY317_CR35,0,214,317_AL_.jpg";
@@ -16815,7 +16815,7 @@ person:Neil_Burger
 		predicate:profession "Director";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMjE3NDc5NjAwN15BMl5BanBnXkFtZTYwNDIzODg2._V1_UY317_CR138,0,214,317_AL_.jpg";
 		predicate:bio "Neil Burger was born in 1963 in Greenwich, Connecticut, USA. He is a producer and director, known for Divergente (2014), O Ilusionista (2006) and Novos Amigos Improváveis (2017). He has been married to Diana Kellogg since June 30, 1997. ".
-person:Jean-Jacques_Annaud
+person:Jean_Jacques_Annaud
 		predicate:name "Jean-Jacques Annaud";
 		predicate:profession "Director";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMTA2OTE0NDk3ODJeQTJeQWpwZ15BbWU3MDUxNzkzMDk@._V1_UX214_CR0,0,214,317_AL_.jpg";
@@ -17345,7 +17345,7 @@ person:Martin_Landau
 		predicate:profession "Actor";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMTI0MzkxNzg0OF5BMl5BanBnXkFtZTcwNDUzOTc5MQ@@._V1_UX214_CR0,0,214,317_AL_.jpg";
 		predicate:bio "Oscar-winning character actor Martin Landau was born on June 20, 1928 in Brooklyn, New York. At age 17, he was hired by the New York Daily News as a staff cartoonist and illustrator. In his five years on the paper, he served as the illustrator for Billy Rose's \"Pitching Horseshoes\" column. He also worked for cartoonist Gus Edson on \"The Gumps\" comic strip. Landau's major ambition was to act, and in 1951, he made his stage debut in \"Detective Story\" at the Peaks Island Playhouse in Peaks Island, Maine. He made his off-Broadway debut that year in \"First Love\".Landau was one of 2000 applicants who auditioned for Lee Strasberg's Actors Studio in 1955 - only he and Steve McQueen were accepted. Landau was a friend of James Dean and McQueen, in a conversation with Landau, mentioned that he knew Dean and had met Landau. When Landau asked where they had met, McQueen informed him he had seen Landau riding into the New York City garage where he worked as a mechanic on the back of Dean's motorcycle.He acted during the mid-1950s in the television anthologies Playhouse 90 (1956), Studio One (1948), The Philco Television Playhouse (1948), Kraft Television Theatre (1947), Goodyear Television Playhouse (1951) and Omnibus (1952). He began making a name for himself after replacing star Franchot Tone in the 1956 off-Broadway revival of Anton Chekhov's \"Uncle Vanya\", a famous production that helped put off-Broadway on the New York theatrical map.In 1957, he made a well-received Broadway debut in the play \"Middle of the Night\". As part of the touring company with star Edward G. Robinson, he made it to the West Coast. He made his movie debut in Os Homens Morrem Assim (1959) but scored on film as the heavy in Alfred Hitchcock's classic thriller Intriga Internacional (1959), in which he was shot on top of Mount Rushmore while sadistically stepping on the fingers of Cary Grant, who was holding on for dear life to the cliff face. He also appeared in the blockbuster Cleópatra (1963), the most expensive film ever made up to that time, which nearly scuttled 20th Century-Fox and engendered one of the great public scandals, the Elizabeth Taylor-Richard Burton love affair that overshadowed the film itself. Despite the difficulties with the film, Landau's memorable portrayal in the key role of Rufio was highly favored by the audience and instantly catapulted his popularity.In 1963, Landau played memorable roles on two episodes of the science-fiction anthology series No Limiar da Realidade (1963), No Limiar da Realidade: The Bellero Shield (1964) and No Limiar da Realidade: The Man Who Was Never Born (1963). He was Gene Roddenberry's first choice to play Mr. Spock on Star Trek (1966), but the role went to Leonard Nimoy, who later replaced Landau on Missão Impossível (1966), the show that really made Landau famous. He originally was not meant to be a regular on the series, which co-starred his wife Barbara Bain, whom he had married in 1957. His character, Rollin Hand, was supposed to make occasional, though recurring appearances, on Missão Impossível (1966), but when the producers had problems with star Steven Hill, Landau was used to take up the slack. Landau's characterisation was so well-received and so popular with the audience that he was made a regular. Landau received Emmy nominations as Outstanding Lead Actor in a Drama Series for each of the three seasons he appeared. In 1968, he won the Golden Globe award as Best Male TV Star.Eventually, he quit the series in 1969 after a salary dispute when the new star, Peter Graves, was given a contract that paid him more than Landau, whose own contract stated he would have parity with any other actor on the show who made more than he did. The producers refused to budge and he and Bain, who had become the first actress in the history of television to be awarded three consecutive Emmy Awards (1967-69) while on the show, left the series, ostensibly to pursue careers in the movies. The move actually held back their careers, and Missão Impossível (1966) went on for another four years with other actors.Landau appeared in support of Sidney Poitier in Chamam-me Mr. Tibbs (1970), the less successful sequel to the Oscar-winning No Calor da Noite (1967), but it did not generate more work of a similar caliber. He starred in the television movie Welcome Home, Johnny Bristol (1972) on CBS, playing a prisoner of war returning to the United States from Vietnam. The following year, he shot a pilot for NBC for a proposed show, \"Savage\". Though it was directed by emerging wunderkind Steven Spielberg, NBC did not pick up the show. Needing work, Landau and Bain moved to England to play the leading roles in the syndicated science-fiction series Espaço: 1999 (1975).Landau's and Bain's careers stalled after Espaço: 1999 (1975) went out of production, and they were reduced to taking parts in the television movie The Harlem Globetrotters on Gilligan's Island (1981). It was the nadir of both their careers, and Bain's acting days, and their marriage, soon were over. Landau, one of the most talented character actors in Hollywood, and one not without recognition, had bottomed out career-wise. In 1983, he was stuck in low-budget sci-fi and horror movies like Colheita Mortal (1983), a role far beneath his talent.His career renaissance got off to a slow start with a recurring role in the NBC sitcom Buffalo Bill (1983), starring Dabney Coleman. On Broadway, he took over the title role in the revival of \"Dracula\" and went on the road with the national touring company. Finally, his career renaissance began to gather momentum when Francis Ford Coppola cast him in a critical supporting role in his Tucker - O Homem E o Seu Sonho (1988), for which Landau was nominated for an Academy Award as Best Supporting Actor. He won his second Golden Globe for the role. The next year, he received his second consecutive Best Supporting Actor Oscar nomination for his superb turn as the adulterous husband in Woody Allen's Crimes e Escapadelas (1989). He followed this up by playing famed Nazi hunter Simon Wiesenthal in the TNT movie Max and Helen (1990). However, the summit of his post-\"Mission: Impossible\" carer was about to be scaled. He portrayed Bela Lugosi in Tim Burton's biopic Ed Wood (1994) and won glowing reviews. For his performance, he won the Best Supporting Actor Oscar. Martin Landau, the superb character actor, finally had been recognized with his profession's ultimate award. His performance, which also won him his third Golden Globe, garnered numerous awards in addition to the Oscar and Golden Globe, including top honors from the New York Film Critics Circle and the National Society of Film Critics. Landau continued to play a wide variety of roles in motion pictures and on television, turning in a superb performance in a supporting role in The Majestic (2001). He received his fourth Emmy nomination in 2004 as Outstanding Guest Actor in a Drama Series for Sem Rasto (2002).Martin Landau was honored with his own star on the Hollywood Walk of Fame, located at 6801 Hollywood Boulevard.Martin Landau died in Los Angeles, California on July 15, 2017. - IMDb Mini Biography By:  Jon C. Hopwood  ".
-person:Jean-Claude_Dreyfus
+person:Jean_Claude_Dreyfus
 		predicate:name "Jean-Claude Dreyfus";
 		predicate:profession "Actor";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMjEyNTE1NzY1OV5BMl5BanBnXkFtZTYwMzg3NDky._V1_UY317_CR14,0,214,317_AL_.jpg";
@@ -17486,7 +17486,7 @@ person:Kerry_Conran
 		predicate:profession "Director";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMTU4MjE2ODE4M15BMl5BanBnXkFtZTcwNzAxMTcyMQ@@._V1_UY317_CR12,0,214,317_AL_.jpg";
 		predicate:bio "Born in 1964 and raised in Flint, Michigan, Kerry Conran came from a family of aspiring artists: his older brother Kevin Conran was an illustrator and his younger sister Kirsten Conran an art director at an ad agency. Growing up watching classic sci-fi films such as Metropolis (1927), King Kong (1933) and Superman (1941), Kerry often imagined recreating the atmospheres of those films as his own, and spent most of his childhood making short super-8 movies, imagining his fantasy worlds.Pursuing his dream to become an illustrator and an animator, Kerry went to and graduated from the animation school, CalArts. It was there that he started to form the idea of his own sci-fi serial in the spirit of those of the 1930s, entitled The World of Tomorrow (2005). With the digital technologies he had at his disposal, he planned to make an entire feature-length film without even having to leave his apartment. Working independently with help from his brother and a few friends, Kerry created his fantasy world on his personal computer and set up a blue screen in his apartment, using other friends as actors. After four years of working on his own time, he had completed only six minutes of footage, but it was these six minutes that would set his career in motion.His brother Kevin invited a friend of his wife's and the only person in the film industry he knew, Marsha Oglesby, to take a look at the short. Oglesby, deeply impressed by their work, immediately referred them to producer Jon Avnet (Negócio Arriscado (1983), Mulheres do Sul (1991)), who agreed to finance their project, with Kerry directing as well as penning the script. Now armed with a studio, a team of over 100 animators, and a cast of A-list actors (Jude Law, Gwyneth Paltrow, and Angelina Jolie among others, all of whom signed on immediately after seeing the 6-minute reel), Kerry was able to complete his project, \"Sky Captain and the World of Tomorrow\" (2004), the first film entirely shot on blue screens. The film, though not a box-office success, was a relative hit among critics, impressive for a newcomer with no major writing or directing experience.Conran was chosen to direct the screen adaption of Edgar Rice Burroughs' 'John Carter of Mars', a sci-fi piece, after 'Robert Rodriguez dropped out, but was replaced by John Favreau, who was in turn replaced by Andrew Stanton. Kerry and Jude Law also expressed interest in turning \"Sky Captain\" into a franchise, but due to the film failing at the box office, there has been no news of any sequels or prequels. - IMDb Mini Biography By:  Apster and Hbenthow  ".
-person:Michael_Caton-Jones
+person:Michael_Caton_Jones
 		predicate:name "Michael Caton-Jones";
 		predicate:profession "Director";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMjA0MTE1OTcyMl5BMl5BanBnXkFtZTYwMDAxNTMz._V1_UY317_CR1,0,214,317_AL_.jpg";
@@ -17858,7 +17858,7 @@ person:Kathleen_Quinlan
 		predicate:profession "Actor";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMjE2ZjJhMTMtYWZhMi00MmYzLTgwOWYtNDE4Yjc1NDJlMjJiXkEyXkFqcGdeQXVyMTE1MzkyMTY@._V1_UY317_CR20,0,214,317_AL_.jpg";
 		predicate:bio "Kathleen Quinlan was born in Pasadena, California, the only child of Josephine (Zachry), a military supply supervisor, and Robert Quinlan, a television sports director. She grew up in Mill Valley, Ca, and got her break in acting when George Lucas came to her high school to cast for his movie American Graffiti: Nova Geração (1973). She followed up her one-line role four years later with Lifeguard (1976), and then several roles in the late 1970s and 1980s. Her breakthrough performance came in 1977, as Deborah in Nunca Te Prometi um Jardim de Rosas (1977). She was nominated for an Academy Award in 1995 for Apollo 13 (1995). She starred in the TV series Family Law (1999), but her contract stipulated that she cannot work later than 6 pm, so she can be home with her husband, She currently works in Film and Television (2015). Bruce Abbott, son Tyler Abbott (b. October 17, 1990), and stepson Dalton Abbott (b. October 4, 1989). - IMDb Mini Biography By:  anon-14  ".
-person:Kodi_Smit-McPhee
+person:Kodi_Smit_McPhee
 		predicate:name "Kodi Smit-McPhee";
 		predicate:profession "Actor";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BOTE4ODU4NzY5NV5BMl5BanBnXkFtZTgwOTIwNTk5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg";
@@ -17898,7 +17898,7 @@ person:Babak_Najafi
 		predicate:profession "Director";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMjY1MWQ3NTktOGIxZC00MmQ5LTgyMjEtOGI2ZTA5OWUwZWRjXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_UY317_CR13,0,214,317_AL_.jpg";
 		predicate:bio "Babak Najafi was born on September 14, 1975 in Tehran, Iran as Babak Najafi Karami. He is a director and writer, known for Sebbe (2010), Assalto a Londres (2016) and Gabriel och lasermannen (2013). ".
-person:Jean-Pierre_Jeunet
+person:Jean_Pierre_Jeunet
 		predicate:name "Jean-Pierre Jeunet";
 		predicate:profession "Director";
 		predicate:image "https://m.media-amazon.com/images/M/MV5BMjE2Mjg3MTE2NF5BMl5BanBnXkFtZTYwOTUzMzk1._V1_UY317_CR3,0,214,317_AL_.jpg";
