@@ -69,7 +69,7 @@ while True:
         print("<movie color=\"Color\"\n"+ color+ "\n")
 
         # rating="PG-13"
-        rating = xml.readline().split("\"")[1]
+        rating = xml.readline().split("\"")[1].lower().replace("-","_")
         print("rating=\"PG-13\"\n"+rating+ "\n")
 
         # country="USA"
@@ -183,11 +183,11 @@ while True:
         xml.readline()
 
         # <first_name>CCH</first_name>
-        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","")
+        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","").replace("-", "_")
         print("<first_name>CCH</first_name>\n"+first_name+ "\n")
 
         # <last_name>Pounder</last_name>
-        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","")
+        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","").replace("-", "_")
         print("<last_name>Pounder</last_name>\n" + last_name + "\n")
 
         person_name = first_name + "_" + last_name
@@ -215,10 +215,10 @@ while True:
         xml.readline()
 
         # <first_name>Joel</first_name>
-        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","")
+        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","").replace("-", "_")
 
         # <last_name>Moore</last_name>
-        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","")
+        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","").replace("-", "_")
 
         person_name = first_name + "_" + last_name
         n3.write("\t\t\tperson:" + person_name + ",\n")
@@ -245,10 +245,10 @@ while True:
         xml.readline()
 
         # <first_name>Wes</first_name>
-        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","")
+        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","").replace("-", "_")
 
         # <last_name>Studi</last_name>
-        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","")
+        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","").replace("-", "_")
 
         person_name = first_name + "_" + last_name
         n3.write("\t\t\tperson:" + person_name + ";\n")
@@ -286,10 +286,10 @@ while True:
         xml.readline()
 
         # <first_name>James</first_name>
-        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","")
+        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","").replace("-", "_")
 
         # <last_name>Cameron</last_name>
-        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","")
+        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","").replace("-", "_")
 
         person_name = first_name + "_" + last_name
         n3.write("\t\t\tperson:" + person_name + ";\n")
@@ -388,7 +388,7 @@ while True:
     line_t = xml.readline()
     name = "\"" + line_t.split("name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","") + "\""
     print("<name>James Cameron</name>\n"+name+ "\n")
-    ent = name.strip().replace(" ", "_").replace("\"","")
+    ent = name.strip().replace(" ", "_").replace("\"","").replace("-", "_")
 
     # <img> https: /... </img>
     img = "\"" + xml.readline().split("img")[1].replace(">", "").replace("</", "") + "\""
