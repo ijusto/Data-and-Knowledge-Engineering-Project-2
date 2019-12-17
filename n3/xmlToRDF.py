@@ -115,8 +115,8 @@ while True:
         xml.readline()
 
         # <name>Avatar</name>
-        name = xml.readline().split("name")[1].replace(">", "").replace("</", "")
-        entname = name.strip().replace(" ", "_").replace("-","_").replace(":", "")
+        name = xml.readline().split("name")[1].replace(">", "").replace("</", "").replace("/", " ").replace("!","")
+        entname = name.strip().replace(" ", "_").replace("-","_").replace(":", "").replace(",","").replace(".","")
         print("<name>Avatar</name>\n"+entname+ "\n")
         n3.write("mov:" + entname.lower() + "\n")
         n3.write("\tpredicate:name \"" + name + "\";\n")
@@ -183,11 +183,11 @@ while True:
         xml.readline()
 
         # <first_name>CCH</first_name>
-        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "")
+        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","")
         print("<first_name>CCH</first_name>\n"+first_name+ "\n")
 
         # <last_name>Pounder</last_name>
-        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "")
+        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","")
         print("<last_name>Pounder</last_name>\n" + last_name + "\n")
 
         person_name = first_name + "_" + last_name
@@ -215,10 +215,10 @@ while True:
         xml.readline()
 
         # <first_name>Joel</first_name>
-        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "")
+        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","")
 
         # <last_name>Moore</last_name>
-        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "")
+        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","")
 
         person_name = first_name + "_" + last_name
         n3.write("\t\t\tperson:" + person_name + ",\n")
@@ -245,10 +245,10 @@ while True:
         xml.readline()
 
         # <first_name>Wes</first_name>
-        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "")
+        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","")
 
         # <last_name>Studi</last_name>
-        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "")
+        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","")
 
         person_name = first_name + "_" + last_name
         n3.write("\t\t\tperson:" + person_name + ";\n")
@@ -275,7 +275,7 @@ while True:
 
         # <director>
         xml.readline()
-        n3.write("\tpredicate: poster \"" + poster + "\";\n")
+        n3.write("\tpredicate:poster \"" + poster + "\";\n")
         n3.write("\tpredicate:director \n")
 
         # <person>
@@ -286,10 +286,10 @@ while True:
         xml.readline()
 
         # <first_name>James</first_name>
-        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "")
+        first_name = xml.readline().strip().split("first_name")[1].replace(">", "").replace("</", "").replace("'","")
 
         # <last_name>Cameron</last_name>
-        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "")
+        last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","")
 
         person_name = first_name + "_" + last_name
         n3.write("\t\t\tperson:" + person_name + ";\n")
@@ -386,9 +386,9 @@ while True:
 
     # <name>James Cameron</name>
     line_t = xml.readline()
-    name = "\"" + line_t.split("name")[1].replace(">", "").replace("</", "") + "\""
+    name = "\"" + line_t.split("name")[1].replace(">", "").replace("</", "").replace(".","").replace("'","") + "\""
     print("<name>James Cameron</name>\n"+name+ "\n")
-    ent = name.strip().replace(" ", "_")
+    ent = name.strip().replace(" ", "_").replace("\"","")
 
     # <img> https: /... </img>
     img = "\"" + xml.readline().split("img")[1].replace(">", "").replace("</", "") + "\""
@@ -415,7 +415,7 @@ while True:
         person_info["name"] = name
         person_info["ent"] = ent
         person_info["img"] = img
-        person_info["bio"] = "\"" + bio + "\""
+        person_info["bio"] = "\"" + bio.replace("\"", "\\\"") + "\""
         if profession != "":
             person_info["profession"] = [profession]
         person[ent] = person_info
