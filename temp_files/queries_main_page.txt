@@ -1,7 +1,7 @@
 ﻿
 # get_all_genres()
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?genre_name
+SELECT distinct ?genre_name
 WHERE { 
 	?movie pred:genre ?genre .
     ?genre pred:name ?genre_name .
@@ -9,14 +9,14 @@ WHERE {
 
 # get_all_years()
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?year
+SELECT distinct ?year
 WHERE {
 	?movie pred:year ?year .
 }
 
 # get_all_ratings()
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?rating_name
+SELECT distinct ?rating_name
 WHERE {
 	?movie pred:rating ?rating .
     ?rating pred:name ?rating_name .
