@@ -353,7 +353,7 @@ while True:
         read_movie = False
         n3.write("\tpredicate:country \"" + country + "\";\n")
         n3.write("\tpredicate:language \"" + language + "\";\n")
-        n3.write("\tpredicate:rating \"" + rating + "\";\n")
+        n3.write("\tpredicate:rating " + rating + ";\n")
         n3.write("\tpredicate:duration \"" + duration + "\";\n")
         n3.write("\tpredicate:budget \"" + budget + "\".\n")
 
