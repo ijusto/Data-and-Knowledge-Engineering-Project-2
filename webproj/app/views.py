@@ -216,31 +216,86 @@ def movies_feed(request):
         for v in e.values():
             ratings.append(v['value'])
 
-
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    session.execute("open moviesDB")
-
-    input0 = "let $c := collection('moviesDB') return $c"
-    query0 = session.query(input0)
-    xml_result = query0.execute()
-    xml_result = "<?xml version=\"1.0\"?>"+"\n\r" + xml_result
-    xslt_name = 'movies.xsl'
-    xsl_file = os.path.join(BASE_DIR, 'app/data/xslts/' + xslt_name)
-
-    tree = ET.fromstring(bytes(xml_result, "utf-8"))
-    # xml_name = 'movies_short.xml'
-    xslt_name = 'movies.xsl'
-    # xml_file = os.path.join(BASE_DIR, 'app/data/' + xml_name)
-    xsl_file = os.path.join(BASE_DIR, 'app/data/xslts/' + xslt_name)
-    # tree = ET.parse(xml_file)
-    xslt = ET.parse(xsl_file)
-    transform = ET.XSLT(xslt)
-    newdoc = transform(tree)
-
-    session.close()
+    query = """
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT ?title ?pred ?obj
+                WHERE{
+                    ?movie ?pred ?obj .
+                    ?movie pred:director ?year .
+                    ?movie pred:name ?title .
+                }
+               """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    movies = {}
+    for e in res['results']['bindings']:
+        if (e['title']['value'] not in movies.keys()):
+            if len(movies) == 0:
+                movies = {e['title']['value']: {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}}
+            else:
+                movies.update({e['title']['value']: {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}})
+        else:
+            if (e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
+                obj = movies[e['title']['value']][e['pred']['value'].split("/")[-1]]
+            else:
+                obj = [e['obj']['value']]
+            if e['pred']['value'].split("/")[-1] == 'genre':
+                i = e['obj']['value'].split("genres/")[1]
+                query = """
+                                          PREFIX genres: <http://moviesDB.com/entity/genres/>
+                                        prefix predicate: <http://moviesDB.com/predicate/>
+                                         select ?name where{
+                                        genres:""" + i + """ predicate:name ?name.
+                    }
+                                        """
+                payload_query = {"query": query}
+                res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                res = json.loads(res)
+                for f in res['results']['bindings']:
+                    if (e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
+                        obj.append(f['name']['value'])
+                    else:
+                        obj = [f['name']['value']]
+            elif e['pred']['value'].split("/")[-1] == 'director':
+                movie_director = e['obj']['value'].split("person/")[1]
+                query = """
+                                      PREFIX person: <http://moviesDB.com/entity/person/>
+                                       PREFIX predicate: <http://moviesDB.com/predicate/>
+                                       SELECT ?name WHERE{
+                                       person:""" + movie_director + """ predicate:name ?name.
+                           }
+                                   """
+                payload_query = {"query": query}
+                res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                res = json.loads(res)
+                for f in res['results']['bindings']:
+                    obj = f['name']['value']
+            elif e['pred']['value'].split("/")[-1] == 'actor':
+                i = e['obj']['value'].split("person/")[1]
+                query = """
+                                              PREFIX person: <http://moviesDB.com/entity/person/>
+                                            prefix predicate: <http://moviesDB.com/predicate/>
+                                             select ?name where{
+                                            person:""" + i + """ predicate:name ?name.
+                        }
+                                            """
+                payload_query = {"query": query}
+                res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                res = json.loads(res)
+                for f in res['results']['bindings']:
+                    if (e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
+                        obj.append(f['name']['value'])
+                    else:
+                        obj = [f['name']['value']]
+                if len(res['results']['bindings']) == 0:
+                    if (e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
+                        obj.append(i)
+                    else:
+                        obj = [i]
+            movies[e['title']['value']].update({e['pred']['value'].split("/")[-1]: obj})
     tparams = {
-        'movies' : {},
-        'content': newdoc,
+        'movies' : movies,
         "genres": genres,
         "ratings": ratings,
         "years": years
@@ -390,14 +445,14 @@ def apply_search(request):
 
     query = """
             PREFIX pred: <http://moviesDB.com/predicate/>
-            SELECT  ?movie_name ?pred ?obj
+            SELECT  ?title ?pred ?obj
             WHERE {{
                 ?movie ?pred ?obj .
-                ?movie pred:name ?movie_name .
-                FILTER(CONTAINS(?movie_name, \"""" + request.POST['search'] + """\"))
+                ?movie pred:name ?title .
+                FILTER(CONTAINS(?title, \"""" + request.POST['search'] + """\"))
 	        } UNION {
                 ?movie ?pred ?obj .
-                ?movie pred:name ?movie_name .
+                ?movie pred:name ?title .
                 ?movie pred:plot_keyword ?keywords .
                 FILTER(CONTAINS(?keywords, \""""+ request.POST['search'] +"""\"))
             }}
@@ -407,14 +462,14 @@ def apply_search(request):
     res = json.loads(res)
     movies = {}
     for e in res['results']['bindings']:
-        if(e['movie_name']['value'] not in movies.keys()):
+        if(e['title']['value'] not in movies.keys()):
             if len(movies) == 0:
-                movies = {e['movie_name']['value'] : {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}}
+                movies = {e['title']['value'] : {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}}
             else:
-                movies.update({e['movie_name']['value'] : {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}})
+                movies.update({e['title']['value'] : {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}})
         else:
-            if(e['pred']['value'].split("/")[-1] in movies[e['movie_name']['value']].keys()):
-                obj = movies[e['movie_name']['value']][e['pred']['value'].split("/")[-1]]
+            if(e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
+                obj = movies[e['title']['value']][e['pred']['value'].split("/")[-1]]
             else:
                 obj = [e['obj']['value']]
             if e['pred']['value'].split("/")[-1] == 'genre':
@@ -430,7 +485,7 @@ def apply_search(request):
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
                 for f in res['results']['bindings']:
-                    if (e['pred']['value'].split("/")[-1] in movies[e['movie_name']['value']].keys()):
+                    if (e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
                         obj.append(f['name']['value'])
                     else:
                         obj = [f['name']['value']]
@@ -461,16 +516,16 @@ def apply_search(request):
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
                 for f in res['results']['bindings']:
-                    if (e['pred']['value'].split("/")[-1] in movies[e['movie_name']['value']].keys()):
+                    if (e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
                         obj.append(f['name']['value'])
                     else:
                         obj = [f['name']['value']]
                 if len(res['results']['bindings']) == 0:
-                    if (e['pred']['value'].split("/")[-1] in movies[e['movie_name']['value']].keys()):
+                    if (e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
                         obj.append(i)
                     else:
                         obj = [i]
-            movies[e['movie_name']['value']].update({e['pred']['value'].split("/")[-1] : obj})
+            movies[e['title']['value']].update({e['pred']['value'].split("/")[-1] : obj})
 
         print(e)
     print(movies)
