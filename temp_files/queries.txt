@@ -1,0 +1,87 @@
+# QUERIES #
+
+
+# get_all_actors()
+# All actors
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?name
+WHERE { 
+	?movie pred:actor ?actor .
+    ?actor pred:name ?name .
+	}
+
+
+# get_all_directors()
+# All directors
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?name
+WHERE { 
+	?movie pred:director ?director .
+    ?director pred:name ?name .
+	}
+
+
+# get_movies_by_actor($a_first_name, $a_last_name)
+# All movies from an actor
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?mname
+WHERE { 
+    ?actor pred:name "Joel Moore" .
+	?movie pred:actor ?actor .
+    ?movie pred:name ?mname .
+	}
+
+
+# get_movies_by_director($dir_first_name as xs:string, $dir_last_name as xs:string)
+# All movies from a director
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?mname
+WHERE { 
+    ?director pred:name "James Cameron" .
+	?movie pred:director ?director .
+    ?movie pred:name ?mname .
+	}
+
+
+# searchActor($search)
+# dist_searchActor($search)
+# All actors with "" in their names
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?name
+WHERE { 
+    ?movie pred:actor ?actor .
+    ?actor pred:name ?name .
+    FILTER (CONTAINS(?name, ""))
+	}
+
+
+# searchDirector($search)
+# dist_searchDirector($search)
+# All directors with "" in their names
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?name
+WHERE { 
+    ?movie pred:director ?director .
+    ?director pred:name ?name .
+    FILTER (CONTAINS(?name, ""))
+	}
+
+
+# ins_movie($movie)
+# Insert movie into DB
+PREFIX mov: <http://moviesDB.com/entity/mov>
+PREFIX pred: <http://moviesDB.com/predicate/>
+INSERT DATA { 
+    mov:movie_name pred:name "movie name" .
+    # INCOMPLETO : falta adicionar todas as ligaçoes com as outras cenas
+	}
+
+
+# movies:del_movie($movie)
+# Delete movie from DB
+PREFIX mov: <http://moviesDB.com/entity/mov>
+PREFIX pred: <http://moviesDB.com/predicate/>
+DELETE DATA { 
+    mov:movie_name pred:name "movie name" .
+    # INCOMPLETO : falta adicionar todas as ligaçoes com as outras cenas
+	}
