@@ -171,7 +171,7 @@ def movies_feed(request):
     accessor = GraphDBApi(client)
     query = """
         PREFIX mov: <http://moviesDB.com/predicate/>
-    SELECT ?genre_name
+    SELECT distinct ?genre_name
     WHERE { 
     	?movie mov:genre ?genre .
         ?genre mov:name ?genre_name .
@@ -187,7 +187,7 @@ def movies_feed(request):
 
     query = """
             PREFIX pred: <http://moviesDB.com/predicate/>
-            SELECT ?year
+            SELECT distinct ?year
             WHERE {
 	        ?movie pred:year ?year .
 }
@@ -202,7 +202,7 @@ def movies_feed(request):
 
     query = """
             PREFIX pred: <http://moviesDB.com/predicate/>
-            SELECT ?rating_name
+            SELECT distinct ?rating_name
             WHERE {
 	            ?movie pred:rating ?rating .
                 ?rating pred:name ?rating_name .
@@ -336,16 +336,13 @@ def apply_filters(request):
 
 
 def apply_search(request):
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    session.execute("open moviesDB")
-
     endpoint = "http://localhost:7200"
     repo_name = "moviesDB"
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
             PREFIX mov: <http://moviesDB.com/predicate/>
-        SELECT ?genre_name
+        SELECT distinct ?genre_name
         WHERE { 
         	?movie mov:genre ?genre .
             ?genre mov:name ?genre_name .
@@ -361,7 +358,7 @@ def apply_search(request):
 
     query = """
                 PREFIX pred: <http://moviesDB.com/predicate/>
-                SELECT ?year
+                SELECT distinct ?year
                 WHERE {
     	        ?movie pred:year ?year .
     }
@@ -376,7 +373,7 @@ def apply_search(request):
 
     query = """
                 PREFIX pred: <http://moviesDB.com/predicate/>
-                SELECT ?rating_name
+                SELECT distinct ?rating_name
                 WHERE {
     	            ?movie pred:rating ?rating .
                     ?rating pred:name ?rating_name .
@@ -474,25 +471,8 @@ def apply_search(request):
 
         print(e)
     print(movies)
-
-    input4 = "import module namespace movies = 'com.movies' at '" \
-             + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-             + "';<movies>{movies:dist_searcher(<s>" + request.POST['search'] + "</s>)}</movies>"
-    query4 = session.query(input4)
-    xml_result = query4.execute()
-    xml_result = "<?xml version=\"1.0\"?>"+"\n\r" + xml_result
-
-    xslt_name = 'movies.xsl'
-    xsl_file = os.path.join(BASE_DIR, 'app/data/xslts/' + xslt_name)
-    tree = ET.fromstring(bytes(xml_result, "utf-8"))
-    xslt = ET.parse(xsl_file)
-    transform = ET.XSLT(xslt)
-    newdoc = transform(tree)
-
-    session.close()
     tparams = {
         'movies' : movies,
-        'content': newdoc,
         "genres": genres,
         "ratings": ratings,
         "years": years
