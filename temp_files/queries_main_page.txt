@@ -1,4 +1,4 @@
-
+﻿
 # get_all_genres()
 PREFIX pred: <http://moviesDB.com/predicate/>
 SELECT ?genre_name
