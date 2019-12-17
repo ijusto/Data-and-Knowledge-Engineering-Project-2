@@ -60,10 +60,9 @@
                 </h1>
 
                 {% for key, value in movies.items %}
-                    <div class="d-flex flex-row" style="min-width: 0; word-wrap: break-word; background-color: #fff; background-clip: border-box; border: 1px solid rgba(0, 0, 0, 0.125); border-radius: 0.25rem; border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; margin-bottom: 1.5rem !important;>
+                    <div class="d-flex flex-row" style="min-width: 0; word-wrap: break-word; background-color: #fff; background-clip: border-box; border: 1px solid rgba(0, 0, 0, 0.125); border-radius: 0.25rem; border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; margin-bottom: 1.5rem !important;">
                         <div class="p-2">
-                            <img src = {{ value.poster.0 }}
-                                 alt="Card-image-cap" class="card-img-top"></img>
+                            <img alt="Card-image-cap" class="card-img-top" src={{ value.poster.0 }}/>
                         </div>
                         <div class="p-2">
                             <h2><a href="movie/"+{{ value.name.0 }}>{{ value.name.0 }}</a></h2>({{ value.year.0 }})
