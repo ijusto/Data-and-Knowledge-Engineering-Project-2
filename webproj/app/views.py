@@ -408,7 +408,10 @@ def apply_search(request):
     movies = {}
     for e in res['results']['bindings']:
         if(e['movie_name']['value'] not in movies.keys()):
-            movies = {e['movie_name']['value'] : {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}}
+            if len(movies) == 0:
+                movies = {e['movie_name']['value'] : {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}}
+            else:
+                movies.update({e['movie_name']['value'] : {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}})
         else:
             if(e['pred']['value'].split("/")[-1] in movies[e['movie_name']['value']].keys()):
                 obj = movies[e['movie_name']['value']][e['pred']['value'].split("/")[-1]]
