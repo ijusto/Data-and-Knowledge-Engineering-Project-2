@@ -116,9 +116,9 @@ while True:
 
         # <name>Avatar</name>
         name = xml.readline().split("name")[1].replace(">", "").replace("</", "")
-        name = name.strip().replace(" ", "_")
-        print("<name>Avatar</name>\n"+name+ "\n")
-        n3.write("mov:" + name.lower() + "\n")
+        entname = name.strip().replace(" ", "_").replace("-","_").replace(":", "")
+        print("<name>Avatar</name>\n"+entname+ "\n")
+        n3.write("mov:" + entname.lower() + "\n")
         n3.write("\tpredicate:name \"" + name + "\";\n")
 
         # <year>2009</year>
@@ -191,7 +191,7 @@ while True:
         print("<last_name>Pounder</last_name>\n" + last_name + "\n")
 
         person_name = first_name + "_" + last_name
-        n3.write("\t\t\tperson: " + person_name + ",\n")
+        n3.write("\t\t\tperson:" + person_name + ",\n")
 
         # </name>
         xml.readline()
@@ -221,7 +221,7 @@ while True:
         last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "")
 
         person_name = first_name + "_" + last_name
-        n3.write("\t\t\tperson: " + person_name + ",\n")
+        n3.write("\t\t\tperson:" + person_name + ",\n")
 
         # </name>
         xml.readline()
@@ -251,7 +251,7 @@ while True:
         last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "")
 
         person_name = first_name + "_" + last_name
-        n3.write("\t\t\tperson: " + person_name + ";\n")
+        n3.write("\t\t\tperson:" + person_name + ";\n")
 
         # </name>
         xml.readline()
@@ -292,7 +292,7 @@ while True:
         last_name = xml.readline().strip().split("last_name")[1].replace(">", "").replace("</", "")
 
         person_name = first_name + "_" + last_name
-        n3.write("\t\t\tperson: " + person_name + ";\n")
+        n3.write("\t\t\tperson:" + person_name + ";\n")
 
         # </name>
         xml.readline()
@@ -423,7 +423,7 @@ while True:
 xml.close()
 
 for ent, person_info in person.items():
-    n3.write("person: " + ent + "\n\t\tpredicate:name " + person_info["name"] + ";\n\t\tpredicate:profession ")
+    n3.write("person:" + ent + "\n\t\tpredicate:name " + person_info["name"] + ";\n\t\tpredicate:profession ")
     profs = str(person_info["profession"]).replace("[","").replace("]",";").replace(",",",\n\t\t\t\t").replace("'","")
     n3.write(profs + "\n\t\tpredicate:image " + person_info["img"] + ";\n\t\tpredicate:bio " + person_info["bio"] + ".\n")
 n3.close()
