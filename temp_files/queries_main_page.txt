@@ -45,15 +45,24 @@ WHERE {
 # apply_search
 # Substituir "Avatar" por uma variável
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT  ?movie_name ?pred ?obj
+SELECT  ?title ?pred ?obj
 WHERE {{
         ?movie ?pred ?obj .
-        ?movie pred:name ?movie_name .
-        FILTER(CONTAINS(?movie_name, "Avatar"))
+        ?movie pred:name ?title .
+        FILTER(CONTAINS(?title, "Avatar"))
 	} UNION {
         ?movie ?pred ?obj .
-        ?movie pred:name ?movie_name .
+        ?movie pred:name ?title .
         ?movie pred:plot_keyword ?keywords .
         FILTER(CONTAINS(?keywords, "Avatar"))
     }
+}
+
+# get_all_movies
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?title ?pred ?obj
+WHERE{
+    ?movie ?pred ?obj .
+    ?movie pred:director ?year .
+    ?movie pred:name ?title .
 }
