@@ -6,6 +6,9 @@ import lxml.etree as ET
 import xmltodict
 from BaseXClient import BaseXClient
 import requests
+import json
+from s4api.graphdb_api import GraphDBApi
+from s4api.swagger import ApiClient
 
 
 def new_movie(request):
@@ -162,6 +165,27 @@ def movies_news_feed(request):
 
 
 def movies_feed(request):
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    query = """
+        PREFIX mov: <http://moviesDB.com/predicate/>
+    SELECT ?genre_name
+    WHERE { 
+    	?movie mov:genre ?genre .
+        ?genre mov:name ?genre_name .
+    	}
+    """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    genres = []
+    for e in res['results']['bindings']:
+        for v in e.values():
+            genres.append(v['value'])
+
+
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
     session.execute("open moviesDB")
 
@@ -182,11 +206,6 @@ def movies_feed(request):
     transform = ET.XSLT(xslt)
     newdoc = transform(tree)
 
-    input1 = "import module namespace movies = 'com.movies' at '"\
-             + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-             +"';<genres>{movies:get_all_genres()}</genres>"
-    query1 = session.query(input1)
-
     input2 = "import module namespace movies = 'com.movies' at '" \
              + os.path.join(BASE_DIR,'app/data/queries/queries.xq') \
              + "';<ratings>{movies:get_all_ratings()}</ratings>"
@@ -196,15 +215,6 @@ def movies_feed(request):
              + os.path.join(BASE_DIR,'app/data/queries/queries.xq') \
              + "';<years>{movies:get_all_years()}</years>"
     query3 = session.query(input3)
-
-    genres = query1.execute().replace("<genres>",
-                          "").replace("</genres>",
-                          "").replace("\n",
-                          "").replace("\r",
-                          "").replace(" ",
-                          "").replace("</genre>",
-                          "").split("<genre>")
-    genres.remove('')
 
     ratings = query2.execute().replace("<ratings>",
                            "").replace("</ratings>",
@@ -477,103 +487,135 @@ def directors_list(request):
 
 
 def show_movie(request, movie):
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    session.execute("open moviesDB")
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    query = """
+            PREFIX mov: <http://moviesDB.com/entity/mov>
+        prefix predicate: <http://moviesDB.com/predicate/>
+        select ?pred ?obj where{
+            ?film ?pred ?obj.
+            ?film predicate:name ?name
+            filter regex(?name,\""""+movie+"""\",+\"i\").
+    }
+        """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    movie_genres = []
+    plot_keywords = []
+    movie_secondary_actors = []
+    movie_main_actors = []
+    for e in res['results']['bindings']:
+        if "name" in e['pred']['value']:
+            name = e['obj']['value']
+        elif "year" in e['pred']['value']:
+            year = e['obj']['value']
+        elif "poster" in e['pred']['value']:
+            poster = e['obj']['value']
+        elif "poster" in e['pred']['value']:
+            poster = e['obj']['value']
+        elif "score" in e['pred']['value']:
+            score = e['obj']['value']
+        elif "actor" in e['pred']['value']:
+            movie_main_actors.append(e['obj']['value'])
+        elif "director" in e['pred']['value']:
+            movie_director = e['obj']['value']
+        elif "genre" in e['pred']['value']:
+            movie_genres.append(e['obj']['value'])
+        elif "plot_keyword" in e['pred']['value']:
+            plot_keywords.append(e['obj']['value'])
+        elif "country" in e['pred']['value']:
+            country = e['obj']['value']
+        elif "language" in e['pred']['value']:
+            language = e['obj']['value']
+        elif "rating" in e['pred']['value']:
+            rating = e['obj']['value']
+        elif "duration" in e['pred']['value']:
+            duration = e['obj']['value']
+        elif "budget" in e['pred']['value']:
+            budget = e['obj']['value']
 
-    input = "import module namespace movies = 'com.movies' at '" \
-             + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-             + "';<movie>{movies:get_movie(" + "<name>" + movie + "</name>" + ")}</movie>"
-    query = session.query(input).execute()
-    dict = xmltodict.parse(query)
 
-    # USING QUERY TO GET THE MOVIE CAST
-    input = "import module namespace movies = 'com.movies' at '" \
-             + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-             + "';<actors>{movies:get_movie_main_actors(" + "<name>" + movie + "</name>" + ")}</actors>"
+    rating = rating.split("ratings/")[1]
+    query = """
+               PREFIX ratings: <http://moviesDB.com/entity/ratings/>
+                PREFIX predicate: <http://moviesDB.com/predicate/>
+                SELECT ?name WHERE{
+                ratings:"""+rating+""" predicate:name ?name.
+    }
+            """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    for e in res['results']['bindings']:
+        rating = e['name']['value']
 
-    movie_main_actors = session.query(input).execute().replace("<actors>",
-                                                      "").replace("</actors>",
-                                                      "").replace("</actor>",
-                                                      "").replace("\n",
-                                                      "").replace("\r",
-                                                      "").split("<actor>")
-    for i in range(len(movie_main_actors[1:])+1):
-        movie_main_actors[i] = movie_main_actors[i].strip().replace(" ", "_")
 
-    input = "import module namespace movies = 'com.movies' at '" \
-            + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-            + "';<actors>{movies:get_movie_secondary_actors(" + "<name>" + movie + "</name>" + ")}</actors>"
-    movie_secondary_actors = session.query(input).execute()
+    genres=[]
+    for i in movie_genres:
+        i = i.split("genres/")[1]
+        query = """
+                      PREFIX genres: <http://moviesDB.com/entity/genres/>
+                    prefix predicate: <http://moviesDB.com/predicate/>
+                     select ?name where{
+                    genres:"""+i+""" predicate:name ?name.
+}
+                    """
+        payload_query = {"query": query}
+        res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+        res = json.loads(res)
+        for e in res['results']['bindings']:
+            genres.append(e['name']['value'])
 
-    if movie_secondary_actors == "<actors/>":
-        movie_secondary_actors = [" "]
-    else:
-        movie_secondary_actors.replace("<actors>",
-                                      "").replace("</actors>",
-                                      "").replace("</actor>",
-                                      "").replace("\n",
-                                      "").replace("\r",
-                                      "").split("<actor>")
-        for i in range(len(movie_main_actors[1:]) + 1):
-            movie_secondary_actors[i] = movie_secondary_actors[i].strip().replace(" ", "_")
+    movie_director = movie_director.split("person/")[1]
+    query = """
+                  PREFIX person: <http://moviesDB.com/entity/person/>
+                   PREFIX predicate: <http://moviesDB.com/predicate/>
+                   SELECT ?name WHERE{
+                   person:""" + movie_director + """ predicate:name ?name.
+       }
+               """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    for e in res['results']['bindings']:
+        movie_director = e['name']['value']
 
-    # USING QUERY TO GET THE MOVIE DIRECTOR
-    input = "import module namespace movies = 'com.movies' at '" \
-            + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-            + "';<director>{movies:get_movie_director_name(" + "<name>" + movie + "</name>" + ")}</director>"
-
-    movie_director = session.query(input).execute().replace("<director>",
-                                                  "").replace("</director>",
-                                                  "").replace("\n",
-                                                  "").replace("\r",
-                                                  "")
-    movie_director = movie_director.strip().replace(" ", "_")
-
-    # USING QUERY TO GET THE MOVIE GENRES
-    input = "import module namespace movies = 'com.movies' at '" \
-            + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-            + "';<genres>{movies:get_movie_genres(" + "<name>" + movie + "</name>" + ")}</genres>"
-
-    movie_genres = session.query(input).execute().replace("<genres>",
-                                                "").replace("</genres>",
-                                                "").replace("</genre>",
-                                                "").replace("\n",
-                                                "").replace("\r",
-                                                "").split("<genre>")
-
-    # USING QUERY TO GET THE MOVIE KEYWORDS
-    input = "import module namespace movies = 'com.movies' at '" \
-            + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-            + "';<keywords>{movies:get_movie_plot_keywords(" + "<name>" + movie + "</name>" + ")}</keywords>"
-
-    plot_keywords = session.query(input).execute().replace("<keywords>",
-                                                "").replace("</keywords>",
-                                                "").replace("</keyword>",
-                                                "").replace("\n",
-                                                "").replace("\r",
-                                                "").split("<keyword>")
-    try:
-        score = dict['movie']['movie']['imbd_info']['score']['#text']
-    except:
-        score = dict['movie']['movie']['imbd_info']['score']
-    
+    actors = []
+    for i in movie_main_actors:
+        i = i.split("person/")[1]
+        query = """
+                          PREFIX person: <http://moviesDB.com/entity/person/>
+                        prefix predicate: <http://moviesDB.com/predicate/>
+                         select ?name where{
+                        person:""" + i + """ predicate:name ?name.
+    }
+                        """
+        payload_query = {"query": query}
+        res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+        res = json.loads(res)
+        for e in res['results']['bindings']:
+            actors.append(e['name']['value'])
+        if len(res['results']['bindings']) == 0:
+            actors.append(i)
     tparams = {
-        'movie_name': dict['movie']['movie']['title']['name'],
-        'movie_img': dict['movie']['movie']['poster'],
-        'movie_year': dict['movie']['movie']['title']['year'],
+        'movie_name': name,
+        'movie_img': poster,
+        'movie_year': year,
         'movie_score': score,
-        'movie_main_actors': movie_main_actors[1:],
+        'movie_main_actors': actors,
         'movie_secondary_actors': movie_secondary_actors[1:],
         'movie_director': movie_director,
-        'movie_genres': movie_genres[1:],
-        'movie_rating': dict['movie']['movie']['@rating'],
-        'movie_language': dict['movie']['movie']['@language'],
-        'movie_country': dict['movie']['movie']['@country'],
-        'movie_duration': dict['movie']['movie']['@duration'],
-        'movie_plot_keywords': plot_keywords[1:],
-        'movie_budget': dict['movie']['movie']['@budget']
+        'movie_genres': genres,
+        'movie_rating': rating,
+        'movie_language': language,
+        'movie_country': country,
+        'movie_duration': duration,
+        'movie_plot_keywords': plot_keywords,
+        'movie_budget': budget
     }
-    session.close()
     return render(request, 'movie_page.html', tparams)
 
 
@@ -675,13 +717,19 @@ def director_profile(request, director):
 
 
 def delete_movie(request, movie):
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    session.execute("open moviesDB")
-
-    input_del = "import module namespace movies = 'com.movies' at '" \
-             + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-             + "';movies:del_movie(<name>" + movie + "</name>)"
-    session.query(input_del).execute()
-
-    session.close()
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    update = """
+        prefix predicate: <http://moviesDB.com/predicate/>
+        DELETE {?film ?pred ?obj.} where{
+        ?film ?pred ?obj.
+        ?film predicate:name ?name.
+        filter regex(?name,\""""+movie+"""\","i").
+        }
+        """
+    payload_query = {"update": update}
+    res = accessor.sparql_update(body=payload_query,
+                                 repo_name=repo_name)
     return redirect('/')

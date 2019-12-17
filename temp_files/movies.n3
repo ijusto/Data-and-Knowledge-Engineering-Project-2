@@ -1,0 +1,44 @@
+@prefix mov: <http://moviesDB.com/entity/mov>.
+@prefix	person: <http://moviesDB.com/entity/person/>.
+@prefix	genres: <http://moviesDB.com/entity/genres/>.
+@prefix	ratings: <http://moviesDB.com/entity/ratings/>.
+@prefix	predicate: <http://moviesDB.com/predicate/>.
+
+genres:action predicate:name "Action".
+genres:adventure predicate:name "Adventure".
+genres:fantasy predicate:name "Fantasy".
+genres:sci_fi predicate:name "Sci-Fi".
+
+ratings:pg_13 predicate:name "PG-13".
+
+mov:avatar   predicate:name "Avatar";
+		predicate:year "2003";
+		predicate:score "7.9";
+		predicate:actor person:CCH_Pounder,
+				person:Joel_Moore,
+				person:Wes_Studi;
+		predicate:poster "https://m.media-amazon.com/images/M/....";
+		predicate:director person:James_Cameron;
+		predicate:genre genres:action,
+				genres:adventure,
+				genres:fantasy,
+				genres:sci_fi;
+		predicate:plot_keyword  "avatar",
+					"future",
+					"marine",
+					"native",
+					"paraplegic";
+		predicate:country "USA";
+		predicate:language "English";
+		predicate:rating ratings:pg_13;
+		predicate:duration "178";
+		predicate:budget "237000000".
+
+person:James_Cameron	predicate:name "James Cameron";
+			predicate:profession "Actor";
+			predicate:image "https://m.media-amazon.com/images/M/MV5BMjI0MjMzOTg2MF5BMl5BanBnXkFtZTcwMTM3NjQxMw@@._V1_UX214_CR0,0,214,317_AL_.jpg";
+			predicate:bio "James Francis Cameron was born on August 16, 1954 in Kapuskasing, Ontario, Canada. He moved to the United States in 1971. The son of an engineer, he majored in physics at California State University before switching to English, and eventually dropping out. He then drove a truck to support his screenwriting ambition. He landed his first professional film job as art director, miniature-set builder, and process-projection supervisor on Roger Corman's Batalha Além das Estrelas (1980) and had his first experience as a director with a two week stint on Piranha II - O Peixe Vampiro (1981) before being fired. In 1984, he wrote and directed O Exterminador Implacável (1984), a futuristic action-thriller starring Arnold Schwarzenegger, Michael Biehn and Linda Hamilton. It was a huge success. After this came a string of successful science-fiction action films such as Aliens: O Recontro Final (1986), O Abismo (1989) and Exterminador Implacável 2: O Dia do Julgamento (1991). In 1990, Cameron formed his own production company, Lightstorm Entertainment. In 1997, he wrote and directed Titanic (1997), a romance epic about two young lovers from different social classes who meet on board the famous ship. The movie went on to break all box office records and earned eleven Academy Awards. It became the highest grossing movie of all time. The rest is history. James Cameron is now one of the most sought-after directors in Hollywood. He was formerly married to producer Gale Anne Hurd, who produced several of his films. In 2000, he married actress Suzy Amis, who appeared in Titanic, and they have three children. - IMDb Mini Biography By: Dorian House".
+
+person:CCH_Pounder	predicate:name	"CCH Pounder".
+person:Joel_Moore	predicate:name	"Joel Moore".
+person:Wes_Studi	predicate:name	"Wes Studi".

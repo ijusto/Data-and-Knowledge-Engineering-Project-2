@@ -1,0 +1,68 @@
+
+# get_all_genres()
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?genre_name
+WHERE { 
+	?movie pred:genre ?genre .
+    ?genre pred:name ?genre_name .
+	}
+
+# get_all_years()
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?year
+WHERE {
+	?movie pred:year ?year .
+}
+
+# get_all_ratings()
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?rating_name
+WHERE {
+	?movie pred:rating ?rating .
+    ?rating pred:name ?rating_name .
+}
+
+# aplly_filters()
+# Substituir ("Action", "Fantasy") e os outros literais por variaveis
+# Juntar os FILTER apenas se a "lista de filtros" nao estiver vazia
+# Substituir x por "score, title ou year"
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT distinct ?title ?pred ?obj
+WHERE {
+    ?movie ?pred ?obj .
+	?movie pred:rating ?rating .
+    ?movie pred:year ?year .
+    ?movie pred:genre ?genre .
+    ?rating pred:name ?rating_name .
+    ?genre pred:name ?genre_name .
+    ?movie pred:name ?title .
+    ?movie pred:score ?score .
+    FILTER (?genre_name IN ("Action", "Fantasy"))
+    FILTER (?rating_name = "PG-13")
+    FILTER (?year = "2003")
+} ORDER BY ?x
+
+# apply_search
+# Substituir "Avatar" por uma variável
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT  ?title ?pred ?obj
+WHERE {{
+        ?movie ?pred ?obj .
+        ?movie pred:name ?title .
+        FILTER(CONTAINS(?title, "Avatar"))
+	} UNION {
+        ?movie ?pred ?obj .
+        ?movie pred:name ?title .
+        ?movie pred:plot_keyword ?keywords .
+        FILTER(CONTAINS(?keywords, "Avatar"))
+    }
+}
+
+# get_all_movies
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?title ?pred ?obj
+WHERE{
+    ?movie ?pred ?obj .
+    ?movie pred:director ?year .
+    ?movie pred:name ?title .
+}
