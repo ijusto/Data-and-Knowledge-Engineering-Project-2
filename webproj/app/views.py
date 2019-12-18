@@ -190,7 +190,7 @@ def movies_feed(request):
             SELECT distinct ?year
             WHERE {
 	        ?movie pred:year ?year .
-}
+} order by ?year
         """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
@@ -333,7 +333,7 @@ def apply_filters(request):
                 SELECT distinct ?year
                 WHERE {
     	        ?movie pred:year ?year .
-    }
+    } order by ?year
             """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
@@ -503,7 +503,7 @@ def apply_search(request):
                 SELECT distinct ?year
                 WHERE {
     	        ?movie pred:year ?year .
-    }
+    } order by ?year
             """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
