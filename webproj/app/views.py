@@ -305,9 +305,6 @@ def movies_feed(request):
 
 
 def apply_filters(request):
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    session.execute("open moviesDB")
-
     endpoint = "http://localhost:7200"
     repo_name = "moviesDB"
     client = ApiClient(endpoint=endpoint)
@@ -403,11 +400,42 @@ def apply_filters(request):
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
     for e in res['results']['bindings']:
+        print(e)
         if (e['title']['value'] not in movies.keys()):
             if len(movies) == 0:
-                movies = {e['title']['value']: {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}}
+                obj = [e['obj']['value']]
+                if e['pred']['value'].split("/")[-1] == 'genre':
+                    i = e['obj']['value'].split("genres/")[1]
+                    query = """
+                                                  PREFIX genres: <http://moviesDB.com/entity/genres/>
+                                                prefix predicate: <http://moviesDB.com/predicate/>
+                                                 select ?name where{
+                                                genres:""" + i + """ predicate:name ?name.
+                            }
+                                                """
+                    payload_query = {"query": query}
+                    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                    res = json.loads(res)
+                    for f in res['results']['bindings']:
+                        obj = [f['name']['value']]
+                movies = {e['title']['value']: {e['pred']['value'].split("/")[-1]: obj}}
             else:
-                movies.update({e['title']['value']: {e['pred']['value'].split("/")[-1]: [e['obj']['value']]}})
+                obj = [e['obj']['value']]
+                if e['pred']['value'].split("/")[-1] == 'genre':
+                    i = e['obj']['value'].split("genres/")[1]
+                    query = """
+                                                                  PREFIX genres: <http://moviesDB.com/entity/genres/>
+                                                                prefix predicate: <http://moviesDB.com/predicate/>
+                                                                 select ?name where{
+                                                                genres:""" + i + """ predicate:name ?name.
+                                            }
+                                                                """
+                    payload_query = {"query": query}
+                    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                    res = json.loads(res)
+                    for f in res['results']['bindings']:
+                         obj = [f['name']['value']]
+                movies.update({e['title']['value']: {e['pred']['value'].split("/")[-1]: obj}})
         else:
             if (e['pred']['value'].split("/")[-1] in movies[e['title']['value']].keys()):
                 obj = movies[e['title']['value']][e['pred']['value'].split("/")[-1]]
@@ -536,12 +564,12 @@ def apply_search(request):
             WHERE {{
                 ?movie ?pred ?obj .
                 ?movie pred:name ?title .
-                FILTER(CONTAINS(?title, \"""" + request.POST['search'] + """\"))
+                FILTER(CONTAINS(lcase(?title), \"""" + request.POST['search'].lower() + """\"))
 	        } UNION {
                 ?movie ?pred ?obj .
                 ?movie pred:name ?title .
                 ?movie pred:plot_keyword ?keywords .
-                FILTER(CONTAINS(?keywords, \""""+ request.POST['search'] +"""\"))
+                FILTER(CONTAINS(lcase(?keywords), \""""+ request.POST['search'].lower() +"""\"))
             }}
            """
     payload_query = {"query": query}
@@ -660,11 +688,11 @@ def apply_searchActor(request):
     accessor = GraphDBApi(client)
     query = """
         PREFIX pred: <http://moviesDB.com/predicate/>
-        SELECT ?name
+        SELECT distinct ?name
         WHERE { 
             ?movie pred:actor ?actor .
             ?actor pred:name ?name .
-            FILTER (CONTAINS(?name, \""""+request.POST['search']+"""\"))
+            FILTER (CONTAINS(lcase(?name), \""""+request.POST['search'].lower() +"""\"))
             }
                         """
     payload_query = {"query": query}
@@ -688,11 +716,11 @@ def apply_searchDirector(request):
     accessor = GraphDBApi(client)
     query = """
             PREFIX pred: <http://moviesDB.com/predicate/>
-            SELECT ?name
+            SELECT distinct ?name
             WHERE { 
                 ?movie pred:director ?director .
                 ?director pred:name ?name .
-                FILTER (CONTAINS(?name, \"""" + request.POST['search'] + """\"))
+                FILTER (CONTAINS(lcase(?name), \"""" + request.POST['search'].lower() + """\"))
                 }
                             """
     payload_query = {"query": query}
@@ -747,7 +775,7 @@ def show_movie(request, movie):
         select ?pred ?obj where{
             ?film ?pred ?obj.
             ?film predicate:name ?name
-            filter regex(?name,\""""+movie+"""\",+\"i\").
+            filter regex(?name,\""""+movie.replace("/", " ").replace("!","")+"""\",+\"i\").
     }
         """
     payload_query = {"query": query}

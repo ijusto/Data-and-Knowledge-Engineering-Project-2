@@ -47,11 +47,11 @@ WHERE {
 # dist_searchActor($search)
 # All actors with "" in their names
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?name
+SELECT distinct ?name
 WHERE { 
     ?movie pred:actor ?actor .
     ?actor pred:name ?name .
-    FILTER (CONTAINS(?name, ""))
+    FILTER (CONTAINS(lcase(?name), ""))
 	}
 
 
@@ -59,11 +59,11 @@ WHERE {
 # dist_searchDirector($search)
 # All directors with "" in their names
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?name
+SELECT distinct ?name
 WHERE { 
     ?movie pred:director ?director .
     ?director pred:name ?name .
-    FILTER (CONTAINS(?name, ""))
+    FILTER (CONTAINS(lcase(?name), ""))
 	}
 
 
