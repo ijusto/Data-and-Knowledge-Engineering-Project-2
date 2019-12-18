@@ -65,16 +65,16 @@
                             <img alt="Card-image-cap" class="card-img-top" src={{ value.poster.0 }}/>
                         </div>
                         <div class="p-2">
-                            <h2><a href={{ "movie/"|add:value.name.0 }}>{{ value.name.0 }}</a></h2>({{ value.year.0 }})
+                            <h2><a href="movie/{{value.name.0 }}">{{ value.name.0 }}</a></h2>({{ value.year.0 }})
 
                             <p>{% for g in value.genre %}[{{ g }}]{% endfor %}</p>
                             <p><strong><i>Director:</i></strong>
-                                <a href={{ "director/"|add:value.director }}>
+                                <a href= "director/{{ value.director }}">
                                     {{ value.director }}
                                 </a>
                             </p>
                             <p><strong><i>Cast: </i></strong><br/>
-                                {% for a in value.actor %} - <a href={{ "actor/"|add:a }}>
+                                {% for a in value.actor %} - <a href="actor/{{a}}">
                                     {{ a }}
                                     </a><br/>
                                 {% endfor %}

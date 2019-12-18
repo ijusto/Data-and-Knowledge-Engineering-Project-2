@@ -539,18 +539,29 @@ def apply_search(request):
 
 
 def actors_list(request):
-    xml_name = 'movies.xml'
-    xslt_name = 'actors.xsl'
-    xml_file = os.path.join(BASE_DIR, 'app/data/' + xml_name)
-    xsl_file = os.path.join(BASE_DIR, 'app/data/xslts/' + xslt_name)
-
-    tree = ET.parse(xml_file)
-    xslt = ET.parse(xsl_file)
-    transform = ET.XSLT(xslt)
-    newdoc = transform(tree)
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    query = """
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT ?name
+                WHERE { 
+                    ?movie pred:actor ?actor .
+                    ?actor pred:name ?name .
+                    }
+                """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    actors = []
+    for e in res['results']['bindings']:
+        for v in e.values():
+            actors.append(v['value'].split(" "))
+    print(actors)
 
     tparams = {
-        'content': newdoc,
+        'actors': actors,
     }
     return render(request, 'actors.html', tparams)
 
@@ -607,18 +618,28 @@ def apply_searchDirector(request):
 
 
 def directors_list(request):
-    xml_name = 'movies.xml'
-    xslt_name = 'directors.xsl'
-    xml_file = os.path.join(BASE_DIR, 'app/data/' + xml_name)
-    xsl_file = os.path.join(BASE_DIR, 'app/data/xslts/' + xslt_name)
-
-    tree = ET.parse(xml_file)
-    xslt = ET.parse(xsl_file)
-    transform = ET.XSLT(xslt)
-    newdoc = transform(tree)
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    query = """
+                    PREFIX pred: <http://moviesDB.com/predicate/>
+                    SELECT ?name
+                    WHERE { 
+                        ?movie pred:director ?director .
+                        ?director pred:name ?name .
+	}
+                    """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    directors = []
+    for e in res['results']['bindings']:
+        for v in e.values():
+            directors.append(v['value'].split(" "))
 
     tparams = {
-        'content': newdoc,
+        'directors' : directors,
     }
     return render(request, 'directors.html', tparams)
 
@@ -675,7 +696,7 @@ def show_movie(request, movie):
         elif "budget" in e['pred']['value']:
             budget = e['obj']['value']
 
-    #rating = rating.split("ratings/")[1]
+    rating = rating.split("ratings/")[1]
     query = """
                PREFIX ratings: <http://moviesDB.com/entity/ratings/>
                 PREFIX predicate: <http://moviesDB.com/predicate/>
