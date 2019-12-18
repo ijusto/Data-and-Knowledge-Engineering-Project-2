@@ -258,6 +258,7 @@ def movies_feed(request):
                     else:
                         obj = [f['name']['value']]
             elif e['pred']['value'].split("/")[-1] == 'director':
+                obj = [e['obj']['value'].split("person/")[1]]
                 movie_director = e['obj']['value'].split("person/")[1]
                 query = """
                                       PREFIX person: <http://moviesDB.com/entity/person/>
@@ -270,7 +271,7 @@ def movies_feed(request):
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
                 for f in res['results']['bindings']:
-                    obj = f['name']['value']
+                    obj = [f['name']['value']]
             elif e['pred']['value'].split("/")[-1] == 'actor':
                 i = e['obj']['value'].split("person/")[1]
                 query = """
@@ -430,6 +431,7 @@ def apply_filters(request):
                     else:
                         obj = [f['name']['value']]
             elif e['pred']['value'].split("/")[-1] == 'director':
+                obj = [e['obj']['value'].split("person/")[1]]
                 movie_director = e['obj']['value'].split("person/")[1]
                 query = """
                                           PREFIX person: <http://moviesDB.com/entity/person/>
@@ -442,7 +444,7 @@ def apply_filters(request):
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
                 for f in res['results']['bindings']:
-                    obj = f['name']['value']
+                    obj = [f['name']['value']]
             elif e['pred']['value'].split("/")[-1] == 'actor':
                 i = e['obj']['value'].split("person/")[1]
                 query = """
@@ -575,6 +577,7 @@ def apply_search(request):
                     else:
                         obj = [f['name']['value']]
             elif e['pred']['value'].split("/")[-1] == 'director':
+                obj = [e['obj']['value'].split("person/")[1]]
                 movie_director = e['obj']['value'].split("person/")[1]
                 query = """
                                   PREFIX person: <http://moviesDB.com/entity/person/>
@@ -587,7 +590,7 @@ def apply_search(request):
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
                 for f in res['results']['bindings']:
-                    obj = f['name']['value']
+                    obj = [f['name']['value']]
             elif e['pred']['value'].split("/")[-1] == 'actor':
                 i = e['obj']['value'].split("person/")[1]
                 query = """
