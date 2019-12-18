@@ -630,7 +630,7 @@ def actors_list(request):
     accessor = GraphDBApi(client)
     query = """
                 PREFIX pred: <http://moviesDB.com/predicate/>
-                SELECT ?name
+                SELECT distinct ?name
                 WHERE { 
                     ?movie pred:actor ?actor .
                     ?actor pred:name ?name .
@@ -713,7 +713,7 @@ def directors_list(request):
     accessor = GraphDBApi(client)
     query = """
                     PREFIX pred: <http://moviesDB.com/predicate/>
-                    SELECT ?name
+                    SELECT distinct ?name
                     WHERE { 
                         ?movie pred:director ?director .
                         ?director pred:name ?name .
@@ -867,99 +867,103 @@ def show_movie(request, movie):
 
 
 def actor_profile(request, actor):
-    fn_actor = actor.split("_")[0]
-    ln_actor = actor.split("_")[1]
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    query = """
+           PREFIX pred: <http://moviesDB.com/predicate/>
+            PREFIX movies: <http://moviesDB.com/entity/movies/>
+            SELECT distinct ?person ?pred ?obj
+            WHERE {
+                ?person pred:name \""""+actor.replace('_', ' ')+"""\".
+                ?person ?pred ?obj.
+            }
+                        """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    for e in res['results']['bindings']:
+        if "name" in e['pred']['value']:
+            name = e['obj']['value']
+        elif "image" in e['pred']['value']:
+            img = e['obj']['value']
+        elif "bio" in e['pred']['value']:
+            bio = e['obj']['value']
 
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    session.execute("open peopleDB")
-    session.execute("open moviesDB")
-
-    input_img = "import module namespace people = 'com.people' at '" \
-             + os.path.join(BASE_DIR, 'app/data/queries/people_queries.xq') \
-             + "';<movie>{people:get_img(" + "<name><first_name>" + fn_actor + "</first_name><last_name>"+ln_actor+"</last_name></name>" + ")}</movie>"
-
-    input_bio = "import module namespace people = 'com.people' at '" \
-                + os.path.join(BASE_DIR, 'app/data/queries/people_queries.xq') \
-                + "';<movie>{people:get_bio(" + "<name><first_name>" + fn_actor + "</first_name><last_name>"+ln_actor+"</last_name></name>" + ")}</movie>"
-
-    query_img = session.query(input_img).execute()
-    if query_img == "<movie/>":
-        query_img = "https://alumni.crg.eu/sites/default/files/default_images/default-picture_0_0.png"
-    query_bio = session.query(input_bio).execute()
-    if query_bio == "<movie/>":
-        query_bio = "No bio found."
-
-    inputMovies = "import module namespace movies = 'com.movies' at '" \
-                  + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-                  + "';<movie>{movies:dist_get_movies_by_actor(<first_name>"+fn_actor+"</first_name>, <last_name>"+ln_actor+"</last_name>)}</movie>"
-
-    queryMovies = session.query(inputMovies).execute()
-    listMovie = queryMovies.replace("<movie>", "").replace("<name>", "").replace("</name>", "").replace("</movie>", "").replace("\r", "").split("\n")
-
-    while ' ' in listMovie:
-        listMovie.remove(' ')
-    for i in range(len(listMovie)):
-        listMovie[i] = listMovie[i].strip()
+    query = """
+              PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT ?mname
+                WHERE { 
+                    ?actor pred:name \""""+actor.replace('_',' ')+"""\" .
+                    ?movie pred:actor ?actor .
+                    ?movie pred:name ?mname .
+                    }
+                           """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    listMovies=[]
+    for e in res['results']['bindings']:
+        listMovies.append(e['mname']['value'])
 
     tparams = {
-        'actor_img': query_img.replace("<img>","").replace("</img>", "").replace("<movie>","").replace("</movie>",""),
-        'actor_bio': query_bio.replace("<bio>","").replace("</bio>", "").replace("<movie>","").replace("</movie>",""),
-        'actor_name': fn_actor+" "+ln_actor,
-        'movies': listMovie
+        'actor_img': img,
+        'actor_bio': bio,
+        'actor_name': name,
+        'movies': listMovies,
     }
-    session.close()
     return render(request, 'actor_profile.html', tparams)
 
 
 def director_profile(request, director):
-    fn_director = director.split("_")[0]
-    if len(director.split("_")) >= 2:
-        ln_director = director.split("_")[1]
-    else:
-        ln_director = fn_director
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    query = """
+               PREFIX pred: <http://moviesDB.com/predicate/>
+                PREFIX movies: <http://moviesDB.com/entity/movies/>
+                SELECT distinct ?person ?pred ?obj
+                WHERE {
+                    ?person pred:name \"""" + director.replace('_', ' ') + """\".
+                    ?person ?pred ?obj.
+                }
+                            """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    for e in res['results']['bindings']:
+        if "name" in e['pred']['value']:
+            name = e['obj']['value']
+        elif "image" in e['pred']['value']:
+            img = e['obj']['value']
+        elif "bio" in e['pred']['value']:
+            bio = e['obj']['value']
 
-    session.execute("open peopleDB")
-    session.execute("open moviesDB")
-
-    input_img = "import module namespace people = 'com.people' at '" \
-             + os.path.join(BASE_DIR, 'app/data/queries/people_queries.xq') \
-             + "';<movie>{people:get_img(" + "<name><first_name>" + fn_director + "</first_name><last_name>"+ln_director+"</last_name></name>" + ")}</movie>"
-
-    input_bio = "import module namespace people = 'com.people' at '" \
-                + os.path.join(BASE_DIR, 'app/data/queries/people_queries.xq') \
-                + "';<movie>{people:get_bio(" + "<name><first_name>" + fn_director + "</first_name><last_name>"+ln_director+"</last_name></name>" + ")}</movie>"
-
-    query_img = session.query(input_img).execute()
-    if query_img == "<movie/>":
-        query_img = "https://alumni.crg.eu/sites/default/files/default_images/default-picture_0_0.png"
-    query_bio = session.query(input_bio).execute()
-    if query_bio == "<movie/>":
-        query_bio = "No bio found."
-
-    inputMovies = "import module namespace movies = 'com.movies' at '" \
-                  + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-                  + "';<movie>{movies:dist_get_movies_by_director(<first_name>" + fn_director + "</first_name>, <last_name>" + ln_director + "</last_name>)}</movie>"
-
-    queryMovies = session.query(inputMovies).execute()
-    listMovie = queryMovies.replace("<movie>", "").replace("<name>", "").replace("</name>", "").replace("</movie>",
-                                                                                                        "").replace("\r","").split("\n")
-    while ' ' in listMovie:
-        listMovie.remove(' ')
-    for i in range(len(listMovie)):
-        listMovie[i] = listMovie[i].strip()
-    if len(director.split("_")) >= 2:
-        ln_director = director.split("_")[1]
-    else:
-        ln_director = ""
+    query = """
+           PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT ?mname
+                WHERE { 
+                    ?director pred:name \""""+director.replace('_',' ')+"""\" .
+                    ?movie pred:director ?director .
+                    ?movie pred:name ?mname .
+                    }
+                           """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    listMovies = []
+    for e in res['results']['bindings']:
+        print(e)
+        listMovies.append(e['mname']['value'])
 
     tparams = {
-        'director_img': query_img.replace("<img>","").replace("</img>", "").replace("<movie>","").replace("</movie>",""),
-        'director_bio': query_bio.replace("<bio>","").replace("</bio>", "").replace("<movie>","").replace("</movie>",""),
-        'director_name': fn_director+" "+ln_director,
-        'movies':listMovie
+        'director_img': img,
+        'director_bio': bio,
+        'director_name': name,
+        'movies': listMovies,
     }
-    session.close()
     return render(request, 'director_profile.html', tparams)
 
 
