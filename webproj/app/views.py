@@ -148,17 +148,51 @@ def new_movie(request):
 
 
 def movies_news_feed(request):
-    xml_link = "https://www.cinemablend.com/rss/topic/news/movies"
-    xml_file = requests.get(xml_link)
-    xslt_name = 'rss.xsl'
-    xsl_file = os.path.join(BASE_DIR, 'app/data/xslts/' + xslt_name)
-    tree = ET.fromstring(xml_file.content)
-    xslt = ET.parse(xsl_file)
-    transform = ET.XSLT(xslt)
-    newdoc = transform(tree)
+    # pip install sparqlwrapper
+    # https://rdflib.github.io/sparqlwrapper/
 
+    from SPARQLWrapper import SPARQLWrapper, JSON
+
+    endpoint_url = "https://query.wikidata.org/sparql"
+
+    query = """SELECT DISTINCT ?itemTitle ?autnamestr ?pubin_name ?pubdate ?arc_url WHERE {
+      #      instanceof  newsarticle
+      ?item  wdt:P31     wd:Q5707594;
+      #      title      
+             wdt:P1476   ?itemTitle;
+      #      archiveURL
+             wdt:P1065   ?arc_url;
+      #      published in
+             wdt:P1433   ?pubin;
+      #      author name string
+             wdt:P2093   ?autnamestr;
+      #      publication date
+             wdt:P577    ?pubdate.
+      ?pubin wdt:P856    ?pubin_name.
+      FILTER(REGEX(STR(?arc_url), "movies")) 
+    }"""
+
+    def get_results(endpoint_url, query):
+        sparql = SPARQLWrapper(endpoint_url)
+        sparql.setQuery(query)
+        sparql.setReturnFormat(JSON)
+        return sparql.query().convert()
+
+    results = get_results(endpoint_url, query)
+
+    news_dic = []
+    for result in results["results"]["bindings"]:
+        one_news = {}
+        one_news['itemTitle'] = result['itemTitle']['value']
+        one_news['autnamestr'] = result['autnamestr']['value']
+        one_news['pubin_name'] = result['pubin_name']['value']
+        one_news['pubdate'] = result['pubdate']['value']
+        one_news['arc_url'] = result['arc_url']['value']
+        news_dic.append(one_news)
+
+    print(news_dic)
     tparams = {
-        'content': newdoc,
+        'news_dic': news_dic,
     }
 
     return render(request, 'news.html', tparams)
