@@ -644,6 +644,7 @@ def show_movie(request, movie):
     plot_keywords = []
     movie_secondary_actors = []
     movie_main_actors = []
+    rating = ""
     for e in res['results']['bindings']:
         if "name" in e['pred']['value']:
             name = e['obj']['value']
@@ -674,8 +675,7 @@ def show_movie(request, movie):
         elif "budget" in e['pred']['value']:
             budget = e['obj']['value']
 
-
-    rating = rating.split("ratings/")[1]
+    #rating = rating.split("ratings/")[1]
     query = """
                PREFIX ratings: <http://moviesDB.com/entity/ratings/>
                 PREFIX predicate: <http://moviesDB.com/predicate/>
