@@ -566,53 +566,57 @@ def actors_list(request):
     return render(request, 'actors.html', tparams)
 
 def apply_searchActor(request):
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    session.execute("open moviesDB")
-
-    xslt_name = 'actors.xsl'
-    xsl_file = os.path.join(BASE_DIR, 'app/data/xslts/' + xslt_name)
-
-    inputSearch = "import module namespace movies = 'com.movies' at '" \
-             + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-             + "';<movie><cast><main_actor><person>{movies:dist_searchActor(<name>" + request.POST['search'] + "</name>)}</person></main_actor></cast></movie>"
-
-    querySearch = session.query(inputSearch)
-    xml_result = querySearch.execute()
-    xml_result = "<?xml version=\"1.0\"?>" + "\n\r" + xml_result
-
-    tree = ET.fromstring(bytes(xml_result, "utf-8"))
-    xslt = ET.parse(xsl_file)
-    transform = ET.XSLT(xslt)
-    newdoc = transform(tree)
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    query = """
+        PREFIX pred: <http://moviesDB.com/predicate/>
+        SELECT ?name
+        WHERE { 
+            ?movie pred:actor ?actor .
+            ?actor pred:name ?name .
+            FILTER (CONTAINS(?name, \""""+request.POST['search']+"""\"))
+            }
+                        """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    actors = []
+    for e in res['results']['bindings']:
+        for v in e.values():
+            actors.append(v['value'].split(" "))
 
     tparams = {
-        'content': newdoc,
+        'actors': actors,
     }
     return render(request, 'actors.html', tparams)
 
 
 def apply_searchDirector(request):
-    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    session.execute("open moviesDB")
-
-    xslt_name = 'directors.xsl'
-    xsl_file = os.path.join(BASE_DIR, 'app/data/xslts/' + xslt_name)
-
-    inputSearch = "import module namespace movies = 'com.movies' at '" \
-                  + os.path.join(BASE_DIR, 'app/data/queries/queries.xq') \
-                  + "';<director>{movies:dist_searchDirector(<name>" + request.POST[
-                      'search'] + "</name>)}</director>"
-    querySearch = session.query(inputSearch)
-    xml_result = querySearch.execute()
-    xml_result = "<?xml version=\"1.0\"?>" + "\n\r" + xml_result
-
-    tree = ET.fromstring(bytes(xml_result, "utf-8"))
-    xslt = ET.parse(xsl_file)
-    transform = ET.XSLT(xslt)
-    newdoc = transform(tree)
+    endpoint = "http://localhost:7200"
+    repo_name = "moviesDB"
+    client = ApiClient(endpoint=endpoint)
+    accessor = GraphDBApi(client)
+    query = """
+            PREFIX pred: <http://moviesDB.com/predicate/>
+            SELECT ?name
+            WHERE { 
+                ?movie pred:director ?director .
+                ?director pred:name ?name .
+                FILTER (CONTAINS(?name, \"""" + request.POST['search'] + """\"))
+                }
+                            """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    directors = []
+    for e in res['results']['bindings']:
+        for v in e.values():
+            directors.append(v['value'].split(" "))
 
     tparams = {
-        'content': newdoc,
+        'directors': directors,
     }
     return render(request, 'directors.html', tparams)
 
