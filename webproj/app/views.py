@@ -34,13 +34,14 @@ def new_movie(request):
 
         for g in genres:
             query = """
-                    PREFIX gen: <http://moviesDB.com/entity/genres/>
-                    PREFIX pred: <http://moviesDB.com/predicate/>
-                    ASK {
-                        { gen:""" + g.lower() + " pred:name \"" + g + """" . }
-                        UNION
-                        { ?movie pred:genre ?genre .
-                          ?genre pred:name \"""" + g + """" . }
+                        PREFIX gen: <http://moviesDB.com/entity/genres/>
+                        PREFIX pred: <http://moviesDB.com/predicate/>
+                        ASK {
+                            { gen:""" + g.lower() + " pred:name \"" + g + """" . }
+                            UNION
+                            { ?movie pred:genre ?genre .
+                              ?genre pred:name \"""" + g + """" . 
+                            }
                         }
                     """
             payload_query = {"query": query}
@@ -57,13 +58,13 @@ def new_movie(request):
                 )
             else:
                 query = """
-                        PREFIX mov: <http://moviesDB.com/entity/mov>
-                        PREFIX pred: <http://moviesDB.com/predicate/>
-                        INSERT  { mov:""" + clean_title + """ pred:genre ?genre }
-                        WHERE {
-                            ?movie pred:genre ?genre .
-                            ?genre pred:name ?name .
-                            FILTER (?name = \"""" + g + """")
+                            PREFIX mov: <http://moviesDB.com/entity/mov>
+                            PREFIX pred: <http://moviesDB.com/predicate/>
+                            INSERT  { mov:""" + clean_title + """ pred:genre ?genre }
+                            WHERE {
+                                ?movie pred:genre ?genre .
+                                ?genre pred:name ?name .
+                                FILTER (?name = \"""" + g + """")
                             }
                         """
                 payload_query = {"update": query}
@@ -72,13 +73,14 @@ def new_movie(request):
             # Check if the rating exists in the DB (and adding the connection to it if it does)
             rating = request.POST['rating'].lower().replace("-","_").replace(":","").replace(",","").replace(".","")
             query = """
-                    PREFIX gen: <http://moviesDB.com/entity/ratings/>
-                    PREFIX pred: <http://moviesDB.com/predicate/>
-                    ASK {
-                        { gen:""" + rating + " pred:name \"" + request.POST['rating'] + """" . }
-                        UNION
-                        { ?movie pred:rating ?rating .
-                          ?rating pred:name \"""" + request.POST['rating'] + """" . }
+                        PREFIX gen: <http://moviesDB.com/entity/ratings/>
+                        PREFIX pred: <http://moviesDB.com/predicate/>
+                        ASK {
+                            { gen:""" + rating + " pred:name \"" + request.POST['rating'] + """" . }
+                            UNION
+                            { ?movie pred:rating ?rating .
+                              ?rating pred:name \"""" + request.POST['rating'] + """" . 
+                            }
                         }
                     """
             payload_query = {"query": query}
@@ -95,13 +97,13 @@ def new_movie(request):
                 )
             else:
                 query = """
-                        PREFIX mov: <http://moviesDB.com/entity/mov>
-                        PREFIX pred: <http://moviesDB.com/predicate/>
-                        INSERT  { mov:""" + clean_title + """ pred:rating ?rating }
-                        WHERE {
-                            ?movie pred:rating ?rating .
-                            ?rating pred:name ?name .
-                            FILTER (?name = \"""" + request.POST['rating'] + """")
+                            PREFIX mov: <http://moviesDB.com/entity/mov>
+                            PREFIX pred: <http://moviesDB.com/predicate/>
+                            INSERT  { mov:""" + clean_title + """ pred:rating ?rating }
+                            WHERE {
+                                ?movie pred:rating ?rating .
+                                ?rating pred:name ?name .
+                                FILTER (?name = \"""" + request.POST['rating'] + """")
                             }
                         """
                 payload_query = {"update": query}
@@ -127,23 +129,23 @@ def new_movie(request):
                 country = "XXX"
 
             query = """
-                    PREFIX mov: <http://moviesDB.com/entity/mov>
-                    PREFIX pred: <http://moviesDB.com/predicate/>
-                    INSERT DATA { 
-                        mov:""" + clean_title + "	pred:name	\"" + request.POST['title'] + """" ;
-                                        pred:year	\"""" + request.POST['year'] + """" ;
-                                        pred:duration	\"""" + request.POST['duration'] + """" ;
-                                        pred:director	<http://moviesDB.com/entity/person/""" + director + """> ;
-                                        pred:actor	<http://moviesDB.com/entity/person/""" + actor1 + """> ,
-                                                    <http://moviesDB.com/entity/person/""" + actor2 + """> ,
-                                                    <http://moviesDB.com/entity/person/""" + actor3 + """> ;
-                                        pred:budget	\"""" + budget + """" ;
-                                        pred:country	\"""" + country + """" ;
-                                        pred:language	"XXX" ;
-                                        pred:poster	"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT16wQWF2p4_8GBLCNAMR9tOfs-q7o1TpLN23n7obheV5IroABG&fbclid=IwAR0YOgN094aLmuX7Z0VMd9xyXgiBZDQu7-HXpB7NAEm8CKiWxz_8JUQJ1nE" ;
-                                        pred:score	"?" .
+                        PREFIX mov: <http://moviesDB.com/entity/mov>
+                        PREFIX pred: <http://moviesDB.com/predicate/>
+                        INSERT DATA { 
+                            mov:""" + clean_title + "	pred:name	\"" + request.POST['title'] + """" ;
+                                pred:year	\"""" + request.POST['year'] + """" ;
+                                pred:duration	\"""" + request.POST['duration'] + """" ;
+                                pred:director	<http://moviesDB.com/entity/person/""" + director + """> ;
+                                pred:actor	<http://moviesDB.com/entity/person/""" + actor1 + """> ,
+                                            <http://moviesDB.com/entity/person/""" + actor2 + """> ,
+                                            <http://moviesDB.com/entity/person/""" + actor3 + """> ;
+                                pred:budget	\"""" + budget + """" ;
+                                pred:country	\"""" + country + """" ;
+                                pred:language	"XXX" ;
+                                pred:poster	"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT16wQWF2p4_8GBLCNAMR9tOfs-q7o1TpLN23n7obheV5IroABG&fbclid=IwAR0YOgN094aLmuX7Z0VMd9xyXgiBZDQu7-HXpB7NAEm8CKiWxz_8JUQJ1nE" ;
+                                pred:score	"?" .
                         }
-                        """
+                    """
             payload_query = {"update": query}
             accessor.sparql_update(body=payload_query, repo_name=repo_name)
 
@@ -173,22 +175,25 @@ def movies_news_feed(request):
 
     endpoint_url = "https://query.wikidata.org/sparql"
 
-    query = """SELECT DISTINCT ?itemTitle ?autnamestr ?pubin_name ?pubdate ?arc_url WHERE {
-      #      instanceof  newsarticle
-      ?item  wdt:P31     wd:Q5707594;
-      #      title      
-             wdt:P1476   ?itemTitle;
-      #      archiveURL
-             wdt:P1065   ?arc_url;
-      #      published in
-             wdt:P1433   ?pubin;
-      #      author name string
-             wdt:P2093   ?autnamestr;
-      #      publication date
-             wdt:P577    ?pubdate.
-      ?pubin wdt:P856    ?pubin_name.
-      FILTER(REGEX(STR(?arc_url), "movies")) 
-    }"""
+    query = """ 
+                SELECT DISTINCT ?itemTitle ?autnamestr ?pubin_name ?pubdate ?arc_url 
+                WHERE {
+                    #      instanceof  newsarticle
+                    ?item  wdt:P31     wd:Q5707594;
+                    #      title      
+                           wdt:P1476   ?itemTitle;
+                    #      archiveURL
+                           wdt:P1065   ?arc_url;
+                    #      published in
+                           wdt:P1433   ?pubin;
+                    #      author name string
+                           wdt:P2093   ?autnamestr;
+                    #      publication date
+                           wdt:P577    ?pubdate.
+                    ?pubin wdt:P856    ?pubin_name.
+                    FILTER(REGEX(STR(?arc_url), "movies")) 
+                }
+            """
 
     results = get_results(endpoint_url, query)
 
@@ -215,13 +220,13 @@ def movies_feed(request):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-        PREFIX mov: <http://moviesDB.com/predicate/>
-        SELECT distinct ?genre_name
-        WHERE { 
-            ?movie mov:genre ?genre .
-            ?genre mov:name ?genre_name .
-        }
-    """
+                PREFIX mov: <http://moviesDB.com/predicate/>
+                SELECT distinct ?genre_name
+                WHERE { 
+                    ?movie mov:genre ?genre .
+                    ?genre mov:name ?genre_name .
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -231,12 +236,12 @@ def movies_feed(request):
             genres.append(v['value'])
 
     query = """
-            PREFIX pred: <http://moviesDB.com/predicate/>
-            SELECT distinct ?year
-            WHERE {
-	            ?movie pred:year ?year .
-            } order by ?year
-        """
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT distinct ?year
+                WHERE {
+                    ?movie pred:year ?year .
+                } order by ?year
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -246,12 +251,12 @@ def movies_feed(request):
             years.append(v['value'])
 
     query = """
-            PREFIX pred: <http://moviesDB.com/predicate/>
-            SELECT distinct ?rating_name
-            WHERE {
-	            ?movie pred:rating ?rating .
-                ?rating pred:name ?rating_name .
-            }
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT distinct ?rating_name
+                WHERE {
+                    ?movie pred:rating ?rating .
+                    ?rating pred:name ?rating_name .
+                }
             """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
@@ -269,7 +274,7 @@ def movies_feed(request):
                     ?movie pred:director ?year .
                     ?movie pred:name ?title .
                 }
-               """
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -288,12 +293,12 @@ def movies_feed(request):
             if e['pred']['value'].split("/")[-1] == 'genre':
                 i = e['obj']['value'].split("genres/")[1]
                 query = """
-                                          PREFIX genres: <http://moviesDB.com/entity/genres/>
-                                        prefix predicate: <http://moviesDB.com/predicate/>
-                                         select ?name where{
-                                        genres:""" + i + """ predicate:name ?name.
-                    }
-                                        """
+                            PREFIX genres: <http://moviesDB.com/entity/genres/>
+                            prefix predicate: <http://moviesDB.com/predicate/>
+                            select ?name where{
+                                genres:""" + i + """ predicate:name ?name.
+                            }
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -306,12 +311,12 @@ def movies_feed(request):
                 obj = [e['obj']['value'].split("person/")[1]]
                 movie_director = e['obj']['value'].split("person/")[1]
                 query = """
-                                      PREFIX person: <http://moviesDB.com/entity/person/>
-                                       PREFIX predicate: <http://moviesDB.com/predicate/>
-                                       SELECT ?name WHERE{
-                                       person:""" + movie_director + """ predicate:name ?name.
-                           }
-                                   """
+                            PREFIX person: <http://moviesDB.com/entity/person/>
+                            PREFIX predicate: <http://moviesDB.com/predicate/>
+                            SELECT ?name WHERE{
+                                person:""" + movie_director + """ predicate:name ?name.
+                            }
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -320,12 +325,12 @@ def movies_feed(request):
             elif e['pred']['value'].split("/")[-1] == 'actor':
                 i = e['obj']['value'].split("person/")[1]
                 query = """
-                                              PREFIX person: <http://moviesDB.com/entity/person/>
-                                            prefix predicate: <http://moviesDB.com/predicate/>
-                                             select ?name where{
-                                            person:""" + i + """ predicate:name ?name.
-                        }
-                                            """
+                            PREFIX person: <http://moviesDB.com/entity/person/>
+                            prefix predicate: <http://moviesDB.com/predicate/>
+                            select ?name where{
+                                person:""" + i + """ predicate:name ?name.
+                            }
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -355,13 +360,13 @@ def apply_filters(request):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-            PREFIX mov: <http://moviesDB.com/predicate/>
-        SELECT distinct ?genre_name
-        WHERE { 
-        	?movie mov:genre ?genre .
-            ?genre mov:name ?genre_name .
-        	}
-        """
+                PREFIX mov: <http://moviesDB.com/predicate/>
+                SELECT distinct ?genre_name
+                WHERE { 
+                    ?movie mov:genre ?genre .
+                    ?genre mov:name ?genre_name .
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -392,7 +397,7 @@ def apply_filters(request):
     	            ?movie pred:rating ?rating .
                     ?rating pred:name ?rating_name .
                 }
-                """
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -402,18 +407,19 @@ def apply_filters(request):
             ratings.append(v['value'])
 
     query = """
-    PREFIX pred: <http://moviesDB.com/predicate/>
-    SELECT distinct ?title ?pred ?obj
-    WHERE {
-        ?movie ?pred ?obj .
-        ?movie pred:rating ?rating .
-        ?movie pred:year ?year .
-        ?movie pred:genre ?genre .
-        ?rating pred:name ?rating_name .
-        ?genre pred:name ?genre_name .
-        ?movie pred:name ?title .
-        ?movie pred:score ?score .
-    """
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT distinct ?title ?pred ?obj
+                WHERE {
+                    ?movie ?pred ?obj .
+                    ?movie pred:rating ?rating .
+                    ?movie pred:year ?year .
+                    ?movie pred:genre ?genre .
+                    ?rating pred:name ?rating_name .
+                    ?genre pred:name ?genre_name .
+                    ?movie pred:name ?title .
+                    ?movie pred:score ?score .
+                }
+            """
 
     genresToQuery = []
     for g in genres:
@@ -451,12 +457,12 @@ def apply_filters(request):
                 if e['pred']['value'].split("/")[-1] == 'genre':
                     i = e['obj']['value'].split("genres/")[1]
                     query = """
-                                                  PREFIX genres: <http://moviesDB.com/entity/genres/>
-                                                prefix predicate: <http://moviesDB.com/predicate/>
-                                                 select ?name where{
-                                                genres:""" + i + """ predicate:name ?name.
-                            }
-                                                """
+                                PREFIX genres: <http://moviesDB.com/entity/genres/>
+                                prefix predicate: <http://moviesDB.com/predicate/>
+                                    select ?name where{
+                                    genres:""" + i + """ predicate:name ?name.
+                                }
+                            """
                     payload_query = {"query": query}
                     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                     res = json.loads(res)
@@ -468,12 +474,12 @@ def apply_filters(request):
                 if e['pred']['value'].split("/")[-1] == 'genre':
                     i = e['obj']['value'].split("genres/")[1]
                     query = """
-                                                                  PREFIX genres: <http://moviesDB.com/entity/genres/>
-                                                                prefix predicate: <http://moviesDB.com/predicate/>
-                                                                 select ?name where{
-                                                                genres:""" + i + """ predicate:name ?name.
-                                            }
-                                                                """
+                                PREFIX genres: <http://moviesDB.com/entity/genres/>
+                                prefix predicate: <http://moviesDB.com/predicate/>
+                                select ?name where{
+                                    genres:""" + i + """ predicate:name ?name.
+                                }
+                            """
                     payload_query = {"query": query}
                     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                     res = json.loads(res)
@@ -488,12 +494,12 @@ def apply_filters(request):
             if e['pred']['value'].split("/")[-1] == 'genre':
                 i = e['obj']['value'].split("genres/")[1]
                 query = """
-                                              PREFIX genres: <http://moviesDB.com/entity/genres/>
-                                            prefix predicate: <http://moviesDB.com/predicate/>
-                                             select ?name where{
-                                            genres:""" + i + """ predicate:name ?name.
-                        }
-                                            """
+                            PREFIX genres: <http://moviesDB.com/entity/genres/>
+                            prefix predicate: <http://moviesDB.com/predicate/>
+                            select ?name where{
+                                genres:""" + i + """ predicate:name ?name.
+                            }
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -506,12 +512,12 @@ def apply_filters(request):
                 obj = [e['obj']['value'].split("person/")[1]]
                 movie_director = e['obj']['value'].split("person/")[1]
                 query = """
-                                          PREFIX person: <http://moviesDB.com/entity/person/>
-                                           PREFIX predicate: <http://moviesDB.com/predicate/>
-                                           SELECT ?name WHERE{
-                                           person:""" + movie_director + """ predicate:name ?name.
-                               }
-                                       """
+                            PREFIX person: <http://moviesDB.com/entity/person/>
+                            PREFIX predicate: <http://moviesDB.com/predicate/>
+                            SELECT ?name WHERE{
+                                person:""" + movie_director + """ predicate:name ?name.
+                            }
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -520,12 +526,12 @@ def apply_filters(request):
             elif e['pred']['value'].split("/")[-1] == 'actor':
                 i = e['obj']['value'].split("person/")[1]
                 query = """
-                                                  PREFIX person: <http://moviesDB.com/entity/person/>
-                                                prefix predicate: <http://moviesDB.com/predicate/>
-                                                 select ?name where{
-                                                person:""" + i + """ predicate:name ?name.
+                            PREFIX person: <http://moviesDB.com/entity/person/>
+                            prefix predicate: <http://moviesDB.com/predicate/>
+                            select ?name where{
+                                person:""" + i + """ predicate:name ?name.
                             }
-                                                """
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -555,13 +561,13 @@ def apply_search(request):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-            PREFIX mov: <http://moviesDB.com/predicate/>
-        SELECT distinct ?genre_name
-        WHERE { 
-        	?movie mov:genre ?genre .
-            ?genre mov:name ?genre_name .
-        	}
-        """
+                PREFIX mov: <http://moviesDB.com/predicate/>
+                SELECT distinct ?genre_name
+                WHERE { 
+                    ?movie mov:genre ?genre .
+                    ?genre mov:name ?genre_name .
+        	    }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -574,8 +580,8 @@ def apply_search(request):
                 PREFIX pred: <http://moviesDB.com/predicate/>
                 SELECT distinct ?year
                 WHERE {
-    	        ?movie pred:year ?year .
-    } order by ?year
+    	            ?movie pred:year ?year .
+                } order by ?year
             """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
@@ -592,7 +598,7 @@ def apply_search(request):
     	            ?movie pred:rating ?rating .
                     ?rating pred:name ?rating_name .
                 }
-                """
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -602,19 +608,21 @@ def apply_search(request):
             ratings.append(v['value'])
 
     query = """
-            PREFIX pred: <http://moviesDB.com/predicate/>
-            SELECT  ?title ?pred ?obj
-            WHERE {{
-                ?movie ?pred ?obj .
-                ?movie pred:director ?director.
-                ?movie pred:name ?title .
-                FILTER(CONTAINS(lcase(?title), \"""" + request.POST['search'].lower() + """\"))
-	        } UNION {
-                ?movie ?pred ?obj .
-                ?movie pred:name ?title .
-                ?movie pred:plot_keyword ?keywords .
-                FILTER(CONTAINS(lcase(?keywords), \""""+ request.POST['search'].lower() +"""\"))
-            }}
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT  ?title ?pred ?obj
+                WHERE {
+                    {
+                        ?movie ?pred ?obj .
+                        ?movie pred:director ?director.
+                        ?movie pred:name ?title .
+                        FILTER(CONTAINS(lcase(?title), \"""" + request.POST['search'].lower() + """\"))
+                    } UNION {
+                        ?movie ?pred ?obj .
+                        ?movie pred:name ?title .
+                        ?movie pred:plot_keyword ?keywords .
+                        FILTER(CONTAINS(lcase(?keywords), \""""+ request.POST['search'].lower() +"""\"))
+                    }
+                }
            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
@@ -634,12 +642,12 @@ def apply_search(request):
             if e['pred']['value'].split("/")[-1] == 'genre':
                 i = e['obj']['value'].split("genres/")[1]
                 query = """
-                                      PREFIX genres: <http://moviesDB.com/entity/genres/>
-                                    prefix predicate: <http://moviesDB.com/predicate/>
-                                     select ?name where{
-                                    genres:""" + i + """ predicate:name ?name.
-                }
-                                    """
+                            PREFIX genres: <http://moviesDB.com/entity/genres/>
+                            prefix predicate: <http://moviesDB.com/predicate/>
+                                select ?name where{
+                                genres:""" + i + """ predicate:name ?name.
+                            }
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -652,12 +660,12 @@ def apply_search(request):
                 obj = [e['obj']['value'].split("person/")[1]]
                 movie_director = e['obj']['value'].split("person/")[1]
                 query = """
-                                  PREFIX person: <http://moviesDB.com/entity/person/>
-                                   PREFIX predicate: <http://moviesDB.com/predicate/>
-                                   SELECT ?name WHERE{
-                                   person:""" + movie_director + """ predicate:name ?name.
-                       }
-                               """
+                            PREFIX person: <http://moviesDB.com/entity/person/>
+                            PREFIX predicate: <http://moviesDB.com/predicate/>
+                            SELECT ?name WHERE{
+                                person:""" + movie_director + """ predicate:name ?name.
+                            }
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -666,12 +674,12 @@ def apply_search(request):
             elif e['pred']['value'].split("/")[-1] == 'actor':
                 i = e['obj']['value'].split("person/")[1]
                 query = """
-                                          PREFIX person: <http://moviesDB.com/entity/person/>
-                                        prefix predicate: <http://moviesDB.com/predicate/>
-                                         select ?name where{
-                                        person:""" + i + """ predicate:name ?name.
-                    }
-                                        """
+                            PREFIX person: <http://moviesDB.com/entity/person/>
+                            prefix predicate: <http://moviesDB.com/predicate/>
+                            select ?name where{
+                                person:""" + i + """ predicate:name ?name.
+                            }
+                        """
                 payload_query = {"query": query}
                 res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
                 res = json.loads(res)
@@ -709,8 +717,8 @@ def actors_list(request):
                 WHERE { 
                     ?movie pred:actor ?actor .
                     ?actor pred:name ?name .
-                    }
-                """
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -732,14 +740,14 @@ def apply_searchActor(request):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-        PREFIX pred: <http://moviesDB.com/predicate/>
-        SELECT distinct ?name
-        WHERE { 
-            ?movie pred:actor ?actor .
-            ?actor pred:name ?name .
-            FILTER (CONTAINS(lcase(?name), \""""+request.POST['search'].lower() +"""\"))
-            }
-                        """
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT distinct ?name
+                WHERE { 
+                    ?movie pred:actor ?actor .
+                    ?actor pred:name ?name .
+                    FILTER (CONTAINS(lcase(?name), \""""+request.POST['search'].lower() +"""\"))
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -760,14 +768,14 @@ def apply_searchDirector(request):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-            PREFIX pred: <http://moviesDB.com/predicate/>
-            SELECT distinct ?name
-            WHERE { 
-                ?movie pred:director ?director .
-                ?director pred:name ?name .
-                FILTER (CONTAINS(lcase(?name), \"""" + request.POST['search'].lower() + """\"))
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT distinct ?name
+                WHERE { 
+                    ?movie pred:director ?director .
+                    ?director pred:name ?name .
+                    FILTER (CONTAINS(lcase(?name), \"""" + request.POST['search'].lower() + """\"))
                 }
-                            """
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -788,13 +796,13 @@ def directors_list(request):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-                    PREFIX pred: <http://moviesDB.com/predicate/>
-                    SELECT distinct ?name
-                    WHERE { 
-                        ?movie pred:director ?director .
-                        ?director pred:name ?name .
-	                }
-                    """
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                SELECT distinct ?name
+                WHERE { 
+                    ?movie pred:director ?director .
+                    ?director pred:name ?name .
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -815,14 +823,14 @@ def show_movie(request, movie):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-            PREFIX mov: <http://moviesDB.com/entity/mov>
-        prefix predicate: <http://moviesDB.com/predicate/>
-        select ?pred ?obj where{
-            ?film ?pred ?obj.
-            ?film predicate:name ?name
-            filter regex(?name,\""""+movie.replace("/", " ").replace("!","")+"""\",+\"i\").
-    }
-        """
+                PREFIX mov: <http://moviesDB.com/entity/mov>
+                prefix predicate: <http://moviesDB.com/predicate/>
+                select ?pred ?obj where{
+                    ?film ?pred ?obj.
+                    ?film predicate:name ?name
+                    filter regex(?name,\""""+movie.replace("/", " ").replace("!","")+"""\",+\"i\").
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -863,11 +871,11 @@ def show_movie(request, movie):
 
     rating = rating.split("ratings/")[1]
     query = """
-               PREFIX ratings: <http://moviesDB.com/entity/ratings/>
+                PREFIX ratings: <http://moviesDB.com/entity/ratings/>
                 PREFIX predicate: <http://moviesDB.com/predicate/>
                 SELECT ?name WHERE{
-                ratings:""" + rating + """ predicate:name ?name.
-    }
+                    ratings:""" + rating + """ predicate:name ?name.
+                }
             """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
@@ -884,7 +892,7 @@ def show_movie(request, movie):
                     select ?name where{
                         genres:""" + i + """ predicate:name ?name.
                     }
-                    """
+                """
         payload_query = {"query": query}
         res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
         res = json.loads(res)
@@ -893,12 +901,12 @@ def show_movie(request, movie):
 
     movie_director = movie_director.split("person/")[1]
     query = """
-                  PREFIX person: <http://moviesDB.com/entity/person/>
-                   PREFIX predicate: <http://moviesDB.com/predicate/>
-                   SELECT ?name WHERE{
-                   person:""" + movie_director + """ predicate:name ?name.
-       }
-               """
+                PREFIX person: <http://moviesDB.com/entity/person/>
+                PREFIX predicate: <http://moviesDB.com/predicate/>
+                SELECT ?name WHERE{
+                    person:""" + movie_director + """ predicate:name ?name.
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -909,12 +917,12 @@ def show_movie(request, movie):
     for i in movie_main_actors:
         i = i.split("person/")[1]
         query = """
-                          PREFIX person: <http://moviesDB.com/entity/person/>
-                        prefix predicate: <http://moviesDB.com/predicate/>
-                         select ?name where{
+                   PREFIX person: <http://moviesDB.com/entity/person/>
+                   prefix predicate: <http://moviesDB.com/predicate/>
+                   select ?name where{
                         person:""" + i + """ predicate:name ?name.
-    }
-                        """
+                   }
+                """
         payload_query = {"query": query}
         res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
         res = json.loads(res)
@@ -947,14 +955,14 @@ def actor_profile(request, actor):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-           PREFIX pred: <http://moviesDB.com/predicate/>
-            PREFIX movies: <http://moviesDB.com/entity/movies/>
-            SELECT distinct ?person ?pred ?obj
-            WHERE {
-                ?person pred:name \"""" + actor.replace('_', ' ') + """\".
-                ?person ?pred ?obj.
-            }
-                        """
+                PREFIX pred: <http://moviesDB.com/predicate/>
+                PREFIX movies: <http://moviesDB.com/entity/movies/>
+                SELECT distinct ?person ?pred ?obj
+                WHERE {
+                    ?person pred:name \"""" + actor.replace('_', ' ') + """\".
+                    ?person ?pred ?obj.
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -967,14 +975,14 @@ def actor_profile(request, actor):
             bio = e['obj']['value']
 
     query = """
-              PREFIX pred: <http://moviesDB.com/predicate/>
+                PREFIX pred: <http://moviesDB.com/predicate/>
                 SELECT ?mname
                 WHERE { 
                     ?actor pred:name \"""" + actor.replace('_', ' ') + """\" .
                     ?movie pred:actor ?actor .
                     ?movie pred:name ?mname .
-                    }
-                           """
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -997,14 +1005,14 @@ def director_profile(request, director):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     query = """
-               PREFIX pred: <http://moviesDB.com/predicate/>
+                PREFIX pred: <http://moviesDB.com/predicate/>
                 PREFIX movies: <http://moviesDB.com/entity/movies/>
                 SELECT distinct ?person ?pred ?obj
                 WHERE {
                     ?person pred:name \"""" + director.replace('_', ' ') + """\".
                     ?person ?pred ?obj.
                 }
-                            """
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -1017,14 +1025,14 @@ def director_profile(request, director):
             bio = e['obj']['value']
 
     query = """
-           PREFIX pred: <http://moviesDB.com/predicate/>
+                PREFIX pred: <http://moviesDB.com/predicate/>
                 SELECT ?mname
                 WHERE { 
                     ?director pred:name \"""" + director.replace('_', ' ') + """\" .
                     ?movie pred:director ?director .
                     ?movie pred:name ?mname .
-                    }
-                           """
+                }
+            """
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
@@ -1048,13 +1056,13 @@ def delete_movie(request, movie):
     client = ApiClient(endpoint=endpoint)
     accessor = GraphDBApi(client)
     update = """
-        prefix predicate: <http://moviesDB.com/predicate/>
-        DELETE {?film ?pred ?obj.} where{
-        ?film ?pred ?obj.
-        ?film predicate:name ?name.
-        filter regex(?name,\"""" + movie + """\","i").
-        }
-        """
+            prefix predicate: <http://moviesDB.com/predicate/>
+            DELETE {?film ?pred ?obj.} where{
+                ?film ?pred ?obj.
+                ?film predicate:name ?name.
+                filter regex(?name,\"""" + movie + """\","i").
+            }
+            """
     payload_query = {"update": update}
     res = accessor.sparql_update(body=payload_query,
                                  repo_name=repo_name)
