@@ -617,7 +617,7 @@ def apply_search(request):
 
     query = """
                 PREFIX pred: <http://moviesDB.com/predicate/>
-                SELECT  ?title ?pred ?obj
+                SELECT distinct ?title ?pred ?obj
                 WHERE {
                     {
                         ?movie ?pred ?obj .
