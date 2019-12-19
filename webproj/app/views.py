@@ -1,10 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpRequest, HttpResponse
-from webproj.settings import BASE_DIR
-import os
-import lxml.etree as ET
-import xmltodict
-from BaseXClient import BaseXClient
+from django.http import HttpRequest
 import json
 from s4api.graphdb_api import GraphDBApi
 from s4api.swagger import ApiClient
@@ -71,8 +66,8 @@ def new_movie(request):
                             FILTER (?name = \"""" + g + """")
                             }
                         """
-                payload_query = {"query": query}
-                accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                payload_query = {"update": query}
+                accessor.sparql_update(body=payload_query, repo_name=repo_name)
 
             # Check if the rating exists in the DB (and adding the connection to it if it does)
             rating = request.POST['rating'].lower().replace("-","_").replace(":","").replace(",","").replace(".","")
@@ -109,8 +104,8 @@ def new_movie(request):
                             FILTER (?name = \"""" + request.POST['rating'] + """")
                             }
                         """
-                payload_query = {"query": query}
-                accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                payload_query = {"update": query}
+                accessor.sparql_update(body=payload_query, repo_name=repo_name)
 
             # Adding the rest of the movie's information to the DB
             director = request.POST['first_name1'].replace("'","").replace("-","_") \
@@ -149,8 +144,8 @@ def new_movie(request):
                                         pred:score	"?" .
                         }
                         """
-            payload_query = {"query": query}
-            accessor.sparql_select(body=payload_query, repo_name=repo_name)
+            payload_query = {"update": query}
+            accessor.sparql_update(body=payload_query, repo_name=repo_name)
 
             return show_movie(request, request.POST['title'])
     else:
