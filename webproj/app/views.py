@@ -8,7 +8,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 def new_movie(request):
     assert isinstance(request, HttpRequest)
-    
+
     if 'title' in request.POST:
         # verify if the required info was provided
         if {'title', 'year', 'first_name1', 'last_name1', 'first_name2', 'last_name2', 'first_name3', 'last_name3',
@@ -426,7 +426,7 @@ def apply_filters(request):
                     ?genre pred:name ?genre_name .
                     ?movie pred:name ?title .
                     ?movie pred:score ?score .
-                }
+                
             """
 
     genresToQuery = []
