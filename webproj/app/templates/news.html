@@ -60,16 +60,16 @@
                 {% for one_news_dic in news_dic %}
                     </div>
                     <br/><br/>
-                    <div class="row">
-                        <div class="col-md-12 align-items-center" style="min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0, 0, 0, 0.125);border-radius: 0.25rem;border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;">
+                    <div class="row hAtom">
+                        <div class="col-md-12 align-items-center hentry" style="min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0, 0, 0, 0.125);border-radius: 0.25rem;border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;">
                             <br/>
                             <br/>
                             <h2>
-                                <a href={{ one_news_dic.arc_url }}>{{ one_news_dic.itemTitle }}</a>
+                                <a class="entry-title" href={{ one_news_dic.arc_url }}>{{ one_news_dic.itemTitle }}</a>
                             </h2>
                             <br/>
-                            By {{ one_news_dic.autnamestr }}
-                            <div class="card-footer text-muted">
+                            By <span class="author vcard"><span class="fn">{{ one_news_dic.autnamestr }}</span></span>
+                            <div class="card-footer text-muted published" title={{ one_news_dic.pubdate }}>
                                 {{ one_news_dic.pubdate }}
                                 <br/>
                                 <a href={{ one_news_dic.pubin_name }}>{{ one_news_dic.pubin_name }}</a>
