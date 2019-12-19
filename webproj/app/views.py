@@ -9,152 +9,161 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 def new_movie(request):
     assert isinstance(request, HttpRequest)
 
-    # verify if the required info was provided
-    if {'title', 'year', 'first_name1', 'last_name1', 'first_name2', 'last_name2', 'first_name3', 'last_name3',
-        'duration', 'rating', 'genre1'} <= set(request.POST) \
-            and "" not in {request.POST['title'], request.POST['year'], request.POST['first_name1'],
-                           request.POST['last_name1'], request.POST['first_name2'], request.POST['last_name2'],
-                           request.POST['first_name3'], request.POST['last_name3'], request.POST['duration'],
-                           request.POST['rating'], request.POST['genre1']}:
-        clean_title = request.POST['title'].lower().strip().replace(" ","_").replace("-","_").replace(":","").replace(",","").replace(".","")
+    if 'title' in request.POST:
+        # verify if the required info was provided
+        if {'title', 'year', 'first_name1', 'last_name1', 'first_name2', 'last_name2', 'first_name3', 'last_name3',
+            'duration', 'rating', 'genre1'} <= set(request.POST) \
+                and "" not in {request.POST['title'], request.POST['year'], request.POST['first_name1'],
+                               request.POST['last_name1'], request.POST['first_name2'], request.POST['last_name2'],
+                               request.POST['first_name3'], request.POST['last_name3'], request.POST['duration'],
+                               request.POST['rating'], request.POST['genre1']}:
+            clean_title = request.POST['title'].lower().strip().replace(" ","_").replace("-","_").replace(":","").replace(",","").replace(".","")
 
-        endpoint = "http://localhost:7200"
-        repo_name = "moviesDB"
-        client = ApiClient(endpoint=endpoint)
-        accessor = GraphDBApi(client)
+            endpoint = "http://localhost:7200"
+            repo_name = "moviesDB"
+            client = ApiClient(endpoint=endpoint)
+            accessor = GraphDBApi(client)
 
-        # Check if the genres exist in the DB (and adding connections to them if they do)
-        genres = [request.POST['genre1']]
-        if 'genre2' in request.POST and request.POST['genre2'] != "":
-            genres.append(request.POST['genre2'])
-        if 'genre3' in request.POST and request.POST['genre3'] != "":
-            genres.append(request.POST['genre3'])
-        if 'genre4' in request.POST and request.POST['genre4'] != "":
-            genres.append(request.POST['genre4'])
+            # Check if the genres exist in the DB (and adding connections to them if they do)
+            genres = [request.POST['genre1']]
+            if 'genre2' in request.POST and request.POST['genre2'] != "":
+                genres.append(request.POST['genre2'])
+            if 'genre3' in request.POST and request.POST['genre3'] != "":
+                genres.append(request.POST['genre3'])
+            if 'genre4' in request.POST and request.POST['genre4'] != "":
+                genres.append(request.POST['genre4'])
 
-        for g in genres:
-            query = """
-                    PREFIX gen: <http://moviesDB.com/entity/genres/>
-                    PREFIX pred: <http://moviesDB.com/predicate/>
-                    ASK {
-                        { gen:""" + g.lower() + " pred:name \"" + g + """" . }
-                        UNION
-                        { ?movie pred:genre ?genre .
-                          ?genre pred:name \"""" + g + """" . }
+            for g in genres:
+                query = """
+                        PREFIX gen: <http://moviesDB.com/entity/genres/>
+                        PREFIX pred: <http://moviesDB.com/predicate/>
+                        ASK {
+                            { gen:""" + g.lower() + " pred:name \"" + g + """" . }
+                            UNION
+                            { ?movie pred:genre ?genre .
+                              ?genre pred:name \"""" + g + """" . }
+                            }
+                        """
+                payload_query = {"query": query}
+                res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                res = json.loads(res)
+                if not res['boolean']:
+                    return render(
+                        request,
+                        'newMovie.html',
+                        {
+                            'error': True,
+                            'errormessage': "The genre \"" + g + "\" does not exist in the database."
                         }
-                    """
-            payload_query = {"query": query}
-            res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
-            res = json.loads(res)
-            if not res['boolean']:
-                return render(
-                    request,
-                    'newMovie.html',
-                    {
-                        'error': True,
-                        'errormessage': "The genre \"" + g + "\" does not exist in the database."
-                    }
-                )
-            else:
+                    )
+                else:
+                    query = """
+                            PREFIX mov: <http://moviesDB.com/entity/mov>
+                            PREFIX pred: <http://moviesDB.com/predicate/>
+                            INSERT  { mov:""" + clean_title + """ pred:genre ?genre }
+                            WHERE {
+                                ?movie pred:genre ?genre .
+                                ?genre pred:name ?name .
+                                FILTER (?name = \"""" + g + """")
+                                }
+                            """
+                    payload_query = {"update": query}
+                    accessor.sparql_update(body=payload_query, repo_name=repo_name)
+
+                # Check if the rating exists in the DB (and adding the connection to it if it does)
+                rating = request.POST['rating'].lower().replace("-","_").replace(":","").replace(",","").replace(".","")
+                query = """
+                        PREFIX gen: <http://moviesDB.com/entity/ratings/>
+                        PREFIX pred: <http://moviesDB.com/predicate/>
+                        ASK {
+                            { gen:""" + rating + " pred:name \"" + request.POST['rating'] + """" . }
+                            UNION
+                            { ?movie pred:rating ?rating .
+                              ?rating pred:name \"""" + request.POST['rating'] + """" . }
+                            }
+                        """
+                payload_query = {"query": query}
+                res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+                res = json.loads(res)
+                if not res['boolean']:
+                    return render(
+                        request,
+                        'newMovie.html',
+                        {
+                            'error': True,
+                            'errormessage': "The rating \"" + request.POST['rating'] + "\" does not exist in the database."
+                        }
+                    )
+                else:
+                    query = """
+                            PREFIX mov: <http://moviesDB.com/entity/mov>
+                            PREFIX pred: <http://moviesDB.com/predicate/>
+                            INSERT  { mov:""" + clean_title + """ pred:rating ?rating }
+                            WHERE {
+                                ?movie pred:rating ?rating .
+                                ?rating pred:name ?name .
+                                FILTER (?name = \"""" + request.POST['rating'] + """")
+                                }
+                            """
+                    payload_query = {"update": query}
+                    accessor.sparql_update(body=payload_query, repo_name=repo_name)
+
+                # Adding the rest of the movie's information to the DB
+                director = request.POST['first_name1'].replace("'","").replace("-","_") \
+                           + "_" + request.POST['last_name1'].replace("'","").replace("-","_")
+                actor1 = request.POST['first_name2'].replace("'","").replace("-","_") \
+                         + "_" + request.POST['last_name2'].replace("'","").replace("-","_")
+                actor2 = request.POST['first_name3'].replace("'", "").replace("-", "_") + "_" \
+                         + request.POST['last_name3'].replace("'", "").replace("-", "_")
+                actor3 = request.POST['first_name4'].replace("'", "").replace("-", "_") \
+                         + "_" + request.POST['last_name4'].replace("'", "").replace("-", "_")
+
+                if 'budget' in request.POST and request.POST['budget'] != "":
+                    budget = request.POST['budget']
+                else:
+                    budget = "0"
+                if 'country' in request.POST and request.POST['country'] != "":
+                    country = request.POST['country']
+                else:
+                    country = "XXX"
+
                 query = """
                         PREFIX mov: <http://moviesDB.com/entity/mov>
                         PREFIX pred: <http://moviesDB.com/predicate/>
-                        INSERT  { mov:""" + clean_title + """ pred:genre ?genre }
-                        WHERE {
-                            ?movie pred:genre ?genre .
-                            ?genre pred:name ?name .
-                            FILTER (?name = \"""" + g + """")
+                        INSERT DATA { 
+                            mov:""" + clean_title + "	pred:name	\"" + request.POST['title'] + """" ;
+                                            pred:year	\"""" + request.POST['year'] + """" ;
+                                            pred:duration	\"""" + request.POST['duration'] + """" ;
+                                            pred:director	<http://moviesDB.com/entity/person/""" + director + """> ;
+                                            pred:actor	<http://moviesDB.com/entity/person/""" + actor1 + """> ,
+                                                        <http://moviesDB.com/entity/person/""" + actor2 + """> ,
+                                                        <http://moviesDB.com/entity/person/""" + actor3 + """> ;
+                                            pred:budget	\"""" + budget + """" ;
+                                            pred:country	\"""" + country + """" ;
+                                            pred:language	"XXX" ;
+                                            pred:poster	"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT16wQWF2p4_8GBLCNAMR9tOfs-q7o1TpLN23n7obheV5IroABG&fbclid=IwAR0YOgN094aLmuX7Z0VMd9xyXgiBZDQu7-HXpB7NAEm8CKiWxz_8JUQJ1nE" ;
+                                            pred:score	"?" .
                             }
-                        """
+                            """
                 payload_query = {"update": query}
                 accessor.sparql_update(body=payload_query, repo_name=repo_name)
 
-            # Check if the rating exists in the DB (and adding the connection to it if it does)
-            rating = request.POST['rating'].lower().replace("-","_").replace(":","").replace(",","").replace(".","")
-            query = """
-                    PREFIX gen: <http://moviesDB.com/entity/ratings/>
-                    PREFIX pred: <http://moviesDB.com/predicate/>
-                    ASK {
-                        { gen:""" + rating + " pred:name \"" + request.POST['rating'] + """" . }
-                        UNION
-                        { ?movie pred:rating ?rating .
-                          ?rating pred:name \"""" + request.POST['rating'] + """" . }
-                        }
-                    """
-            payload_query = {"query": query}
-            res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
-            res = json.loads(res)
-            if not res['boolean']:
-                return render(
-                    request,
-                    'newMovie.html',
-                    {
-                        'error': True,
-                        'errormessage': "The rating \"" + request.POST['rating'] + "\" does not exist in the database."
-                    }
-                )
-            else:
-                query = """
-                        PREFIX mov: <http://moviesDB.com/entity/mov>
-                        PREFIX pred: <http://moviesDB.com/predicate/>
-                        INSERT  { mov:""" + clean_title + """ pred:rating ?rating }
-                        WHERE {
-                            ?movie pred:rating ?rating .
-                            ?rating pred:name ?name .
-                            FILTER (?name = \"""" + request.POST['rating'] + """")
-                            }
-                        """
-                payload_query = {"update": query}
-                accessor.sparql_update(body=payload_query, repo_name=repo_name)
-
-            # Adding the rest of the movie's information to the DB
-            director = request.POST['first_name1'].replace("'","").replace("-","_") \
-                       + "_" + request.POST['last_name1'].replace("'","").replace("-","_")
-            actor1 = request.POST['first_name2'].replace("'","").replace("-","_") \
-                     + "_" + request.POST['last_name2'].replace("'","").replace("-","_")
-            actor2 = request.POST['first_name3'].replace("'", "").replace("-", "_") + "_" \
-                     + request.POST['last_name3'].replace("'", "").replace("-", "_")
-            actor3 = request.POST['first_name4'].replace("'", "").replace("-", "_") \
-                     + "_" + request.POST['last_name4'].replace("'", "").replace("-", "_")
-
-            if 'budget' in request.POST and request.POST['budget'] != "":
-                budget = request.POST['budget']
-            else:
-                budget = "0"
-            if 'country' in request.POST and request.POST['country'] != "":
-                country = request.POST['country']
-            else:
-                country = "XXX"
-
-            query = """
-                    PREFIX mov: <http://moviesDB.com/entity/mov>
-                    PREFIX pred: <http://moviesDB.com/predicate/>
-                    INSERT DATA { 
-                        mov:""" + clean_title + "	pred:name	\"" + request.POST['title'] + """" ;
-                                        pred:year	\"""" + request.POST['year'] + """" ;
-                                        pred:duration	\"""" + request.POST['duration'] + """" ;
-                                        pred:director	<http://moviesDB.com/entity/person/""" + director + """> ;
-                                        pred:actor	<http://moviesDB.com/entity/person/""" + actor1 + """> ,
-                                                    <http://moviesDB.com/entity/person/""" + actor2 + """> ,
-                                                    <http://moviesDB.com/entity/person/""" + actor3 + """> ;
-                                        pred:budget	\"""" + budget + """" ;
-                                        pred:country	\"""" + country + """" ;
-                                        pred:language	"XXX" ;
-                                        pred:poster	"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT16wQWF2p4_8GBLCNAMR9tOfs-q7o1TpLN23n7obheV5IroABG&fbclid=IwAR0YOgN094aLmuX7Z0VMd9xyXgiBZDQu7-HXpB7NAEm8CKiWxz_8JUQJ1nE" ;
-                                        pred:score	"?" .
-                        }
-                        """
-            payload_query = {"update": query}
-            accessor.sparql_update(body=payload_query, repo_name=repo_name)
-
-            return show_movie(request, request.POST['title'])
+                return show_movie(request, request.POST['title'])
+        else:
+            return render(
+                request,
+                'newMovie.html',
+                {
+                    'error': True,
+                    'errormessage': "Please fill all the required fields."
+                }
+            )
     else:
         return render(
             request,
             'newMovie.html',
             {
-                'error': True,
-                'errormessage': "Please fill all the required fields."
+                'error': False
             }
         )
 
