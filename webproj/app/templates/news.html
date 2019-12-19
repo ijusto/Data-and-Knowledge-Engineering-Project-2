@@ -60,19 +60,19 @@
                 {% for one_news_dic in news_dic %}
                     </div>
                     <br/><br/>
-                    <div class="row hAtom">
-                        <div class="col-md-12 align-items-center hentry" style="min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0, 0, 0, 0.125);border-radius: 0.25rem;border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;">
+                    <div vocab="http://schema.org/" typeof="Article" class="row">
+                        <div class="col-md-12 align-items-center" style="min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0, 0, 0, 0.125);border-radius: 0.25rem;border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;">
                             <br/>
                             <br/>
                             <h2>
-                                <a class="entry-title" href={{ one_news_dic.arc_url }}>{{ one_news_dic.itemTitle }}</a>
+                                <a property="name" href={{ one_news_dic.arc_url }}>{{ one_news_dic.itemTitle }}</a>
                             </h2>
                             <br/>
-                            By <span class="author vcard"><span class="fn">{{ one_news_dic.autnamestr }}</span></span>
-                            <div class="card-footer text-muted published" title={{ one_news_dic.pubdate }}>
-                                {{ one_news_dic.pubdate }}
+                          By <span property="author">{{ one_news_dic.autnamestr }}</span>
+                            <div class="card-footer text-muted" title={{ one_news_dic.pubdate }}>
+                              <span property="datePublished">{{ one_news_dic.pubdate }}</span>
                                 <br/>
-                                <a href={{ one_news_dic.pubin_name }}>{{ one_news_dic.pubin_name }}</a>
+                              <a href={{ one_news_dic.pubin_name }}><span property="identifier">{{ one_news_dic.pubin_name }}</span></a>
                             </div>
                         </div>
                 {% endfor %}

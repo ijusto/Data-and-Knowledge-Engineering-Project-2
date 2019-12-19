@@ -49,10 +49,9 @@
 
     <!-- Page Content -->
     <div class="container">
-       
         <div class="row">
             <!-- Blog Entries Column -->
-            <div class="col-md-12 align-items-center">
+            <div vocab="http://schema.org/" typeof="Movie" class="col-md-12 align-items-center">
                 <div class="d-flex flex-row" style="min-width: 0;
                                                 word-wrap: break-word;
                                                 background-color: #fff;
@@ -63,28 +62,26 @@
                                                 border-bottom-left-radius: 0.25rem;
                                                 margin-bottom: 1.5rem !important;">
                 <div class="p-2">
-                    <!--<img class="card-img-top" src="" alt="Card image cap"/>-->
                     <img style="width:350px;padding-top: 12px" src="{{movie_img}}" alt="Card image cap" class="card-img"/>
                 </div>
-                <div class="p-2 hmedia">
-                    <!--<div class="card-body" style="align-items: baseline">-->
-                    <h1 class="fn"><!--class="card-title"-->{{ movie_name }}</h1>
-                    <p style="padding-left: 15px"><b><i>Year: </i></b>{{ movie_year }}</p>
-                    <p style="padding-left: 15px"><b><i>Rating: </i></b>{{ movie_rating }}</p>
-                    <p style="padding-left: 15px"><b><i>Language: </i></b>{{ movie_language }}</p>
-                    <p style="padding-left: 15px"><b><i>Country: </i></b>{{ movie_country }}</p>
-                    <p style="padding-left: 15px"><b><i>Duration: </i></b>{{ movie_duration }} min</p>
-                    <p style="padding-left: 15px"><b><i>Budget: </i></b>{{ movie_budget }}</p>
+                <div class="p-2">
+                    <h1 property="name"><!--class="card-title"-->{{ movie_name }}</h1>
+                  <p style="padding-left: 15px"><b><i>Year: </i></b><time property="datePublished">{{ movie_year }}</time></p>
+                  <p style="padding-left: 15px"><b><i>Rating: </i></b><span property="contentRating">{{ movie_rating }}</span></p>
+                  <p style="padding-left: 15px"><b><i>Language: </i></b><span property="inLanguage">{{ movie_language }}</span></p>
+                  <p style="padding-left: 15px"><b><i>Country: </i></b><span property="countryOfOrigin">{{ movie_country }}</span></p>
+                  <p style="padding-left: 15px"><b><i>Duration: </i></b><span property="duration">{{ movie_duration }}</span> min</p>
+                  <p typeof="MonetaryAmount" style="padding-left: 15px"><b><i>Budget: </i></b><span property="amount">{{ movie_budget }}</span></p>
                     <p style="padding-left: 15px"><strong><i>Genres: </i></strong>
                         {% for genre in movie_genres %}
-                            [{{ genre }}]
+                      [<span property="genre">{{ genre }}</span>]
                         {% endfor %}
                     </p>
                     <p style="padding-left: 15px"><strong><i>Director: </i></strong>
                         {% if "_" not in movie_director %}
-                            <a href="../../director/{{movie_director}}">{{movie_director}}</a>
+                      <a property="director" typeof="Person" href="../../director/{{movie_director}}"><span property="name">{{movie_director}}</span></a>
                         {% else %}
-                            <a>{{ movie_director }}</a>
+                      <a property="director" typeof="Person"><span property="name">{{ movie_director }}</span></a>
                         {% endif %}
                     </p>
 
@@ -94,9 +91,9 @@
                         <strong style="padding-left: 20px"><i>Main actors: </i></strong>
                                 {% for actor_name in movie_main_actors %}
                                     {% if "_" not in actor_name %}
-                                        [<a href="../../actor/{{actor_name}}">{{actor_name}}</a>]
+                      [<a property="actor" typeof="Person" href="../../actor/{{actor_name}}"><span property="name">{{actor_name}}</span></a>]
                                     {% else %}
-                                        [<a>{{ actor_name }}</a>]
+                      [<a property="actor" typeof="Person"><span property="name">{{ actor_name }}</span></a>]
                                     {% endif %}
                                 {% endfor %}
                         <br/>
@@ -105,7 +102,7 @@
                                     None
                                 {% else %}
                                     {% for actor_name in movie_secondary_actors %}
-                                        [<a href="../../actor/{{actor_name}}">{{actor_name}}</a>]
+                      [<a property="actor" typeof="Person" href="../../actor/{{actor_name}}"><span property="name">{{actor_name}}</span></a>]
                                     {% endfor %}
                                 {% endif %}
                             <br/>
@@ -113,13 +110,12 @@
                     <p>
 
                     </p>
-                    </p>
                     <p style="padding-left: 15px"><strong><i>Plot keywords: </i></strong>
                         {% for key in movie_plot_keywords %}
-                            [{{ key }}]
+                      		[<span property="keywords">{{ key }}</span>]
                         {% endfor %}
                     </p>
-                    <p style="padding-left: 15px"><b><i>Score: </i></b><strong>{{ movie_score }}</strong>/10</p>
+                  <p property="aggregateRating" typeof="AggregateRating" style="padding-left: 15px"><b><i>Score: </i></b><strong><span property="ratingValue">{{ movie_score }}</span></strong>/<span property="ratingCount">10</span></p>
 
                     <p align="right"> <button type="submit" class="btn btn-secondary" type="button" onclick="deleteAlert('{{ movie_name }}')">Delete</button></p>
                     <script>function deleteAlert(movie) {
@@ -129,6 +125,8 @@
                 </div>
             </div>
         </div>
+        <!-- /.row -->
+    </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
