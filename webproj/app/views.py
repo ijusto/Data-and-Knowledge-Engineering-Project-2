@@ -594,6 +594,7 @@ def apply_search(request):
             SELECT  ?title ?pred ?obj
             WHERE {{
                 ?movie ?pred ?obj .
+                ?movie pred:director ?director.
                 ?movie pred:name ?title .
                 FILTER(CONTAINS(lcase(?title), \"""" + request.POST['search'].lower() + """\"))
 	        } UNION {
