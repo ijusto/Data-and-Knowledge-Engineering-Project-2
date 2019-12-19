@@ -57,7 +57,18 @@
                     <!--TODO category selected-->
                 </h1>
 
-                {{ content | safe }}
+                {% for d in directors %}
+                    <div class="d-flex flex-row" style="min-width: 0; word-wrap: break-word; background-color: #fff; background-clip: border-box;border: 1px solid rgba(0, 0, 0, 0);border-radius: 0.02rem;border-bottom-right-radius: 0.02rem;border-bottom-left-radius: 0.02rem;">
+                        <div class="p-2">
+                            <h5>
+                                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                <a href="director/{{ d.0 }}_{{ d.1 }}">
+                                        {{d.0}} {{ d.1 }}
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                {% endfor %}
 
             </div>
 
@@ -87,7 +98,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">EDC - Trabalho Prático 1 - Grupo 3</p>
+            <p class="m-0 text-center text-white">EDC - Trabalho Prático 2 - Grupo 3</p>
         </div>
         <!-- /.container -->
     </footer>

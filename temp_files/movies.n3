@@ -1,44 +1,237 @@
 @prefix mov: <http://moviesDB.com/entity/mov>.
-@prefix	person: <http://moviesDB.com/entity/person/>.
-@prefix	genres: <http://moviesDB.com/entity/genres/>.
-@prefix	ratings: <http://moviesDB.com/entity/ratings/>.
-@prefix	predicate: <http://moviesDB.com/predicate/>.
-
+@prefix person: <http://moviesDB.com/entity/person/>.
+@prefix genres: <http://moviesDB.com/entity/genres/>.
+@prefix ratings: <http://moviesDB.com/entity/ratings/>.
+@prefix predicate: <http://moviesDB.com/predicate/>.
+genres:horror predicate:name "Horror".
+genres:mystery predicate:name "Mystery".
+genres:thriller predicate:name "Thriller".
 genres:action predicate:name "Action".
 genres:adventure predicate:name "Adventure".
 genres:fantasy predicate:name "Fantasy".
 genres:sci_fi predicate:name "Sci-Fi".
-
+genres:romance predicate:name "Romance".
+genres:animation predicate:name "Animation".
+genres:comedy predicate:name "Comedy".
+genres:family predicate:name "Family".
+genres:musical predicate:name "Musical".
+genres:western predicate:name "Western".
+genres:drama predicate:name "Drama".
+genres:history predicate:name "History".
+genres:crime predicate:name "Crime".
+genres:war predicate:name "War".
+genres:biography predicate:name "Biography".
+genres:music predicate:name "Music".
+ratings:r predicate:name "R".
+ratings:pg predicate:name "PG".
 ratings:pg_13 predicate:name "PG-13".
-
-mov:avatar   predicate:name "Avatar";
-		predicate:year "2003";
-		predicate:score "7.9";
-		predicate:actor person:CCH_Pounder,
-				person:Joel_Moore,
-				person:Wes_Studi;
-		predicate:poster "https://m.media-amazon.com/images/M/....";
-		predicate:director person:James_Cameron;
-		predicate:genre genres:action,
-				genres:adventure,
-				genres:fantasy,
-				genres:sci_fi;
-		predicate:plot_keyword  "avatar",
-					"future",
-					"marine",
-					"native",
-					"paraplegic";
-		predicate:country "USA";
-		predicate:language "English";
-		predicate:rating ratings:pg_13;
-		predicate:duration "178";
-		predicate:budget "237000000".
-
-person:James_Cameron	predicate:name "James Cameron";
-			predicate:profession "Actor";
-			predicate:image "https://m.media-amazon.com/images/M/MV5BMjI0MjMzOTg2MF5BMl5BanBnXkFtZTcwMTM3NjQxMw@@._V1_UX214_CR0,0,214,317_AL_.jpg";
-			predicate:bio "James Francis Cameron was born on August 16, 1954 in Kapuskasing, Ontario, Canada. He moved to the United States in 1971. The son of an engineer, he majored in physics at California State University before switching to English, and eventually dropping out. He then drove a truck to support his screenwriting ambition. He landed his first professional film job as art director, miniature-set builder, and process-projection supervisor on Roger Corman's Batalha Além das Estrelas (1980) and had his first experience as a director with a two week stint on Piranha II - O Peixe Vampiro (1981) before being fired. In 1984, he wrote and directed O Exterminador Implacável (1984), a futuristic action-thriller starring Arnold Schwarzenegger, Michael Biehn and Linda Hamilton. It was a huge success. After this came a string of successful science-fiction action films such as Aliens: O Recontro Final (1986), O Abismo (1989) and Exterminador Implacável 2: O Dia do Julgamento (1991). In 1990, Cameron formed his own production company, Lightstorm Entertainment. In 1997, he wrote and directed Titanic (1997), a romance epic about two young lovers from different social classes who meet on board the famous ship. The movie went on to break all box office records and earned eleven Academy Awards. It became the highest grossing movie of all time. The rest is history. James Cameron is now one of the most sought-after directors in Hollywood. He was formerly married to producer Gale Anne Hurd, who produced several of his films. In 2000, he married actress Suzy Amis, who appeared in Titanic, and they have three children. - IMDb Mini Biography By: Dorian House".
-
-person:CCH_Pounder	predicate:name	"CCH Pounder".
-person:Joel_Moore	predicate:name	"Joel Moore".
-person:Wes_Studi	predicate:name	"Wes Studi".
+ratings:g predicate:name "G".
+mov:avatar
+	predicate:name "Avatar";
+	predicate:year "2009";
+	predicate:score "7.9";
+	predicate:actor 
+			person:CCH_Pounder,
+			person:Joel_Moore,
+			person:Wes_Studi;
+	predicate:poster "https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_UX182_CR0,0,182,268_AL_.jpg";
+	predicate:director 
+			person:James_Cameron;
+	predicate:genre 
+			genres:action,
+			genres:adventure,
+			genres:fantasy,
+			genres:sci-fi;
+	predicate:plot_keyword 
+			"avatar",
+			"future",
+			"marine",
+			"native",
+			"paraplegic";
+	predicate:country "USA";
+	predicate:language "English";
+	predicate:rating ratings:pg_13;
+	predicate:duration "178";
+	predicate:budget "237000000".
+mov:spectre
+	predicate:name "Spectre";
+	predicate:year "2015";
+	predicate:score "6.8";
+	predicate:actor 
+			person:Christoph_Waltz,
+			person:Rory_Kinnear,
+			person:Stephanie_Sigman;
+	predicate:poster "https://m.media-amazon.com/images/M/MV5BOWQ1MDE1NzgtNTQ4OC00ZjliLTllZDAtN2IyOTVmMTc5YjUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg";
+	predicate:director 
+			person:Sam_Mendes;
+	predicate:genre 
+			genres:action,
+			genres:adventure,
+			genres:thriller;
+	predicate:plot_keyword 
+			"bomb",
+			"espionage",
+			"sequel",
+			"spy",
+			"terrorist";
+	predicate:country "UK";
+	predicate:language "English";
+	predicate:rating ratings:pg_13;
+	predicate:duration "148";
+	predicate:budget "245000000".
+mov:the_dark_knight_rises
+	predicate:name "The Dark Knight Rises";
+	predicate:year "2012";
+	predicate:score "8.5";
+	predicate:actor 
+			person:Tom_Hardy,
+			person:Christian_Bale,
+			person:Joseph_Gordon_Levitt;
+	predicate:poster "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg";
+	predicate:director 
+			person:Christopher_Nolan;
+	predicate:genre 
+			genres:action,
+			genres:thriller;
+	predicate:plot_keyword 
+			"deception",
+			"imprisonment",
+			"lawlessness",
+			"police officer",
+			"terrorist plot";
+	predicate:country "USA";
+	predicate:language "English";
+	predicate:rating ratings:pg_13;
+	predicate:duration "164";
+	predicate:budget "250000000".
+person:Milos_Forman
+		predicate:name "Milos Forman";
+		predicate:profession "Director";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BNDY5NDAyODM2Nl5BMl5BanBnXkFtZTcwMzgzNzg3OA@@._V1_UY317_CR13,0,214,317_AL_.jpg";
+		predicate:bio "Milos Forman was born Jan Tomas Forman in Caslav, Czechoslovakia, to Anna (Svabova), who ran a summer hotel, and Rudolf Forman, a professor. During World War II, his parents were taken away by the Nazis, after being accused of participating in the underground resistance. His father died in Buchenwald and his mother died in Auschwitz, and Milos became an orphan very early on. He studied screen-writing at the Prague Film Academy (F.A.M.U.). In his Czechoslovakian films, O Ás de Espadas (1964), Os Amores de Uma Loira (1965), and O Baile dos Bombeiros (1967), he created his own style of comedy. During the invasion of his country by the troops of the Warsaw pact in the summer of 1968 to stop the Prague spring, he left Europe for the United States. In spite of difficulties, he filmed Os Amores de Uma Adolescente (1971) there and achieved his fame later with Voando Sobre Um Ninho de Cucos (1975) adapted from the novel of Ken Kesey, which won five Oscars including one for direction. Other important films of Milos Forman were the musical Hair (1979) and his biography of Wolfgang Amadeus Mozart, Amadeus (1984), which won eight Oscars. - IMDb Mini Biography By:  Volker Boehm  ".
+person:Gerry_Becker
+		predicate:name "Gerry Becker";
+		predicate:profession "Actor";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMTEwNDA5NDE5ODNeQTJeQWpwZ15BbWU3MDk3ODM5OTc@._V1_UY317_CR3,0,214,317_AL_.jpg";
+		predicate:bio "Gerry Becker was born on April 11, 1951 in St. Louis, Missouri, USA. He is an actor, known for Homem-Aranha (2002), Felicidade (1998) and O Jogo (1997). ".
+person:Pierre_Morel
+		predicate:name "Pierre Morel";
+		predicate:profession "Director";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMjE3NDcyNzY4Nl5BMl5BanBnXkFtZTcwNDg5NDUxMw@@._V1_UY317_CR5,0,214,317_AL_.jpg";
+		predicate:bio "Pierre Morel was born on May 12, 1964 in France. He is known for his work on Os Gangs do Bairro 13 (2004), Busca Implacável (2008) and The Gunman - O Atirador (2015). ".
+person:Kasia_Smutniak
+		predicate:name "Kasia Smutniak";
+		predicate:profession "Actor";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMjExNjAyMjg3M15BMl5BanBnXkFtZTcwODc5NDUxMw@@._V1_UY317_CR2,0,214,317_AL_.jpg";
+		predicate:bio "Kasia Smutniak was born on August 13, 1979 in Pila, Wielkopolskie, Poland as Katarzyna Anna Smutniak. She is an actress and producer, known for Amigos Amigos, Telemóveis à Parte (2016), De Paris com Amor (2010) and Tutta colpa di Giuda (2009). She has been married to Domenico Procacci since September 15, 2019. ".
+person:Jaime_King
+		predicate:name "Jaime King";
+		predicate:profession "Actor";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMTUwNDE1NTc0Nl5BMl5BanBnXkFtZTgwMDY1MTcyNDE@._V1_UY317_CR51,0,214,317_AL_.jpg";
+		predicate:bio "Jaime King was born on April 23, 1979 in Omaha, Nebraska, USA. She is an actress and producer, known for São Valentim Sangrento (2009), Sin City: Cidade do Pecado (2005) and Loiras à Força (2004). She has been married to Kyle Newman since November 23, 2007. They have two children. ".
+person:Steve_Oedekerk
+		predicate:name "Steve Oedekerk";
+		predicate:profession "Director";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMTgwMTI3NjkzOV5BMl5BanBnXkFtZTYwMzg4ODY3._V1_UX214_CR0,0,214,317_AL_.jpg";
+		predicate:bio "Steve Oedekerk, the Academy Award nominated multi-hyphenate, has built an extraordinary career, experiencing vast success in writing, directing, producing, acting, stand-up comedy and computer generated animation. He has written and directed films that have grossed over $1.9 billion in worldwide box office, including such blockbusters as Bruce Almighty, the Ace Ventura franchise, The Nutty Professor, and Patch Adams. He received an Academy Award nomination for his producing and creative leadership role on Jimmy Neutron: Boy Genius, and with the addition of the CG animated feature Barnyard along with its Emmy Award winning TV series, Oedekerk has created a successful template for turning hit animated feature films into long running hit television series. Having just completed the screenplay for the upcoming live action/VFX, stereoscopic spectacle Stretch Armstrong for Universal, Oedekerk is currently prepping his next round of blockbuster feature films and TV series.Cult Crazy: Also excelling in the coveted youth demographic, Oedekerk has created cult franchise properties, whose audience continues to grow with each passing year. From his initial indy feature film High Strung, and his Thumb filmettes, including Thumb Wars and Thumbtanic, to writing, directing and starring in the wild retro-martial arts comedy Kung Pow: Enter the Fist, Oedekerk has a steadily growing base of Oedefans, who religiously await, track down and tune into the future right-brained creations from Steve.Television: Further expanding the Jimmy Neutron franchise for Nickelodeon Television, Steve executive produced 63 episodes of The Adventures of Jimmy Neutron, and 52 episodes of the Emmy Award winning Back at the Barnyard. The Neutron TV series initially released with $100 million dollars of sponsor support, and Back at the Barnyard continually lands in the top 20 ratings of all cable TV, reaching as high as the top 5. The new and raucous, Planet Sheen, a spin-off of the popular Neutron franchise will hit Nickelodeon air in 2010. Oedekerk also starred in his own television special for NBC, produced an animated Christmas special for ABC, and his six Thumb filmette titles: \"Thumb Wars\",\"Thumbtanic\", \"The Blair Thumb\", \"Bat Thumb\", \"Frankenthumb\" and \"The Godthumb\" have aired on both Showtime and Cartoon Network.Digital Media: Always in pursuit of the future of entertainment, Steve is not only focused on the burgeoning areas of new media and social networking, but has created an innovative model defining the future of successful franchise property development, including Gaming, Internet, Mobile, Virtual worlds and Digital Media production. Dirk Derby Wonder Jockey will be the first broadcast length comedy series released exclusively to the online digital media arena and digital hand held media market , including Sony PSP, iPhone and iPad. Dirk Derby will set the pace for the future transition from repurposed online media to full length original content available exclusively in the digital marketplace.New Technologies: Oedekerk's company, O Entertainment, led the way with the first IMAX 3D animated film,Santa vs. the Snowman 3D (2002), releasing November, 2002 and launching the return of stereoscopic 3D entertainment to the big screen. Oedekerk also created \"Thumbmation\" the technology behind the series of Thumb Parody projects distributed worldwide on DVD and video by Image Entertainment. Kicking off the series was \"Thumb Wars\", followed by \"Thumbtanic\", \"The Blair Thumb\", \"Bat Thumb\", \"Frankenthumb\" and \"The Godthumb\".His writing credits include some of the most successful movies in recent history. While writing on the Fox series_\"In Living Color\" (1990)_, Oedekerk collaborated with Jim Carreyon the surprise hit comedy \"Ace Ventura: Pet Detective.\" When that film became a break-out success, Oedekerk was asked to write and directed its sequel, Ace Ventura em África (1995), which proved to be one of those rare sequels that far surpassed the box office gross of the original.Following the success of \"Ace Ventura\" franchise, Oedekerk wrote Universal's_The Nutty Professor (1996)_, which became one of the highest-grossing films of 1996. He also wrote, directed and appeared (in a scene-stealing cameo) in Touchstone Pictures' Nada a Perder (1997), starring Tim Robbins and Martin Lawrence. He then went on to write the box office smash and Golden Globe nominated Patch Adams (1998) starring Robin Williams. On the small screen, Oedekerk directed, wrote, and starred in his own television special for NBC, produced an animated Christmas special for ABC as well as the original \"Thumb Wars\" special for UPN.Oedekerk resides in Southern California with his wife, two children and a badger, pound for pound known to be the most vicious mammal on the planet. - IMDb Mini Biography By:  Steve Oedekerk  ".
+person:George_Nolfi
+		predicate:name "George Nolfi";
+		predicate:profession "Director";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMjI0MTEyODE0OF5BMl5BanBnXkFtZTcwMTc3MDM1NA@@._V1_UY317_CR131,0,214,317_AL_.jpg";
+		predicate:bio "Nolfi was born in Boston, Massachusetts. He attended James Hart Junior High School in Homewood, Illinois, and then Homewood-Flossmoor High School in Flossmoor, both in the south suburbs of Chicago. He graduated from Princeton University summa cum laude with a bachelor's in public policy and was awarded a Marshall Scholarship to Oxford University. He completed some graduate work there in philosophy and then switched to the doctoral program in political science at UCLA.Nolfi sold his first spec script, Pathfinder (as yet unproduced), before completing his Ph.D. and left UCLA with a master's degree.In 2004, he adapted his spec screenplay Honor Among Thieves (previously considered as a John Woo vehicle) into the sequel to Ocean's Eleven called Ocean's Twelve.[2] He has also written screenplays for Timeline and The Sentinel. He co-wrote The Bourne Ultimatum with Tony Gilroy, and Scott Z. Burns.Nolfi is set to direct a projected horror film entitled, XOXO, which is being produced by Darren Aronofsky and written by Black Swan writer Mark Heyman. - IMDb Mini Biography By:  Anonymous  ".
+person:James_Cameron
+		predicate:name "James Cameron";
+		predicate:profession "Director";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMjI0MjMzOTg2MF5BMl5BanBnXkFtZTcwMTM3NjQxMw@@._V1_UX214_CR0,0,214,317_AL_.jpg";
+		predicate:bio "James Francis Cameron was born on August 16, 1954 in Kapuskasing, Ontario, Canada. He moved to the United States in 1971. The son of an engineer, he majored in physics at California State University before switching to English, and eventually dropping out. He then drove a truck to support his screenwriting ambition. He landed his first professional film job as art director, miniature-set builder, and process-projection supervisor on Roger Corman's Batalha Além das Estrelas (1980) and had his first experience as a director with a two week stint on Piranha II - O Peixe Vampiro (1981) before being fired. In 1984, he wrote and directed O Exterminador Implacável (1984), a futuristic action-thriller starring Arnold Schwarzenegger, Michael Biehn and Linda Hamilton. It was a huge success. After this came a string of successful science-fiction action films such as Aliens: O Recontro Final (1986), O Abismo (1989) and Exterminador Implacável 2: O Dia do Julgamento (1991). In 1990, Cameron formed his own production company, Lightstorm Entertainment. In 1997, he wrote and directed Titanic (1997), a romance epic about two young lovers from different social classes who meet on board the famous ship. The movie went on to break all box office records and earned eleven Academy Awards. It became the highest grossing movie of all time. The rest is history. James Cameron is now one of the most sought-after directors in Hollywood. He was formerly married to producer Gale Anne Hurd, who produced several of his films. In 2000, he married actress Suzy Amis, who appeared in Titanic, and they have three children. - IMDb Mini Biography By:  Dorian House  ".
+person:Sam_Mendes
+		predicate:name "Sam Mendes";
+		predicate:profession "Director";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BNTgzODMyMDUwNF5BMl5BanBnXkFtZTcwNzEyMjAyMg@@._V1_UX214_CR0,0,214,317_AL_.jpg";
+		predicate:bio "Samuel Alexander Mendes was born on August 1, 1965 in Reading, England, UK to parents James Peter Mendes, a retired university lecturer, and Valerie Helene Mendes, an author who writes children's books. Their marriage didn't last long, James divorced Sam's mother in 1970 when Sam was just 5-years-old. Sam was educated at Cambridge University and joined the Chichester Festival Theatre following his graduation in 1987. Afterwards, he directed Judi Dench in \"The Cherry Orchard\", for which he won a Critics Circle Award for Best Newcomer. He then joined the Royal Shakespeare Company, where he directed such productions as \"Troilus and Cressida\" with Ralph Fiennes and \"Richard III\". In 1992, he became artistic director of the reopened Donmar Warehouse in London, where he directed such productions as \"The Glass Menagerie\" and the revival of the musical \"Cabaret\", which earned four Tony Awards including one for Best Revival of a Musical. He also directed \"The Blue Room\" starring Nicole Kidman. In 1999, he got the chance to direct his first feature film, Beleza Americana (1999). The movie earned 5 Academy Awards including Best Picture and Best Director for Mendes, which is a rare feat for a first-time film director. - IMDb Mini Biography By:  TrendEkiD@aol.com  ".
+person:Tom_Hardy
+		predicate:name "Tom Hardy";
+		predicate:profession "Actor";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMTQ3ODEyNjA4Nl5BMl5BanBnXkFtZTgwMTE4ODMyMjE@._V1_UX214_CR0,0,214,317_AL_.jpg";
+		predicate:bio "With his breakthrough performance as Eames in Christopher Nolan's sci-fi thriller A Origem (2010), English actor Tom Hardy has been brought to the attention of mainstream audiences worldwide. However, the versatile actor has been steadily working on both stage and screen since his television debut in the miniseries Irmãos de Armas (2001). After being cast in the World War II drama, Hardy left his studies at the prestigious Drama Centre in London and was subsequently cast as Twombly in Ridley Scott's Cercados (2001) and as the villain Shinzon in Star Trek: Nemesis (2002).Edward Thomas Hardy was born on September 15, 1977 in Hammersmith, London; his mother, Elizabeth Anne (Barrett), is an artist and painter, and his father, Chips Hardy, is a writer. He is of English and Irish descent. Hardy was brought up in East Sheen, London, and first studied at Reed's School. His education continued at Tower House School, then at Richmond Drama School, and subsequently at the Drama Centre London, along with fellow Oscar nominee Michael Fassbender. After winning a modeling competition at age 21, he had a brief contract with the agency Models One.Tom spent his teens and early twenties battling delinquency, alcoholism and drug addiction; after completing his work on Star Trek: Nemesis (2002), he sought treatment and has also admitted that his battles with addiction ended his five-year marriage to Sarah Ward. Returning to work in 2003, Hardy was awarded the Evening Standard Most Promising Newcomer Award for his theatre performances in the productions of \"In Arabia, We'd All Be Kings\" and \"Blood\". In 2003, Tom also co-starred in the play \"The Modernists\" with Paul Popplewell, Jesse Spencer and Orlando Wells.During the next five years, Hardy worked consistently in film, television and theatre, playing roles as varied as Robert Dudley in the BBC's A Rainha Virgem (2005), Bill Sikes in Oliver Twist (2007) and starring in \"The Man of Mode\" at the National Theatre. On the silver screen, he appeared in the crime thriller Layer Cake - Crime Organizado (2004) with Daniel Craig, Sofia Coppola's Marie Antoinette (2006), and the romp Cenas de Natureza Sexual (2006).In 2006, Hardy created \"Shotgun\", an underground theatre company along with director Robert Delamere, and directed a play, penned by his father for the company, called \"Blue on Blue\". In 2007, Hardy received a best actor BAFTA nomination for his touching performance as Stuart Shorter in the BBC adaptation of Alexander Masters' bestselling biography Stuart: Uma Vida ao Contrário (2007). Hailed for his transformative character acting, Hardy was lauded for his emotionally and physically convincing portrayal in the ill-fated and warmhearted tale of Shorter, a homeless and occasionally violent man suffering from addiction and muscular dystrophy.The following year, he appeared as gay hoodlum Handsome Bob in the Guy Ritchie film RocknRolla: A Quadrilha (2008), but this would be his next transformation that would prove his extensive range and stun critics. In the film Bronson (2008), Hardy played the notorious Charles Bronson (given name, Michael Peterson), the \"most violent prisoner in Britain\". Bald, pumped-up, and outfitted with Bronson's signature strongman mustache, Hardy is unrecognizable and gives a harrowing performance that is physically fearless and psychologically unsettling. Director Nicolas Winding Refn breaks the fourth wall with Hardy retelling his tales directly to viewers as well as performing them outright before an audience of his own imagining. The performance mixes terrifying brutality, vaudevillian showmanship, wry humor, and an alarming amount of commitment, and won Hardy a British Independent Film Award for Best Actor. The performance got Hollywood's attention, and in 2009, Hardy was named one of Variety's \"10 Actors to Watch\". That year, he continued to garner praise for his starring role in The Take (2009), a four-part adaptation of Martina Cole's bestselling crime novel, as well as for his performance as Heathcliff in a version of Wuthering Heights (2009).Recent work includes the aforementioned breakthrough appearance in A Origem (2010) alongside Leonardo DiCaprio, Joseph Gordon-Levitt, Cillian Murphy, Tom Berenger, Ken Watanabe, Michael Caine, Marion Cotillard and Ellen Page. The movie was released in July 2010 and became one of top 25 highest grossing films of all time, collecting eight Oscar nominations (including Best Picture) and winning four.Other films include Warrior - Combate Entre Irmãos (2011), opposite Joel Edgerton, the story of two estranged brothers facing the fight of a lifetime from director Gavin O'Connor, and Guerra é Guerra (2012), directed by McG and co-starring Reese Witherspoon and Chris Pine. Tom also starred in the heralded Cold War thriller, A Toupeira (2011) with Colin Firth and Gary Oldman. Hardy rejoined Christopher Nolan for O Cavaleiro das Trevas Renasce (2012); he played the villain role of Bane opposite Christian Bale, Anne Hathaway, Joseph Gordon-Levitt and Gary Oldman. Hardy's menacing physique and his character's scrambled, hard-to-distinguish voice became a major discussion point as the film was released.Outside of performing, Hardy is the patron for the charity \"Flack\", which is an organization to aid the recovery of the homeless in Cambridge. And in 2010, Hardy was named an Ambassador for The Prince's Trust, which helps disadvantaged youth. On the recent stage, he starred in the Brett C. Leonard play \"The Long Red Road\" in early 2010. Written for Hardy and directed by Philip Seymour Hoffman, the play was staged at Chicago's Goodman Theater.In 2015, Hardy starred as the iconic Mad Max in George Miller's reboot of his franchise, Mad Max: Estrada da Fúria (2015). He also collected a British Independent Film Award for his portrayal of both the Kray twins, Ronnie and Reggie, in Lendas do Crime (2015), and an Oscar nomination for Best Supporting Actor for his role as John Fitzgerald in The Revenant: O Renascido (2015). Hardy also starred on the BBC series Peaky Blinders (2013), alongside Cillian Murphy, and on the television series Taboo (2017), both created by Steven Knight.He has an outlaw biker story among other projects in development. In 2010, Hardy became engaged to fellow English actress Charlotte Riley, whom he starred with in The Take (2009) and Wuthering Heights (2009), and is raising a young son, Louis Thomas Hardy, with ex-girlfriend Rachael Speed. - IMDb Mini Biography By:  Pedro Borges  ".
+person:Christoph_Waltz
+		predicate:name "Christoph Waltz";
+		predicate:profession "Actor";
+		predicate:image "https://m.media-amazon.com/images/M/MV5BMTM4MDk3OTYxOF5BMl5BanBnXkFtZTcwMDk5OTUwOQ@@._V1_UY317_CR9,0,214,317_AL_.jpg";
+		predicate:bio "Christoph Waltz is an Austrian-German actor. He is known for his works with American filmmaker Quentin Tarantino, receiving acclaim for portraying SS-Standartenführer Hans Landa in Sacanas Sem Lei (2009) and bounty hunter Dr. King Schultz in Django Libertado (2012). For each performance, he won an Academy Award, a BAFTA Award, and a Golden Globe Award for Best Supporting Actor. Additionally, he received the Best Actor Award at the Cannes Film Festival and a Screen Actors Guild Award for his portrayal of Landa.Christoph Waltz was born in Vienna, Austria, to Elisabeth Urbancic, an Austrian-born costume designer, and Johannes Waltz, a German-born stage builder. He has three siblings. He was born into a theatre family, as his maternal grandmother was Viennese Burgtheater actress Maria Mayen, and his step-grandfather was fellow Burgtheater actor Emmerich Reimers. His maternal grandfather, Rudolf von Urban, was a psychologist and psychiatrist who wrote the 1949 book \"Sex Perfection and Marital Happiness\".Waltz attended the Theresianium and Billrothstrasse in Vienna. Upon graduation, he attended the Max-Reinhardt-Seminar before going to New York to the Lee Strasberg Institute. While in New York, Christoph met his first wife, and moved back to Vienna, then to London.During the 80s, Christoph worked primarily in theatre, commuting from his home in London to Germany. Slowly he began to work in TV, taking one-off roles on series, and TV movies. Film roles soon followed, however, attempts to break into English-speaking film and TV were unsuccessful. Christoph has stated he is grateful to have made a living and supported his family through acting. For thirty years he worked steadily, tirelessly, in this manner.It was not until he met Quentin Tarantino that his career in Hollywood took off. The role of Colonel Hans Landa in Sacanas Sem Lei (2009) catapulted Christoph from a lifetime working in German TV/film to the new life of an international superstar and Academy Award-winning actor. He won 27 awards for his performance as Hans Landa, including the Cannes prix d'interpretation Masculin for 2009, the Golden Globe for Best Supporting Actor, the BAFTA Best Supporting Actor award, and the Academy Award for Best Supporting Actor (which he won again for 2012's Django Libertado (2012)).He also portrayed computer genius Qohen Leth in the film O Teorema Zero (2013), American plagiarist Walter Keane in the biographical film _Big Eyes (2014), and 007's nemesis and head of SPECTRE Ernst Stavro Blofeld in _Spectre (2015)_. In Quentin Tarantino's 2009 film Inglourious Basterds, Waltz portrayed SS-Standartenführer Hans Landa, aka \"The Jew Hunter\". Clever, courteous, and multilingual - but also self-serving, cunning, implacable, and murderous. Waltz played gangster Benjamin Chudnofsky in Green Hornet (2011). That same year, he starred in Água aos Elefantes (2011), Roman Polanski's O Deus da Carnificina (2011), and a remake of Os Três Mosqueteiros (2011). He played German bounty hunter Dr. King Schultz in Quentin Tarantino's Django Libertado (2012), a role Tarantino wrote specifically for Waltz.Christoph resides in Berlin and Los Angeles. His wife is costume builder Judith Holste. - IMDb Mini Biography By:  www.ChristophWaltzFans.com and  ".
+mov:titanic
+	predicate:name "Titanic";
+	predicate:year "1997";
+	predicate:score "7.7";
+	predicate:actor 
+			person:Leonardo_DiCaprio,
+			person:Kate_Winslet,
+			person:Gloria_Stuart;
+	predicate:poster "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg";
+	predicate:director 
+			person:James_Cameron;
+	predicate:genre 
+			genres:drama,
+			genres:romance;
+	predicate:plot_keyword 
+			"artist",
+			"love",
+			"ship",
+			"titanic",
+			"wet";
+	predicate:country "USA";
+	predicate:language "English";
+	predicate:rating ratings:pg_13;
+	predicate:duration "194";
+	predicate:budget "200000000".
+mov:the_abyss
+	predicate:name "The Abyss";
+	predicate:year "1989";
+	predicate:score "7.6";
+	predicate:actor 
+			person:Michael_Biehn,
+			person:Todd_Graff,
+			person:Mary_Mastrantonio;
+	predicate:poster "https://m.media-amazon.com/images/M/MV5BYWMzMDNlMDQtMTYyYi00OTM3LTllZDYtYThhMTk5MzNhZTRhXkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg";
+	predicate:director 
+			person:James_Cameron;
+	predicate:genre 
+			genres:adventure,
+			genres:drama,
+			genres:sci-fi,
+			genres:thriller;
+	predicate:plot_keyword 
+			"alien",
+			"estranged couple",
+			"ocean",
+			"submarine",
+			"underwater";
+	predicate:country "USA";
+	predicate:language "English";
+	predicate:rating ratings:pg_13;
+	predicate:duration "171";
+	predicate:budget "69500000".
+mov:batman_returns
+	predicate:name "Batman Returns";
+	predicate:year "1992";
+	predicate:score "7.0";
+	predicate:actor 
+			person:Michael_Gough,
+			person:Vincent_Schiavelli,
+			person:Andrew_Bryniarski;
+	predicate:poster "https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_UX182_CR0,0,182,268_AL_.jpg";
+	predicate:director 
+			person:Tim_Burton;
+	predicate:genre 
+			genres:action;
+	predicate:plot_keyword 
+			"box office hit",
+			"dc comics",
+			"gotham",
+			"mayor",
+			"penguin";
+	predicate:country "USA";
+	predicate:language "English";
+	predicate:rating ratings:pg_13;
+	predicate:duration "126";
+	predicate:budget "80000000".

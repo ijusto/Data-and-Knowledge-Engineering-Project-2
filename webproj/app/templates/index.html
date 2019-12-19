@@ -59,7 +59,43 @@
                     <small></small>
                 </h1>
 
-                {{ content | safe }}
+                {% for key, value in movies.items %}
+                    <div class="d-flex flex-row" style="min-width: 0; word-wrap: break-word; background-color: #fff; background-clip: border-box; border: 1px solid rgba(0, 0, 0, 0.125); border-radius: 0.25rem; border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; margin-bottom: 1.5rem !important;">
+                        <div class="p-2">
+                            <img alt="Card-image-cap" class="card-img-top" src={{ value.poster.0 }}/>
+                        </div>
+                        <div class="p-2">
+                            <h2><a href="movie/{{value.name.0 }}">{{ value.name.0 }}</a></h2>({{ value.year.0 }})
+
+                            <p>{% for g in value.genre %}[{{ g }}]{% endfor %}</p>
+                            <p><strong><i>Director:</i></strong>
+                                {% if '_' not in value.director.0 %}
+                                    <a href= "director/{{ value.director.0 }}">
+                                        {{ value.director.0 }}
+                                    </a>
+                                {% else %}
+                                    <a>
+                                        {{ value.director.0 }}
+                                    </a>
+                                {% endif %}
+                            </p>
+                            <p><strong><i>Cast: </i></strong><br/>
+                                {% for a in value.actor %} -
+                                    {% if '_' not in a %}
+                                        <a href="actor/{{a}}">
+                                        {{ a }}
+                                        </a><br/>
+                                    {% else %}
+                                        <a>
+                                        {{ a }}
+                                        </a><br/>
+                                    {% endif %}
+                                {% endfor %}
+                            </p>
+                            <p><strong>{{ value.score.0 }}</strong>/10</p>
+                        </div>
+                    </div>
+                {% endfor %}
 
                 <!-- Pagination -->
             </div>
@@ -151,7 +187,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">EDC - Trabalho Prático 1 - Grupo 3</p>
+            <p class="m-0 text-center text-white">EDC - Trabalho Prático 2 - Grupo 3</p>
         </div>
         <!-- /.container -->
     </footer>

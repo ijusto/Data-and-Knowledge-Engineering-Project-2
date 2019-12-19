@@ -1,10 +1,10 @@
-# QUERIES #
+﻿# QUERIES #
 
 
 # get_all_actors()
 # All actors
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?name
+SELECT distinct ?name
 WHERE { 
 	?movie pred:actor ?actor .
     ?actor pred:name ?name .
@@ -14,7 +14,7 @@ WHERE {
 # get_all_directors()
 # All directors
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?name
+SELECT distinct ?name
 WHERE { 
 	?movie pred:director ?director .
     ?director pred:name ?name .
@@ -47,11 +47,11 @@ WHERE {
 # dist_searchActor($search)
 # All actors with "" in their names
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?name
+SELECT distinct ?name
 WHERE { 
     ?movie pred:actor ?actor .
     ?actor pred:name ?name .
-    FILTER (CONTAINS(?name, ""))
+    FILTER (CONTAINS(lcase(?name), ""))
 	}
 
 
@@ -59,11 +59,11 @@ WHERE {
 # dist_searchDirector($search)
 # All directors with "" in their names
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?name
+SELECT distinct ?name
 WHERE { 
     ?movie pred:director ?director .
     ?director pred:name ?name .
-    FILTER (CONTAINS(?name, ""))
+    FILTER (CONTAINS(lcase(?name), ""))
 	}
 
 
@@ -85,3 +85,13 @@ DELETE DATA {
     mov:movie_name pred:name "movie name" .
     # INCOMPLETO : falta adicionar todas as ligaçoes com as outras cenas
 	}
+
+
+##Specific actor from DB
+PREFIX pred: <http://moviesDB.com/predicate/>
+PREFIX movies: <http://moviesDB.com/entity/movies/>
+SELECT distinct ?person ?pred ?obj
+WHERE {
+    ?person pred:name "James Cameron".
+    ?person ?pred ?obj.
+}

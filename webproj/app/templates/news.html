@@ -56,9 +56,27 @@
                 <h1 class="my-4">News
                     <!--TODO category selected-->
                 </h1>
-
-                {{ content | safe }}
-
+                <div>
+                {% for one_news_dic in news_dic %}
+                    </div>
+                    <br/><br/>
+                    <div class="row">
+                        <div class="col-md-12 align-items-center" style="min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0, 0, 0, 0.125);border-radius: 0.25rem;border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;">
+                            <br/>
+                            <br/>
+                            <h2>
+                                <a href={{ one_news_dic.arc_url }}>{{ one_news_dic.itemTitle }}</a>
+                            </h2>
+                            <br/>
+                            By {{ one_news_dic.autnamestr }}
+                            <div class="card-footer text-muted">
+                                {{ one_news_dic.pubdate }}
+                                <br/>
+                                <a href={{ one_news_dic.pubin_name }}>{{ one_news_dic.pubin_name }}</a>
+                            </div>
+                        </div>
+                {% endfor %}
+                    </div>
             </div>
         </div>
         <!-- /.row -->
@@ -68,7 +86,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">EDC - Trabalho Prático 1 - Grupo 3</p>
+            <p class="m-0 text-center text-white">EDC - Trabalho Prático 2 - Grupo 3</p>
         </div>
         <!-- /.container -->
     </footer>

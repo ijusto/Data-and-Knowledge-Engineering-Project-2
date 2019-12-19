@@ -80,14 +80,24 @@
                             [{{ genre }}]
                         {% endfor %}
                     </p>
-                    <p style="padding-left: 15px"><strong><i>Director: </i></strong><a href="../../director/{{movie_director}}">{{movie_director}}</a></p>
+                    <p style="padding-left: 15px"><strong><i>Director: </i></strong>
+                        {% if "_" not in movie_director %}
+                            <a href="../../director/{{movie_director}}">{{movie_director}}</a>
+                        {% else %}
+                            <a>{{ movie_director }}</a>
+                        {% endif %}
+                    </p>
 
                     <p style="padding-left: 15px">
                         <strong><i>Cast: </i></strong>
                             <br/>
                         <strong style="padding-left: 20px"><i>Main actors: </i></strong>
                                 {% for actor_name in movie_main_actors %}
-                                    [<a href="../../actor/{{actor_name}}">{{actor_name}}</a>]
+                                    {% if "_" not in actor_name %}
+                                        [<a href="../../actor/{{actor_name}}">{{actor_name}}</a>]
+                                    {% else %}
+                                        [<a>{{ actor_name }}</a>]
+                                    {% endif %}
                                 {% endfor %}
                         <br/>
                         <strong style="padding-left: 20px"><i>Secondary actors: </i></strong>
@@ -126,7 +136,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">EDC - Trabalho Prático 1 - Grupo 3</p>
+            <p class="m-0 text-center text-white">EDC - Trabalho Prático 2 - Grupo 3</p>
         </div>
         <!-- /.container -->
     </footer>

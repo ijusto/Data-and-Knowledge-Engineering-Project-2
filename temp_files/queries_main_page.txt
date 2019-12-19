@@ -1,7 +1,7 @@
-
+﻿
 # get_all_genres()
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?genre_name
+SELECT distinct ?genre_name
 WHERE { 
 	?movie pred:genre ?genre .
     ?genre pred:name ?genre_name .
@@ -9,14 +9,14 @@ WHERE {
 
 # get_all_years()
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?year
+SELECT distinct ?year
 WHERE {
 	?movie pred:year ?year .
-}
+} order by ?year
 
 # get_all_ratings()
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT ?rating_name
+SELECT distinct ?rating_name
 WHERE {
 	?movie pred:rating ?rating .
     ?rating pred:name ?rating_name .
@@ -45,15 +45,25 @@ WHERE {
 # apply_search
 # Substituir "Avatar" por uma variável
 PREFIX pred: <http://moviesDB.com/predicate/>
-SELECT  ?movie_name ?pred ?obj
+SELECT  ?title ?pred ?obj
 WHERE {{
         ?movie ?pred ?obj .
-        ?movie pred:name ?movie_name .
-        FILTER(CONTAINS(?movie_name, "Avatar"))
+        ?movie pred:name ?title .
+	?movie pred:director ?director .
+        FILTER(CONTAINS((lcase(?title)), "Avatar"))
 	} UNION {
         ?movie ?pred ?obj .
-        ?movie pred:name ?movie_name .
+        ?movie pred:name ?title .
         ?movie pred:plot_keyword ?keywords .
-        FILTER(CONTAINS(?keywords, "Avatar"))
+        FILTER(CONTAINS(lcase(?keywords), "Avatar"))
     }
+}
+
+# get_all_movies
+PREFIX pred: <http://moviesDB.com/predicate/>
+SELECT ?title ?pred ?obj
+WHERE{
+    ?movie ?pred ?obj .
+    ?movie pred:director ?director .
+    ?movie pred:name ?title .
 }
