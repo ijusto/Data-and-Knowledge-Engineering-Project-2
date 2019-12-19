@@ -58,7 +58,7 @@
                 </h1>
 
                 {% if error %}
-                    <p style="...">ERROR: insert the requested information</p>
+                    <p style="...">ERROR: {{ errormessage }}</p>
                 {% endif %}
                 <form action="newMovies" method="post">
                     {% csrf_token %}
