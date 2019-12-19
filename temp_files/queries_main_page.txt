@@ -49,12 +49,13 @@ SELECT  ?title ?pred ?obj
 WHERE {{
         ?movie ?pred ?obj .
         ?movie pred:name ?title .
+	?movie pred:director ?director .
         FILTER(CONTAINS((lcase(?title)), "Avatar"))
 	} UNION {
         ?movie ?pred ?obj .
         ?movie pred:name ?title .
         ?movie pred:plot_keyword ?keywords .
-        FILTER(CONTAINS((lcase(?keywords)), "Avatar"))
+        FILTER(CONTAINS(lcase(?keywords), "Avatar"))
     }
 }
 
@@ -63,6 +64,6 @@ PREFIX pred: <http://moviesDB.com/predicate/>
 SELECT ?title ?pred ?obj
 WHERE{
     ?movie ?pred ?obj .
-    ?movie pred:director ?year .
+    ?movie pred:director ?director .
     ?movie pred:name ?title .
 }
