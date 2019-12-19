@@ -111,14 +111,14 @@ def new_movie(request):
                     accessor.sparql_update(body=payload_query, repo_name=repo_name)
 
                 # Adding the rest of the movie's information to the DB
-                director = request.POST['first_name1'].replace("'","").replace("-","_") \
-                           + "_" + request.POST['last_name1'].replace("'","").replace("-","_")
-                actor1 = request.POST['first_name2'].replace("'","").replace("-","_") \
-                         + "_" + request.POST['last_name2'].replace("'","").replace("-","_")
-                actor2 = request.POST['first_name3'].replace("'", "").replace("-", "_") + "_" \
-                         + request.POST['last_name3'].replace("'", "").replace("-", "_")
-                actor3 = request.POST['first_name4'].replace("'", "").replace("-", "_") \
-                         + "_" + request.POST['last_name4'].replace("'", "").replace("-", "_")
+                director = request.POST['first_name1'].replace("'","").replace("-","_").replace(" ","_") \
+                           + "_" + request.POST['last_name1'].replace("'","").replace("-","_").replace(" ","_")
+                actor1 = request.POST['first_name2'].replace("'","").replace("-","_").replace(" ","_") \
+                         + "_" + request.POST['last_name2'].replace("'","").replace("-","_").replace(" ","_")
+                actor2 = request.POST['first_name3'].replace("'","").replace("-","_").replace(" ","_") \
+                         + "_" + request.POST['last_name3'].replace("'","").replace("-","_").replace(" ","_")
+                actor3 = request.POST['first_name4'].replace("'","").replace("-","_").replace(" ","_") \
+                         + "_" + request.POST['last_name4'].replace("'","").replace("-","_").replace(" ","_")
 
                 if 'budget' in request.POST and request.POST['budget'] != "":
                     budget = request.POST['budget']
@@ -165,7 +165,7 @@ def new_movie(request):
             request,
             'newMovie.html',
             {
-                'error': False,
+                'error': False
             }
         )
 
